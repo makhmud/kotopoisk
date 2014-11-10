@@ -1,2 +1,2 @@
-.idea
-public/.sass-cache
+.idea/*
+public/.sass-cache/*
