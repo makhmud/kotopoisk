@@ -80,6 +80,7 @@ App::down(function()
 
 require app_path().'/filters.php';
 
+
 /**
  * Photo storing on DB record create event
  */

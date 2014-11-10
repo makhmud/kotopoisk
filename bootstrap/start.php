@@ -26,7 +26,8 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('homestead'),
+	'local' => array('geronimo-A55F-M3'),
+	'deploy' => array('geronimo-A55F-M3'),
 
 ));
 
