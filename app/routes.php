@@ -18,13 +18,6 @@ Route::get('/', function()
 
 Route::group( array('prefix'=>'/pages/', 'before' => 'ajax'), function()
 {
-    Route::group(array('before' => array('auth.token') ), function() {
-
-        Route::get('add-cat', function(){
-            return View::make('pages.add-cat');
-        });
-
-    });
 
     Route::get('{name}', function($name){
         return View::make('pages.'.$name);
@@ -42,6 +35,8 @@ Route::group(array('prefix' => '/api/', 'before' => 'ajax' ), function() {
         Route::any('upload', 'ApiController@upload');
 
     });
+
+    Route::any('getUserPic', 'ApiController@getUserPic');
 
     Route::controller('auth', 'AuthController');
 });

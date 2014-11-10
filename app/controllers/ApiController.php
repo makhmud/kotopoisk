@@ -27,14 +27,29 @@ class ApiController extends BaseController {
         }
         if ($file->validateFile() && $file->save($destination)) {
 
-//            Image::make($destination)->blur()->save(storage_path() . '/files/flow/uploads/temp.jpg');
+            if (Input::has('isUserPic')) {
+                Image::make($destination)->fit(1366, 800)->blur(15)->brightness(-50)->save($tmpDir . 'blured-' . $filename);
+            }
 
             $response = Response::make($destination, 200);
         }
 
         return $response;
 
+    }
 
+    public function getUserPic() {
+
+        $destination =  public_path() . DIRECTORY_SEPARATOR . 'user' . DIRECTORY_SEPARATOR . 'blured-' . Input::get('destination');
+
+        if (!file_exists($destination)) {
+            $destination = Input::get('destination');
+            $parts = explode(DIRECTORY_SEPARATOR, $destination);
+            $parts[count($parts)-1] = 'blured-' . $parts[count($parts)-1];
+            $destination = implode(DIRECTORY_SEPARATOR, $parts);
+        }
+
+        return Image::make($destination)->response();
     }
 
 }

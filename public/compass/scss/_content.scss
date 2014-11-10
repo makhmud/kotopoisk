@@ -551,6 +551,8 @@ $list: adam john wynn mason kuroir;
 }
 
 #profile-form{
+  width: 695px;
+  margin: 0 auto;
   padding-bottom: 120px;
   .form-item{
     text-align: right;
@@ -587,14 +589,19 @@ $list: adam john wynn mason kuroir;
   }
 }
 
-.page--profile .main-container{
-  background: url(../profile-bg.jpg) center 350px no-repeat #005555;
+.page--profile main{
+  width: 100%;
+  padding-top: 130px;
+  margin-top: -130px;
 }
 
 .file-button-container-big, .file-button-container-big input[type=file] {
 	height: em(361px);
 	width: em(361px);
 	cursor: pointer;
+}
+.photo-file-input{
+  position: relative;
 }
 .photo-preview {
   li img{

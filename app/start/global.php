@@ -91,3 +91,14 @@ Photo::creating( function($photo) {
     Image::make(sys_get_temp_dir() . DIRECTORY_SEPARATOR . $photo->path)->fit(116, 75)->save( public_path() . DIRECTORY_SEPARATOR . 'user/small_'.$photo->path );
 
 });
+
+User::saving( function($user) {
+
+    $destination = $user->image;
+    $parts = explode(DIRECTORY_SEPARATOR, $destination);
+    $user->image = $parts[count($parts)-1];
+
+    Image::make(sys_get_temp_dir() . DIRECTORY_SEPARATOR . $user->image)->save( public_path() . DIRECTORY_SEPARATOR . 'user/'.$user->image );
+    Image::make(sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'blured-' . $user->image)->save( public_path() . DIRECTORY_SEPARATOR . 'user/blured-' . $user->image );
+
+});

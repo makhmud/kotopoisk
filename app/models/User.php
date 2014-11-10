@@ -4,6 +4,7 @@ use \Illuminate\Auth\UserInterface;
 
 class User extends Eloquent implements UserInterface {
 
+    protected $fillable = ['image'];
     /**
      * Contacts model dependency
      * @return mixed

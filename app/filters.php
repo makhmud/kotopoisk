@@ -113,8 +113,8 @@ Route::filter('csrf', function()
 
 Route::filter('ajax', function () {
 
-    if (!Request::ajax()){
-        return Response::make('Not found', 404);
-    }
+//    if (!Request::ajax()){
+//        return Response::make('Not found', 404);
+//    }
 
 });
