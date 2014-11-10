@@ -23,7 +23,7 @@ return array(
         'mysql' => array(
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => 'cats',
+            'database'  => 'filmkino23_kotopoisk',
             'username'  => '045545147_koto',
             'password'  => 'P8S24ko9t',
             'charset'   => 'utf8',
