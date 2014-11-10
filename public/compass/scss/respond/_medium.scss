@@ -1,0 +1,58 @@
+@media only screen and (min-width: 720px + 1) and (max-width: 1090px - 1)
+{
+	.wrapper
+	{
+		width: 720px;
+	}
+
+	header .language-switch { margin: 0 100px;}
+
+	main {
+		width: 500px;
+		font-size: em(11px);
+	}
+  #profile-form input[type="text"]{
+    width: 210px;
+  }
+
+  .jqselect {
+    .select {
+      width: 235px;
+    }
+  }
+
+  #gallery{
+    li{
+      img{
+        max-width: 240px;
+        max-height: 240px;
+      }
+    }
+  }
+
+  #change-password-popup {
+    margin: 0 0 0 -330px !important;
+  }
+
+  #short-cat-item{
+    width: 700px;
+    margin: 10px auto;
+    font-size: 14px;
+    .image{
+      img{
+        width: 200px;
+        height: 157px;
+      }
+    }
+  }
+
+  .main-big-marker, #add-cat #location-selector:before {
+    -webkit-background-size: 35px 475px;
+    -moz-background-size: 35px 475px;
+    -o-background-size: 35px 475px;
+    background-size: 35px 475px;
+    width: 11px;
+    height: 14px;
+    background-position: 0 -289px;
+  }
+}

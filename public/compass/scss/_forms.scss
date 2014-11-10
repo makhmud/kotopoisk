@@ -1,0 +1,80 @@
+$placeholder-color: #e0e0e0;
+
+%form-ui-element
+{
+	height: em(60px);
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.page--home {
+	footer form {
+		width: em(427px);
+		margin: 0 auto;
+		font-weight: 400;
+
+		input[type=text], input[type=password]{
+			@extend %form-ui-element;
+			border: 1px solid #cdcdcd;
+			padding: 0 em(30px,23px);
+			font-size: em(23px);
+			color: #9d9d9d;
+			margin-bottom: em(7px,23px);
+		}
+
+		.info-links {
+			text-align: center;
+			margin-top: em(50px);
+		}
+
+		.lost-password {
+			text-align: right;
+			margin-bottom: em(40px);
+		}
+
+		.info-links a, .lost-password a {
+			text-decoration: none;
+			color: #c1c1c1;
+			font-size: em(20px);
+			&:hover
+			{
+				color: #6a6a6a;
+			}
+		}
+
+		input[type=submit] {
+			@extend %form-ui-element;
+			text-align: center;
+			border: 1px solid transparent;
+			background-color: #3b3b3b;
+			text-transform: uppercase;
+			color: #ffffff;
+			font-size: em(20px);
+			font-weight: bold;
+
+			&:hover {background-color: #292929;}
+		}
+
+	}
+
+	.footer-container {min-height: em(330px);}
+}
+
+input[type=text] {
+	&:-ms-input-placeholder {
+		color: $placeholder-color
+	}
+
+	&::-webkit-input-placeholder {
+		color: $placeholder-color;
+	}
+	&:-moz-placeholder {
+		color: $placeholder-color;
+		opacity: 1;
+	}
+
+	&::-moz-placeholder {
+		color: $placeholder-color;
+		opacity: 1;
+	}
+}

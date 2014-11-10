@@ -1,0 +1,128 @@
+
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+%display-block {
+	display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.nwp {
+	white-space: nowrap;
+}
+
+.text-center {
+	text-align: center;
+}
+
+%pseudos {
+	content: '';
+	position: absolute;
+}
+
+.target-fix {
+	display: block;
+	top: 0;
+	left: 0;
+	position: fixed;
+}
+
+%black-font {
+	color: #000000;
+}
+
+%white-font {
+	color: #ffffff;
+}
+
+%white-background {
+	background-color: #ffffff;
+}
+
+%text-decoration-none {
+	text-decoration: none;
+}
+
+%uppercase {
+	text-transform: uppercase;
+}
+
+@mixin main-sprite-icon($sprite, $shift: 0, $el: "before", $context-font-size: $base-font-size, $magic:true) {
+	@if $el == "before" or $el == "after" {
+		&:#{$el} {
+			@extend %pseudos;
+			$disable-magic-sprite-selectors: $magic;
+			@extend .main-#{$sprite};
+			width: main-sprite-width($sprite);
+			height: main-sprite-height($sprite);
+			margin-left: em((main-sprite-width($sprite)+ $shift)*-1, $context-font-size);
+			@content;
+		}
+	}
+}
+
+@mixin declare-font-face($font-family, $font-filename, $font-weight: normal, $font-style: normal, $font-stretch: normal) {
+	@font-face {
+		font-family: '#{$font-family}';
+		src: url('fonts/#{$font-filename}.eot');
+		src: url('fonts/#{$font-filename}.eot?#iefix') format('embedded-opentype'),
+		url('fonts/#{$font-filename}.woff') format('woff'),
+		url('fonts/#{$font-filename}.ttf') format('truetype'),
+		url('fonts/#{$font-filename}.svg##{$font-filename}') format('svg');
+		font-weight: $font-weight;
+		font-style: $font-style;
+		font-stretch: $font-stretch;
+	}
+}
+
+@mixin resize-sprite($map, $sprite, $percent) {
+	$spritePath: sprite-path($map);
+	$spriteWidth: image-width($spritePath);
+	$spriteHeight: image-height($spritePath);
+	$width: image-width(sprite-file($map, $sprite));
+	$height: image-height(sprite-file($map, $sprite));
+
+	@include background-size(ceil($spriteWidth * ($percent/100)) ceil($spriteHeight * ($percent/100)));
+	width: ceil($width*($percent/100));
+	height: ceil($height*($percent/100));
+	background-position: 0 floor(nth(sprite-position($map, $sprite), 2)  * ($percent/100));
+}
+
+@mixin resize-sprite-set($map, $percent, $only...) {
+	$name: sprite_map_name($map);
+
+	@each $sprite in sprite_names($map) {
+		@if length($only) == 0 or index($only, $sprite) != false {
+			.#{$name}-#{$sprite} {
+				@include resize-sprite($map, $sprite, $percent);
+			}
+		}
+	}
+}
+
+@function em($target, $context: $base-font-size) {
+	@if $target == 0 {
+		@return 0
+	}
+	@return $target / $context + 0em;
+}
+

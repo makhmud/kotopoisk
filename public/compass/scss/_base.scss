@@ -1,0 +1,31 @@
+@import "compass/reset";
+@import "compass/utilities";
+@import "reset";
+@import "helpers";
+
+$default-font-color: #333 !default;
+$default-font-stack: "HelveticaNeueCyr" ,Helvetica Neue, Helvetica, Arial !default;
+
+html, button, input, select, textarea, button[type=button] {
+	color: $default-font-color;font-family: $default-font-stack;
+}
+
+$base-font-size: 16px !default;
+$base-line-height: 24px;
+
+body {
+	font-family: $default-font-stack;
+	font-weight: 300;
+}
+
+html {
+	@include adjust-font-size-to($base-font-size);
+}
+
+::-moz-selection, ::selection {
+	text-shadow: none;
+}
+
+em {
+	font-style: italic;
+}

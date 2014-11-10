@@ -1,0 +1,363 @@
+@media only screen and (max-width: 719px),
+(-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+
+	header .language-switch {
+		margin: 0 em(60px) !important;
+	}
+
+	main {
+		width: 100%;
+		margin: 0 0;
+	}
+
+	.main-container {
+		margin: 0 0 !important;
+	}
+
+	body {
+		font-size: 10px !important;
+		background: none !important;
+		margin-bottom: 80px;
+	}
+
+	.side-menu {
+		width: 283px;
+		left: -283px;
+
+		& header a {
+			line-height: em(43px);
+		}
+	}
+
+	#add-cat {
+		font-size: 12px;
+	}
+
+	@include resize-sprite-set($main-sprites, 50); // 40% sized
+
+	%slide-animation-open {
+		-ms-transform: translate(283px, 0); /* IE 9 */
+		-webkit-transform: translate(283px, 0); /* Chrome, Safari, Opera */
+		-moz-transform: translate(283px, 0); /* Chrome, Safari, Opera */
+		transform: translate(283px, 0);
+	}
+
+	.notification {
+		top: em(300px, 19px);
+	}
+
+	.mob-banner {
+		display: block;
+		position: fixed;
+		width: 320px;
+		height: 80px;
+		bottom: 0;
+		left: 0;
+		background: url(../images/ibanner.jpg) no-repeat bottom center;
+	}
+
+  [class^="profile-icon-"]{
+    width: 45px;
+    height: 37px;
+    background-size: 135px 74px;
+  }
+
+  @for $i from 1 through 3{
+    .profile-icon-#{$i}{
+      background-position: -#{$i*45 - 45}px 0;
+    }
+  }
+
+  #change-password-popup{
+    margin:0 0 0 -168px !important;
+    top: 203px;
+    .icon{
+      top: -30px;
+    }
+    .content{
+      width: auto !important;
+      padding: 24px 22px;
+    }
+    .profile-icon-1{
+      background-position: 0 -37px;
+    }
+
+    input{
+      font-size: 14px;
+      padding: 12px;
+      width: 222px;
+
+      &:first-child{
+        margin-bottom: 30px;
+      }
+      &:nth-child(2){
+        margin-bottom: 12px;
+      }
+
+      &[type="submit"]{
+        font-size: 18px;
+        box-shadow: 0 -20px 20px rgba(0,0,0,.1);
+        padding: 12px 24px;
+        width: 277px;
+        margin: 22px -12px 0;
+      }
+    }
+  }
+
+  #profile-menu .file-button-container-big .photo-file-preview{
+    height: auto;
+    left: -190px;
+    opacity: 1;
+    position: absolute;
+    top: -15px;
+    width: auto;
+  }
+  #profile-menu #profile-change-link{
+    margin-top: 180px;
+    margin-right: 10px;
+  }
+  #profile-menu .file-button-container-big{
+    width: 116px;
+    height: 116px;
+  }
+  #profile-menu .file-button-container-big img{
+    width: 107px;
+    height: 107px;
+  }
+  .file-button-container-big{
+    margin-top: 90px;
+  }
+  #profile-form{
+    margin-top: 50px;
+  }
+  #profile-form input, .jqselect .text, .jqselect li{
+    font-size: 15px;
+  }
+  #profile-form input[type="text"]{
+    width: 120px;
+  }
+  #profile-form input, .jqselect .text, .jqselect li{
+    font-size: 9px;
+  }
+  #profile-menu #password-change-link{
+    margin-left: 10px;
+  }
+  #profile-menu .file-button-container-big:hover .photo-file-preview{
+    background: none;
+  }
+  #profile-menu #profile-change-link{
+    margin-left: -30px;
+  }
+
+  .page--profile .main-container{
+    background-position: center 290px;
+  }
+  .jqselect {
+    .select {
+      width: 145px;
+    }
+    .text{
+      padding: 0 10px;
+    }
+    .trigger .arrow{
+      width: 27px;
+      height: 24px;
+      -webkit-background-size: 27px 24px;
+      background-size: 27px 24px;
+    }
+    .dropdown{
+      top: 28px;
+    }
+  }
+
+
+  #gallery li img{
+    max-width: 160px;
+    max-height: 160px;
+  }
+  #gallery .line{
+    font-size: 8px;
+    *:first-child{
+      margin-left: 4px !important;
+    }
+    *:last-child{
+      margin-right: 4px !important;
+    }
+  }
+  #gallery li .info{
+    padding: 4px 0;
+  }
+
+  [class^="gallery-item-icon-"]{
+    width: 8px;
+    height: 9px;
+    -webkit-background-size: 24px 9px;
+    background-size: 24px 9px;
+  }
+  @for $i from 1 through 3{
+    .gallery-item-icon-#{$i}{
+      background-position: -#{$i*8 - 8}px 0;
+    }
+  }
+
+  [class^="social-icon-"]{
+    width: 45px;
+    height: 45px;
+    -webkit-background-size: 225px 90px;
+    background-size: 225px 90px;
+  }
+  @for $i from 1 through 5{
+    .social-icon-#{$i}{
+      background-position: -#{$i*45 - 45}px 0;
+    }
+    .social-icon-#{$i}:hover{
+      background-position: -#{$i*45 - 45}px -45px;
+    }
+  }
+
+  #overlay{
+    .popup{
+      padding-top: 40px;
+
+      .content{
+        width: 300px;
+        .body, .contacts{
+          font-size: 9px;
+        }
+      }
+      .controls{
+        *{
+          opacity: .5;
+        }
+        *:hover{
+          opacity: 1;
+        }
+        .prev, .next, .close{
+          top: 0;
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+        }
+        .prev{
+          left: 0;
+        }
+        .next{
+          left: 35px;
+        }
+        .close{
+          display: inline-block;
+          right: 0;
+        }
+      }
+      &#cat-item-popup{
+        width: 300px;
+        .map .text{
+          display: none;
+        }
+      }
+
+      &#change-password-popup{
+        width: 278px;
+        .content{
+          padding: 30px 13px 0;
+        }
+      }
+    }
+  }
+
+  [class^="gallery-controls-"]{
+    width: 11px;
+    height: 19px;
+    -webkit-background-size: 22px 19px;
+    background-size: 22px 19px;
+  }
+  .gallery-controls-next{
+    background-position: -11px 0;
+  }
+  .gallery-controls-close{
+    width: 19px;
+    height: 19px;
+    -webkit-background-size: 19px 19px;
+    background-size: 19px 19px;
+    display: inline-block;
+  }
+
+  .main-switch{
+    border-bottom-width: 1px;
+    margin-bottom: 5px;
+
+    a{
+      margin-right: 6px;
+      padding-bottom: 4px;
+
+      &:after{
+        width: 4px;
+        height: 4px;
+        border: 1px solid #d5d5d5;
+        background-color: #d5d5d5;
+        position: absolute;
+        bottom: -3px;
+        left: calc( 50% - 3px );
+        border-radius: 3px;
+      }
+
+      &.active{
+        border-bottom-width: 1px;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  #short-cat-item{
+    width: 320px;
+    margin: 0;
+    font-size: 9px;
+
+    .name{
+      font-size: 15px;
+    }
+
+    .image{
+      img{
+        width: 120px;
+        height: 100px;
+      }
+    }
+  }
+
+  #map{
+    height: 470px;
+  }
+
+  .map-info{
+    width: 175px;
+    text-align: left;
+
+    .image{
+      width: 22px;
+      height: 22px;
+      border-radius: 11px;
+      margin-top: 5px;
+
+      img{
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    .info{
+      padding: 5px 5px 5px 20px;
+      margin-left: -10px;
+      font-size: 10px;
+      line-height: 1.5;
+
+      time{
+        margin-right: 15px;
+      }
+      .refresh{
+        margin-right: 7px;
+      }
+    }
+
+  }
+}

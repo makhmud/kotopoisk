@@ -1,0 +1,59 @@
+@import "compass/css3";
+@import "helpers";
+
+@include declare-font-face("HelveticaNeueCyr", "HelveticaNeueCyr-Thin", 200);
+@include declare-font-face("HelveticaNeueCyr", "HelveticaNeueCyr-Light", 300);
+@include declare-font-face("HelveticaNeueCyr", "HelveticaNeueCyr-Roman", 400);
+@include declare-font-face("HelveticaNeueCyr", "HelveticaNeueCyr-Medium", 500);
+@include declare-font-face("HelveticaNeueCyr", "HelveticaNeueCyr-Bold", 700);
+
+@import "compass/utilities/sprites";
+
+$main-spacing: 20px;
+@import "main/*.png";
+
+$main-spacing: 20px;
+
+@include all-main-sprites;
+
+@import "compass/typography/vertical_rhythm";
+
+$default-font-color: #222;
+
+@import "base";
+
+body {
+	background-color: #f6c658;
+}
+
+.wrapper {
+	vertical-align: top;
+}
+
+.main-container {
+	background-color: #ffffff;
+	margin: 160px auto 0 auto;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+strong {
+	font-weight: bold;
+}
+
+$link-color: #1794e3;
+a, a:visited {
+	color: $link-color;
+}
+
+@import "header";
+@import "menu";
+@import "content";
+@import "forms";
+@import "footer";
+
+@import "respond/medium";
+@import "respond/big";
+@import "respond/wide";
+@import "respond/small";
