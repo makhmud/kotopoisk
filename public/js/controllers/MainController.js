@@ -1,6 +1,22 @@
-app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User) {
+app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $location) {
 
     console.log('In Main Controller');
+
+    if ( typeof($cookies.lng == 'undefined') ) {
+        $cookies.lng = 'ru';
+    }
+
+    $translate.use($cookies.lng);
+
+    $scope.changeLocale = function (key) {
+
+        $cookies.lng = key;
+        $translate.use(key);
+    }
+
+    $scope.isLocale = function(key) {
+        return key == $cookies.lng;
+    }
 
     $scope.settings = {};
 
@@ -82,6 +98,13 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         bodyClasses : ''
     };
 
+    User.getAll({}, function(response){
+        if (response.success) {
+            $scope.page.userCount = response.data;
+        } else {
+            $scope.errors = response.errors;
+        }
+    });
 
     /**
      * Cats array for feed
@@ -145,7 +168,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         if(typeof(currentPosition) == 'undefined') currentPosition = 1;
 
         if(!$scope.settings.lockDelayLoad){
-            //var promise = Cat.getAll().$promise;
+
             var cats = Cat.getAll(
                 { offset:currentPosition, order:$scope.settings.catsOrder, 'auth_token' : $cookies.auth_token },
                 function (response) {

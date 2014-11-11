@@ -4,6 +4,7 @@ app.controller('MapCtrl', function($scope, $resource, Cat) {
 
     $scope.page.title = 'Map';
     $scope.page.bodyClasses = 'page--map';
+    $scope.page.isMain = false;
 
     $scope.parseCatToMarker = function(cat) {
         return '<div class="map-info '+(($scope.settings.map.zoom<7)?'ng-hide':'')+'" > \

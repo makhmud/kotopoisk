@@ -12,7 +12,7 @@
 <body class="{{page.bodyClasses}}">
 
 <div class="main-container wrapper">
-    <div class="side-menu {{ (settings.isSideMenuOpened) ? 'open' : '' }}">
+    <div class="side-menu {{ (settings.isSideMenuOpened) ? 'open' : '' }}" ng-if="!page.isMain">
         <div class="element-container">
             <form>
                 <input type="search" class="search-icon" placeholder="Поиск..."/>
@@ -30,14 +30,25 @@
         </div>
     </div>
 
-    <header class="wrapper clearfix">
+    <header class="clearfix" ng-if="page.isMain">
+        <div class="member-counter"><span>{{page.userCount}} участников</span></div>
+        <nav class="language-switch">
+            <ul>
+                <li><a ng-click="changeLocale('ru')" ng-class="{active : isLocale('ru') }">Рус</a></li>
+                <li><a ng-click="changeLocale('en')" ng-class="{active : isLocale('en') }">Eng</a></li>
+            </ul>
+        </nav>
+        <a href="/about" class="about-nav">О проекте</a>
+    </header>
+
+    <header class="wrapper clearfix" ng-if="!page.isMain">
         <a href="#" class="menu-button" ng-click="methods.toggleSideMenu()">Меню</a>
 
-        <div class="member-counter ta-right"><span>12</span></div>
+        <div class="member-counter ta-right"><span>{{page.userCount}}</span></div>
     </header>
 
     <div class="main wrapper clearfix">
-        <h1 ng-bind="page.title"></h1>
+        <h1 ng-bind="page.title"  ng-if="!page.isMain"></h1>
 
             <div ng-view></div>
 
@@ -62,6 +73,8 @@
     <script src="/js/lib/ng-infinite-scroller-origin/build/ng-infinite-scroll.min.js"></script>
     <script src="/js/lib/flow.js/dist/flow.min.js"></script>
     <script src="/js/lib/ng-flow/dist/ng-flow.min.js"></script>
+    <script src="/js/lib/angular-translate/angular-translate.min.js"></script>
+    <script src="/js/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
     <!--End Angular secondary libs-->
 
     <!--GMap Directive with dependencies-->

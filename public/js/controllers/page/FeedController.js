@@ -14,6 +14,8 @@ app.controller('FeedCtrl', function($scope, $filter, Cat) {
     $scope.settings.catsOrder = null;
 
     $scope.page.title = 'Feed';
+    $scope.page.isMain = false;
+    $scope.page.bodyClasses = 'page--feed';
 
     /**
      * Current offset position, depends on scroll position

@@ -72,6 +72,22 @@ class UserTableSeeder extends Seeder {
                 'id_cats' => $catIds[array_rand($catIds)],
             ));
         }
+
+        DB::table('translations')->delete();
+
+        Translation::insert([
+            [
+                'lng' => 'en',
+                'key' => 'page.about.title',
+                'value' => 'About project'
+            ],
+            [
+                'lng' => 'ru',
+                'key' => 'page.about.title',
+                'value' => 'О проекте'
+            ]
+        ]);
+
     }
 
 }

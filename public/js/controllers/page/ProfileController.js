@@ -11,6 +11,7 @@ app.controller('ProfileCtrl', function($scope, User, $cookies) {
 
     $scope.page.title = 'Profile';
     $scope.page.bodyClasses = 'page--profile';
+    $scope.page.isMain = false;
 
     $scope.user = {};
 

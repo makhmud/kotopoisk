@@ -13,7 +13,10 @@ app.factory('User', function($resource, $cookies) {
             paramDefaults : {
                 'auth_token' : token
             },
-            'update': { method:'PUT' }
+            'update': { method:'PUT' },
+            getAll: {
+                method: "GET"
+            }
         }
     )
 })

@@ -28,13 +28,20 @@ Route::group( array('prefix'=>'/pages/', 'before' => 'ajax'), function()
 Route::group(array('prefix' => '/api/', 'before' => 'ajax' ), function() {
 
     Route::resource('cat', 'CatController');
+
+    Route::resource('language', 'LanguageController');
+
     Route::group(array('before' => array('auth.token') ), function() {
 
         Route::resource('user', 'UserController');
         Route::post('cat', 'CatController@store');
+        Route::post('language', 'LanguageController@store');
+        Route::put('language', 'LanguageController@update');
         Route::any('upload', 'ApiController@upload');
 
     });
+
+    Route::get('user', 'UserController@index');
 
     Route::any('getUserPic', 'ApiController@getUserPic');
 

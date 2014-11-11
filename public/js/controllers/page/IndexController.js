@@ -2,6 +2,9 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route)
 
     console.log('In Index Controller');
 
+    $scope.page.isMain = true;
+    $scope.page.bodyClasses = 'page--home';
+
     $scope.settings.loginForms = {
         active:'signup',
         signin : {

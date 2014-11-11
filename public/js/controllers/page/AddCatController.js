@@ -3,6 +3,8 @@ app.controller('AddCatCtrl', function($scope, Cat, AddressService, $timeout, $co
     console.log('In AddCat Controller');
 
     $scope.page.title = 'Add cat';
+    $scope.page.isMain = false;
+    $scope.page.bodyClasses = 'page--add-cat';
 
     $scope.ngFlowParams = {
         target: '/api/upload?auth_token=' + $cookies.auth_token ,

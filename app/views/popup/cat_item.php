@@ -28,7 +28,7 @@
                 {{data.currentCat.content}}
             </div>
             <div class="contacts"><span class="tbold">Контакты:</span> {{data.currentCat.author.contacts.phone}}</div>
-            <div class="social">
+            <div class="social-icons">
                 <a href="#"><span class="social-icon-1"></span></a>
                 <a href="#"><span class="social-icon-2"></span></a>
                 <a href="#"><span class="social-icon-3"></span></a>

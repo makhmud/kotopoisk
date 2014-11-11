@@ -1,6 +1,6 @@
 <?php
 
-class UserController extends \BaseController {
+class LanguageController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +9,7 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-		return Response::answer(User::all()->count());
+		//
 	}
 
 
@@ -43,9 +43,8 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$user = User::with('contacts')->find($id);
-
-        return Response::answer($user);
+        $translations = Repo::make('language')->translations($id);
+		return Response::make($translations);
 	}
 
 
@@ -69,21 +68,7 @@ class UserController extends \BaseController {
 	 */
 	public function update($id)
 	{
-        $user = User::with('contacts')->find($id);
-
-        $user->image = Input::get('image');
-        if ( is_null($user->contacts) ){
-            $user->contacts = new Contact();
-        }
-
-        $user->contacts->name = Input::get('contacts.name');
-        $user->contacts->surname = Input::get('contacts.surname');
-        $user->contacts->phone = Input::get('contacts.phone');
-        $user->contacts->web = Input::get('contacts.web');
-        $user->contacts->city = Input::get('contacts.city');
-        $user->contacts->save();
-        $user->save();
-
+		//
 	}
 
 
