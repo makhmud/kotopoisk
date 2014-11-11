@@ -7,7 +7,7 @@
     <div class="content">
         <div class="image-panel">
             <img src="/user/big_{{data.currentCat.current_photo}}" alt=""/>
-            <div class="likes"><a href="#"><span class="gallery-item-icon-1"></span><span class="text">{{data.currentCat.count_likes}}</span></a></div>
+            <div class="likes"><a ng-click="like(data.currentCat.id)"><span class="gallery-item-icon-1"></span><span class="text">{{data.currentCat.likes.length}}</span></a></div>
             <div class="line">
                 <div class="map">
                     <a href="#" ng-click="mapView(data.currentCat.position)"><span class="gallery-item-icon-2"></span><span class="text" >Посмотреть на карте</span></a>

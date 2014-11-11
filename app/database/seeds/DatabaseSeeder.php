@@ -85,6 +85,26 @@ class UserTableSeeder extends Seeder {
                 'lng' => 'ru',
                 'key' => 'page.about.title',
                 'value' => 'О проекте'
+            ],
+            [
+                'lng' => 'en',
+                'key' => 'menu.in',
+                'value' => 'Enter'
+            ],
+            [
+                'lng' => 'ru',
+                'key' => 'menu.in',
+                'value' => 'Войти'
+            ],
+            [
+                'lng' => 'en',
+                'key' => 'menu.out',
+                'value' => 'Exit'
+            ],
+            [
+                'lng' => 'ru',
+                'key' => 'menu.out',
+                'value' => 'Выйти'
             ]
         ]);
 

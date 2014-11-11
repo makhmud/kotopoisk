@@ -8,4 +8,6 @@ class Like extends Eloquent {
      */
     protected $table = 'like';
 
+    public $timestamps = false;
+
 }

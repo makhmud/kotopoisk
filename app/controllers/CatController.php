@@ -12,7 +12,7 @@ class CatController extends \BaseController {
 
         $order = Input::get('order');
 
-        $data = Repo::make('cats')->catsFeed( Input::get('offset') * 15, $order);
+        $data = Repo::make('cats')->catsFeed( Input::get('offset') * 15, $order, Input::get('lang'));
 
         return Response::answer(
                 array(

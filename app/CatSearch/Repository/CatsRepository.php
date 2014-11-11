@@ -26,9 +26,10 @@ class CatsRepository {
      * Optimized query for cats feed
      * @param int $offset
      * @param string $order
+     * @param string $lng
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function catsFeed($offset, $order) {
+    public function catsFeed($offset, $order, $lng) {
 
         $order = $this->_checkOrder($order);
 
@@ -52,7 +53,8 @@ class CatsRepository {
             ->get();
 
         foreach ($results as $item) {
-            $item->created_at = Carbon::createFromTimeStamp(strtotime( $item->created_at ))->diffForHumans();
+            \App::setLocale($lng);
+            $item->created_at = \LocalizedCarbon::createFromTimeStamp(strtotime( $item->created_at ))->diffForHumans();
             $tempCoords = explode(',', $item->position);
             $item->position = array(
                 'latitude' => $tempCoords[0],

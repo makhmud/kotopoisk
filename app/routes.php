@@ -34,6 +34,7 @@ Route::group(array('prefix' => '/api/', 'before' => 'ajax' ), function() {
     Route::group(array('before' => array('auth.token') ), function() {
 
         Route::resource('user', 'UserController');
+        Route::resource('like', 'LikeController');
         Route::post('cat', 'CatController@store');
         Route::post('language', 'LanguageController@store');
         Route::put('language', 'LanguageController@update');

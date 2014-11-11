@@ -123,6 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
         'Intervention\Image\ImageServiceProvider',
+        'Laravelrus\LocalizedCarbon\LocalizedCarbonServiceProvider',
         'CatSearch\ServiceProviders\RepositoryServiceProvider'
 
 	),
@@ -194,6 +195,8 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 
         'Image'           => 'Intervention\Image\Facades\Image',
+        'LocalizedCarbon' => 'Laravelrus\LocalizedCarbon\LocalizedCarbon',
+        'DiffFormatter'   => 'Laravelrus\LocalizedCarbon\DiffFactoryFacade',
         'Repo'            => '\CatSearch\Facades\Repo'
 
 	),

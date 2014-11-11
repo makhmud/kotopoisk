@@ -26,7 +26,8 @@
                 <a href="/about" class="icon-about">О проекте</a>
             </nav>
 
-            <a href="/" class="signin">Войти</a>
+            <a href="/" class="signin">{{ 'menu.in' | translate }}</a>
+            <a href="/" class="signin">{{ 'menu.out' | translate }}</a>
         </div>
     </div>
 
@@ -38,7 +39,7 @@
                 <li><a ng-click="changeLocale('en')" ng-class="{active : isLocale('en') }">Eng</a></li>
             </ul>
         </nav>
-        <a href="/about" class="about-nav">О проекте</a>
+        <a href="/about" class="about-nav">{{ 'page.about.title' | translate }}</a>
     </header>
 
     <header class="wrapper clearfix" ng-if="!page.isMain">

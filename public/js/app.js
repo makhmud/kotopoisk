@@ -2,6 +2,7 @@
 app.config(['$locationProvider', '$routeProvider', '$httpProvider', '$translateProvider', function($locationProvider, $routeProvider, $httpProvider, $translateProvider) {
 
     $httpProvider.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
+    $httpProvider.defaults.withCredentials = true;
     $locationProvider.html5Mode(true);
 
     $translateProvider.useStaticFilesLoader({

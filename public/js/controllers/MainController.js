@@ -1,17 +1,19 @@
-app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $location) {
+app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $http) {
 
     console.log('In Main Controller');
 
-    if ( typeof($cookies.lng == 'undefined') ) {
+    if ( typeof($cookies.lng) == 'undefined' ) {
         $cookies.lng = 'ru';
     }
 
     $translate.use($cookies.lng);
 
+
     $scope.changeLocale = function (key) {
 
         $cookies.lng = key;
         $translate.use(key);
+
     }
 
     $scope.isLocale = function(key) {
@@ -170,7 +172,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         if(!$scope.settings.lockDelayLoad){
 
             var cats = Cat.getAll(
-                { offset:currentPosition, order:$scope.settings.catsOrder, 'auth_token' : $cookies.auth_token },
+                { offset:currentPosition, order:$scope.settings.catsOrder, 'auth_token' : $cookies.auth_token, lang: $cookies.lng },
                 function (response) {
                     if (response.success) {
                         cats.data.cats.forEach(function(elm){
@@ -275,6 +277,15 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         $scope.settings.map.zoom = 10;
         $scope.methods.closePopup();
         $location.path('/map');
+    }
+
+    $scope.like = function (idCat) {
+        $http.post('/api/like', {idCat : idCat, idUser : $cookies.auth_id, auth_token : $cookies.auth_token }).then( function (response) {
+            if (response.data.success) {
+                $scope.data.currentCat.likes.push(response.data.data);
+                $filter('filter')($scope.data.cats,{id:$scope.data.currentCat.id}, true)[0].count_likes++;
+            }
+        })
     }
 
 });
