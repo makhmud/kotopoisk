@@ -2,6 +2,10 @@ app.controller('FeedCtrl', function($scope, $filter, Cat) {
 
     console.log('In Feed Controller');
 
+    $scope.ids.first = null;
+    $scope.ids.last = null;
+    $scope.data.cats = [];
+
     /**
      * Sets in true when end of all cats reached
      * @type {boolean}
@@ -16,6 +20,7 @@ app.controller('FeedCtrl', function($scope, $filter, Cat) {
     $scope.page.title = 'Feed';
     $scope.page.isMain = false;
     $scope.page.bodyClasses = 'page--feed';
+    $scope.page.search = false;
 
     /**
      * Current offset position, depends on scroll position

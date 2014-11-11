@@ -27,9 +27,10 @@ class CatsRepository {
      * @param int $offset
      * @param string $order
      * @param string $lng
+     * @param string $search
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function catsFeed($offset, $order, $lng) {
+    public function catsFeed($offset, $order, $lng, $search) {
 
         $order = $this->_checkOrder($order);
 
@@ -50,6 +51,7 @@ class CatsRepository {
             ->skip($offset)
             ->take(self::LIMIT)
             ->orderBy($order, 'DESC')
+            ->whereRaw('cats.content LIKE "%'.$search.'%"')
             ->get();
 
         foreach ($results as $item) {
@@ -65,6 +67,11 @@ class CatsRepository {
         \Log::info(DB::getQueryLog());
 
         return new Collection($results);
+    }
+
+    public function countSearchResults($search) {
+        $results = DB::table('cats')->select('*')->whereRaw('cats.content LIKE "%'.$search.'%"')->count();
+        return $results;
     }
 
 //    public static function catsIds ( $order ) {

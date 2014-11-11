@@ -1,4 +1,4 @@
-app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $http) {
+app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $http, Auth, $route) {
 
     console.log('In Main Controller');
 
@@ -33,10 +33,17 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
      */
     $scope.settings.isSideMenuOpened = false;
 
+    Auth.check(false).then( function(response) {
+        $scope.settings.auth = response;
+    })
+
 
     $scope.settings.map = {
         center : {latitude:50,longitude: 35},
-        zoom : 4
+        zoom : 4,
+        options :{
+            scrollwheel: false
+        }
     };
 
     /**
@@ -97,8 +104,11 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
      */
     $scope.page = {
         title : 'Title',
-        bodyClasses : ''
+        bodyClasses : '',
+        isMain : false
     };
+
+    $scope.searchCount = 0;
 
     User.getAll({}, function(response){
         if (response.success) {
@@ -165,15 +175,19 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
      * @param currentPosition
      * @returns {*}
      */
-    $scope.catsLoad = function(currentPosition) {
+    $scope.catsLoad = function(currentPosition, search) {
 
         if(typeof(currentPosition) == 'undefined') currentPosition = 1;
+        if(typeof(search) == 'undefined') search = '';
+
+
 
         if(!$scope.settings.lockDelayLoad){
 
             var cats = Cat.getAll(
-                { offset:currentPosition, order:$scope.settings.catsOrder, 'auth_token' : $cookies.auth_token, lang: $cookies.lng },
-                function (response) {
+                { offset:currentPosition, order:$scope.settings.catsOrder, 'auth_token' : $cookies.auth_token, lang: $cookies.lng, search: search },
+                function (response, info) {
+
                     if (response.success) {
                         cats.data.cats.forEach(function(elm){
                             $scope.data.cats.push(elm);
@@ -183,11 +197,15 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
                             $scope.settings.lockDelayLoad = true;
                         }
 
-                        if (currentPosition == 0) {
+                        if (typeof(response.data.searchCount) != 'undefined') {
+                            $scope.searchCount = response.data.searchCount
+                        }
+
+                        if (currentPosition == 0 && typeof($scope.data.cats[0]) != 'undefined') {
                             $scope.ids.first = $scope.data.cats[0].id;
                         }
 
-                        if ($scope.settings.lockDelayLoad) {
+                        if ($scope.settings.lockDelayLoad && typeof($scope.data.cats[ $scope.data.cats.length-1 ]) != 'undefined') {
                             $scope.ids.last = $scope.data.cats[ $scope.data.cats.length-1 ].id;
                         }
                     } else {
@@ -286,6 +304,32 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
                 $filter('filter')($scope.data.cats,{id:$scope.data.currentCat.id}, true)[0].count_likes++;
             }
         })
+    }
+
+    $scope.notification = '';
+
+    $scope.notificate = function(message) {
+        $scope.notification = message;
+    }
+
+    $scope.logout = function() {
+        $http.post('/api/auth/logout', {auth_token:$cookies.auth_token} ).success(function(response) {
+            if (response.success) {
+                delete $cookies.auth_token;
+                delete $cookies.auth_id;
+                $scope.settings.auth = false;
+                $location.path('/');
+            } else {
+                $scope.notificate(response.errors);
+            }
+        }).error(function(response) {
+            $scope.notificate(response);
+        });
+    }
+
+    $scope.find = function(find) {
+        $scope.settings.lockDelayLoad = false;
+        $location.path('/search/' + find);
     }
 
 });

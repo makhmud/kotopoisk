@@ -13,7 +13,7 @@
             <img src="/user/{{user.data.image}}" flow-img="$flow.files[$flow.files.length-1]"/>
         </div>
     </div>
-    </a><a href="#"  id="profile-change-link"><span class="profile-icon-2"></span>
+    </a><a ng-click="logout()" id="profile-change-link"><span class="profile-icon-2"></span>
 
         <div class="text">Выйти из профиля</div>
     </a>

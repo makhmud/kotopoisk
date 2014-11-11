@@ -628,7 +628,26 @@ a, a:visited {
   background-color: #c59f48;
   color: #343434;
 }
-/* line 128, ../compass/scss/_menu.scss */
+/* line 127, ../compass/scss/_menu.scss */
+.side-menu form {
+  position: relative;
+}
+/* line 130, ../compass/scss/_menu.scss */
+.side-menu input[type="submit"] {
+  background: url(../images/search-active.png) center center no-repeat transparent;
+  height: 3.43em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  width: 3.43em;
+  outline: none;
+}
+/* line 140, ../compass/scss/_menu.scss */
+.side-menu input[type="submit"]:disabled {
+  background-image: url(../images/search.png);
+}
+/* line 144, ../compass/scss/_menu.scss */
 .side-menu input[type=search] {
   padding: 0 25px;
   box-sizing: border-box;
@@ -637,43 +656,42 @@ a, a:visited {
   color: #d9d9d9;
   font-weight: 300;
   border: 1px solid #212121;
-  background: #292929 url("../images/search.png") no-repeat 310px center;
   margin-bottom: 20px;
+  background-color: #292929;
 }
-/* line 138, ../compass/scss/_menu.scss */
+/* line 154, ../compass/scss/_menu.scss */
 .side-menu input[type=search]:focus {
   border: 1px solid #f6c34f;
   outline: 0;
   -webkit-box-shadow: inset 0px 0px 18px -1px rgba(246, 195, 79, 0.72);
   -moz-box-shadow: inset 0px 0px 18px -1px rgba(246, 195, 79, 0.72);
   box-shadow: inset 0px 0px 18px -1px rgba(246, 195, 79, 0.72);
-  background-image: url("../images/search-active.png");
   background-position-x: 301px;
 }
-/* line 147, ../compass/scss/_menu.scss */
+/* line 162, ../compass/scss/_menu.scss */
 .side-menu input[type=search]::-webkit-input-placeholder {
   /* WebKit browsers */
   color: #343434;
 }
-/* line 152, ../compass/scss/_menu.scss */
+/* line 167, ../compass/scss/_menu.scss */
 .side-menu input[type=search]:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #343434;
   opacity: 1;
 }
-/* line 158, ../compass/scss/_menu.scss */
+/* line 173, ../compass/scss/_menu.scss */
 .side-menu input[type=search]::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #343434;
   opacity: 1;
 }
-/* line 164, ../compass/scss/_menu.scss */
+/* line 179, ../compass/scss/_menu.scss */
 .side-menu input[type=search]:-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #343434;
 }
 
-/* line 172, ../compass/scss/_menu.scss */
+/* line 187, ../compass/scss/_menu.scss */
 .full-container.shifted {
   overflow: hidden;
 }
@@ -1760,7 +1778,7 @@ main h3 {
 
 /* line 963, ../compass/scss/_content.scss */
 .map-info {
-  width: 360px;
+  width: 390px;
   text-align: left;
 }
 /* line 967, ../compass/scss/_content.scss */
@@ -1800,11 +1818,11 @@ main h3 {
 }
 /* line 1002, ../compass/scss/_content.scss */
 .map-info .info time {
-  margin-right: 30px;
+  margin-right: 10px;
 }
 /* line 1005, ../compass/scss/_content.scss */
 .map-info .info .refresh {
-  margin-right: 15px;
+  margin-right: 8px;
 }
 /* line 1009, ../compass/scss/_content.scss */
 .map-info .info span {
@@ -2668,7 +2686,7 @@ input[type=text]::-moz-placeholder {
 
   /* line 333, ../compass/scss/respond/_small.scss */
   .map-info {
-    width: 175px;
+    width: 195px;
     text-align: left;
   }
   /* line 337, ../compass/scss/respond/_small.scss */

@@ -1,4 +1,4 @@
-app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route) {
+app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route, $filter) {
 
     console.log('In Index Controller');
 
@@ -50,9 +50,21 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route)
                 if (response.success) {
                     $cookies.auth_token = response.auth_token;
                     $cookies.auth_id = response.auth_id;
+                    $scope.settings.auth = true;
                     $location.path('/feed');
                     $route.reload();
+                } else {
+                    $scope.notificate($filter('translate')('notification.register.wrong_credentials'));
                 }
+            });
+        },
+
+        signup : function() {
+            $http.post('/api/auth/register', $scope.settings.loginForms.signup).success(function(response) {
+                $scope.notificate($filter('translate')('notification.register'));
+                $scope.settings.loginForms.signup.email = '';
+            }).error(function(response) {
+                $scope.notificate($filter('translate')('notification.register.already_exists'));
             });
         }
 

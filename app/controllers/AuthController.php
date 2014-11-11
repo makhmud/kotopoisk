@@ -14,12 +14,8 @@ class AuthController extends \BaseController {
             $user->auth_token = Hash::make( time() );
             $user->save();
 
-            Session::set('auth_token', $user->auth_token);
-            Session::set('auth_id', Auth::id());
-
             Log::info(array(
-                'login' => $user->auth_token,
-                Session::get('auth_token')
+                'login' => $user->auth_token
             ));
 
             return Response::json( array(
@@ -53,23 +49,35 @@ class AuthController extends \BaseController {
         }
     }
 
-    public function getLogout () {
+    public function postLogout () {
 
-        $user = Auth::user();
+        $user = User::where('auth_token', '=', Input::get('auth_token'))->first();
+
         $user->auth_token = null;
         $user->save();
-
-        Auth::logout();
-
-        Session::forget('auth_token');
 
         return Response::json( array(
             'success' => true,
         ));
     }
 
-    public function putRegister () {
+    public function postRegister () {
 
+        $email = Input::get('email');
+        $password = Str::random(8);
+
+
+        User::insert(array(
+            'email' => $email,
+            'password' => Hash::make($password)
+        ));
+
+        Log::info(array(
+            'email' => $email,
+            'password' => $password
+        ));
+
+        return Response::answer([]);
     }
 
 }

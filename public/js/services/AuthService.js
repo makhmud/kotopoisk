@@ -7,7 +7,9 @@ app.factory('Auth', function($http, $q, $cookies, $location) {
          * @param address
          * @returns {*}
          */
-        check : function() {
+        check : function(redirect) {
+            if (typeof(redirect) == 'undefined') redirect = true;
+
             var defer = $q.defer();
             $http({
                 url: '/api/auth/check',
@@ -20,14 +22,17 @@ app.factory('Auth', function($http, $q, $cookies, $location) {
             })
                 .success(function(data){
                     if (data.success) {
-                        defer.resolve(data)
+                        if ($location.path() == '/'){
+                            $location.path('/feed')
+                        }
+                        defer.resolve(true)
                     } else {
-                        $location.path('/')
-                        defer.reject(data);
+                        if (redirect) $location.path('/');
+                        defer.resolve(false);
                     }
                 })
                 .error(function(data){
-                    defer.reject(data)
+                    defer.resolve(false)
                 });
 
             return defer.promise;

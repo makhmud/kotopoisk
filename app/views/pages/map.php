@@ -1,5 +1,5 @@
 <div id="map-wrap">
-    <ui-gmap-google-map id="map" center="settings.map.center" zoom="settings.map.zoom">
+    <ui-gmap-google-map id="map" center="settings.map.center" zoom="settings.map.zoom" options="settings.map.options">
         <div ng-repeat="cat in data.cats">
             <ui-gmap-marker idKey='marker-cat.id'
                             coords='cat.position'

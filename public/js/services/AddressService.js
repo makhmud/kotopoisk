@@ -20,7 +20,7 @@ app.factory('AddressService', function($http, $q) {
                     address : address,
                     sensor : false
                 },
-                //headers: {'Content-Type': 'application/json'},
+                headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin':true},
                 responseType:'JSON'
             })
                 .success(function(data){defer.resolve(data)})

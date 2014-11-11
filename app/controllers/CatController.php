@@ -11,14 +11,20 @@ class CatController extends \BaseController {
 	{
 
         $order = Input::get('order');
+        $search = Input::get('search');
 
-        $data = Repo::make('cats')->catsFeed( Input::get('offset') * 15, $order, Input::get('lang'));
+        $data = Repo::make('cats')->catsFeed( Input::get('offset') * 15, $order, Input::get('lang'), $search);
 
-        return Response::answer(
-                array(
-                    'lock'=>(count($data) < 15),
-                    'cats'=>$data,
-            ));
+        $responseData = array(
+            'lock'=>(count($data) < 15),
+            'cats'=>$data,
+        );
+
+        if (!empty($search)){
+            $responseData['searchCount'] = Repo::make('cats')->countSearchResults(  Input::get('search'));
+        }
+
+        return Response::answer($responseData);
 	}
 
 

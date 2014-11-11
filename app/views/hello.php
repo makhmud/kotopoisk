@@ -15,37 +15,39 @@
     <div class="side-menu {{ (settings.isSideMenuOpened) ? 'open' : '' }}" ng-if="!page.isMain">
         <div class="element-container">
             <form>
-                <input type="search" class="search-icon" placeholder="Поиск..."/>
+                <input type="search" class="search-icon" ng-model="search" placeholder="Поиск..."/>
+                <input type="submit" class="search-icon" ng-click="find(search)" ng-disabled="search==''" value=""/>
             </form>
             <a href="/add-cat" class="add-cat">+ Добавить котэ</a>
 
             <nav>
                 <a href="/feed" class="icon-feed">Лента</a>
                 <a href="/map" class="icon-map">Карта</a>
-                <a href="/profile" class="icon-profile">Профиль</a>
+                <a href="/profile" class="icon-profile" ng-if="settings.auth">Профиль</a>
                 <a href="/about" class="icon-about">О проекте</a>
             </nav>
-
-            <a href="/" class="signin">{{ 'menu.in' | translate }}</a>
-            <a href="/" class="signin">{{ 'menu.out' | translate }}</a>
+            <a href="/" class="signin" ng-if="!settings.auth" ng-bind="'menu.in' | translate"></a>
+            <a ng-click="logout()" class="signin" ng-if="settings.auth" ng-bind="'menu.out' | translate"></a>
         </div>
     </div>
-
+    <div class="notification" ng-if="notification!=''" ng-click="notificate('')">
+       <span ng-bind="notification"></span>
+    </div>
     <header class="clearfix" ng-if="page.isMain">
-        <div class="member-counter"><span>{{page.userCount}} участников</span></div>
+        <div class="member-counter"><span><span ng-bind="page.userCount"></span> участников</span></div>
         <nav class="language-switch">
             <ul>
                 <li><a ng-click="changeLocale('ru')" ng-class="{active : isLocale('ru') }">Рус</a></li>
                 <li><a ng-click="changeLocale('en')" ng-class="{active : isLocale('en') }">Eng</a></li>
             </ul>
         </nav>
-        <a href="/about" class="about-nav">{{ 'page.about.title' | translate }}</a>
+        <a href="/about" class="about-nav" ng-bind="'page.about.title' | translate"></a>
     </header>
 
     <header class="wrapper clearfix" ng-if="!page.isMain">
         <a href="#" class="menu-button" ng-click="methods.toggleSideMenu()">Меню</a>
 
-        <div class="member-counter ta-right"><span>{{page.userCount}}</span></div>
+        <div class="member-counter ta-right"><span ng-bind="page.userCount"></span></div>
     </header>
 
     <div class="main wrapper clearfix">
@@ -107,6 +109,7 @@
     <script src="/js/controllers/MainController.js"></script>
     <script src="/js/controllers/page/IndexController.js"></script>
     <script src="/js/controllers/page/FeedController.js"></script>
+    <script src="/js/controllers/page/SearchController.js"></script>
     <script src="/js/controllers/page/MapController.js"></script>
     <script src="/js/controllers/page/AboutController.js"></script>
     <script src="/js/controllers/page/LoginController.js"></script>

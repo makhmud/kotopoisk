@@ -105,6 +105,38 @@ class UserTableSeeder extends Seeder {
                 'lng' => 'ru',
                 'key' => 'menu.out',
                 'value' => 'Выйти'
+            ],
+            [
+                'lng' => 'en',
+                'key' => 'notification.register',
+                'value' => 'Almost done.'
+            ],
+            [
+                'lng' => 'ru',
+                'key' => 'notification.register',
+                'value' => 'Почти все. Для завершения регистрации
+проверьте свою почту. Для входа на сайт,
+введите ваш e-mail и пароль здесь'
+            ],
+            [
+                'lng' => 'en',
+                'key' => 'notification.register.already_exists',
+                'value' => 'User already in database.'
+            ],
+            [
+                'lng' => 'ru',
+                'key' => 'notification.register.already_exists',
+                'value' => 'Пользователь уже существует.'
+            ],
+            [
+                'lng' => 'en',
+                'key' => 'notification.register.wrong_credentials',
+                'value' => 'Wrong E-mail or passwrod.'
+            ],
+            [
+                'lng' => 'ru',
+                'key' => 'notification.register.wrong_credentials',
+                'value' => 'Неверный E-mail или пароль.'
             ]
         ]);
 

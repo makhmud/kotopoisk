@@ -11,8 +11,15 @@ app.config(['$locationProvider', '$routeProvider', '$httpProvider', '$translateP
     });
     //$translateProvider.useLocalStorage();
 
-    $routeProvider.when('/', {templateUrl: '/pages/main', controller: 'IndexCtrl'});
+    $routeProvider.when('/', {
+        templateUrl: '/pages/main',
+        controller: 'IndexCtrl',
+        resolve: {
+            auth : ['Auth', function(Auth){ return Auth.check() }]
+        }
+    });
     $routeProvider.when('/feed', {templateUrl: '/pages/feed', controller: 'FeedCtrl'});
+    $routeProvider.when('/search/:find', {templateUrl: '/pages/feed', controller: 'SearchCtrl'});
     $routeProvider.when('/map', {templateUrl: '/pages/map', controller: 'MapCtrl'});
     $routeProvider.when('/add-cat', {
         templateUrl: '/pages/add-cat',

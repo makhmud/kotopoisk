@@ -98,7 +98,12 @@ User::saving( function($user) {
     $parts = explode(DIRECTORY_SEPARATOR, $destination);
     $user->image = $parts[count($parts)-1];
 
-    Image::make(sys_get_temp_dir() . DIRECTORY_SEPARATOR . $user->image)->save( public_path() . DIRECTORY_SEPARATOR . 'user/'.$user->image );
-    Image::make(sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'blured-' . $user->image)->save( public_path() . DIRECTORY_SEPARATOR . 'user/blured-' . $user->image );
+    $tmpPath = sys_get_temp_dir() . DIRECTORY_SEPARATOR . $user->image;
+    $tmpBluredPath = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'blured-' . $user->image;
+
+    if (file_exists($tmpPath) && file_exists($tmpBluredPath)) {
+        Image::make($tmpPath)->save( public_path() . DIRECTORY_SEPARATOR . 'user/'.$user->image );
+        Image::make($tmpBluredPath)->save( public_path() . DIRECTORY_SEPARATOR . 'user/blured-' . $user->image );
+    }
 
 });
