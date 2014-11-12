@@ -7,38 +7,38 @@
     </div>
 
     <div class="enter-switch">
-        <a ng-click="setActive('signup')" ng-class="{ 'active': isActive('signup') }">Зарегистрируйтесь</a>
-        <span>Или</span>
-        <a ng-click="setActive('signin')" ng-class="{ active: isActive('signin') }">Войдите</a>
+        <a ng-click="setActive('signup')" ng-class="{ 'active': isActive('signup') }" ng-bind="'page.main.signup' | translate"></a>
+        <span ng-bind="'or' | translate"></span>
+        <a ng-click="setActive('signin')" ng-class="{ active: isActive('signin') }" ng-bind="'page.main.signin' | translate"></a>
     </div>
 
     <div class="footer-container">
         <footer class="wrapper">
             <form ng-if="isActive('signup')" name="register">
-                <input type="text" placeholder="Введите ваш Email" required="required" ng-model="settings.loginForms.signup.email"/>
-                <input type="submit" value="Получить доступ"  ng-click="formSubmits.signup()" ng-disabled="register.$invalid" />
+                <input type="text" placeholder="{{ 'placeholders.main.email' | translate }}" required="required" ng-model="settings.loginForms.signup.email"/>
+                <input type="submit" value="{{ 'page.main.buttons.access' | translate }}"  ng-click="formSubmits.signup()" ng-disabled="register.$invalid" />
 
                 <div class="info-links">
-                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#"  ng-bind="'page.main.policy' | translate"></a>
                 </div>
             </form>
 
             <form ng-if="isActive('signin')" name="login">
-                <input type="text" placeholder="Введите ваш Email" required="required" ng-model="settings.loginForms.signin.email"/>
-                <input type="password" placeholder="Пароль" required="required" ng-model="settings.loginForms.signin.password"/>
+                <input type="text" placeholder="{{ 'placeholders.main.email' | translate }}" required="required" ng-model="settings.loginForms.signin.email"/>
+                <input type="password" placeholder="{{ 'placeholders.main.password' | translate }}" required="required" ng-model="settings.loginForms.signin.password"/>
 
                 <div class="lost-password">
-                    <a ng-click="setActive('remind')">Забыли пароль</a>
+                    <a ng-click="setActive('remind')" ng-bind="'page.main.forgot' | translate"></a>
                 </div>
-                <input type="submit" value="Войти" ng-click="formSubmits.signin()"  ng-disabled="login.$invalid" />
+                <input type="submit" value="{{ 'page.main.buttons.login' | translate }}" ng-click="formSubmits.signin()"  ng-disabled="login.$invalid" />
             </form>
 
             <form ng-if="isActive('remind')" name="remind">
-                <input type="text" placeholder="Введите ваш Email" required="required" ng-model="settings.loginForms.remind.email"/>
-                <input type="submit" ng-click="formSubmits.remind()" value="Напомнить пароль"  ng-disabled="remind.$invalid" />
+                <input type="text" placeholder="{{ 'placeholders.main.email' | translate }}" required="required" ng-model="settings.loginForms.remind.email"/>
+                <input type="submit" ng-click="formSubmits.remind()" value="{{ 'page.main.buttons.remind' | translate }}"  ng-disabled="remind.$invalid" />
 
                 <div class="info-links">
-                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#" ng-bind="'page.main.policy' | translate"></a>
                 </div>
             </form>
         </footer>

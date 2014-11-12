@@ -1,4 +1,4 @@
-<div id="change-password-popup" class="popup">
+<div id="change-password-popup" class="popup"  ng-show="methods.isPopupOpened('change-password-popup')">
     <div class="controls">
         <a ng-click="methods.closePopup()" class="close"><span class="gallery-controls-close"></span></a>
     </div>

@@ -72,16 +72,20 @@ class UserController extends \BaseController {
         $user = User::with('contacts')->find($id);
 
         $user->image = Input::get('image');
-        if ( is_null($user->contacts) ){
-            $user->contacts = new Contact();
-        }
 
-        $user->contacts->name = Input::get('contacts.name');
-        $user->contacts->surname = Input::get('contacts.surname');
-        $user->contacts->phone = Input::get('contacts.phone');
-        $user->contacts->web = Input::get('contacts.web');
-        $user->contacts->city = Input::get('contacts.city');
-        $user->contacts->save();
+        if ( empty($user->contacts) ){
+            $contacts = new Contact(Input::get('contacts'));
+        } else {
+            $user->contacts->name = Input::get('contacts.name');
+            $user->contacts->surname = Input::get('contacts.surname');
+            $user->contacts->phone = Input::get('contacts.phone');
+            $user->contacts->web = Input::get('contacts.web');
+            $user->contacts->city = Input::get('contacts.city');
+            $contacts = $user->contacts;
+        }
+        $contacts->save();
+
+        $user->contacts()->associate($contacts);
         $user->save();
 
 	}

@@ -14,7 +14,7 @@ class ImproveUsers extends Migration {
 	{
         Schema::table('users', function($table)
         {
-            $table->boolean('is_admin')->default(false);
+            $table->boolean('is_admin')->default(0);
 
         });
 	}

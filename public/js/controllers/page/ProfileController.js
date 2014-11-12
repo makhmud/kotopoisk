@@ -9,7 +9,7 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter) {
         testChunks:false
     }
 
-    $scope.page.title = 'Profile';
+    $scope.page.title = $filter('translate')('page.profile.title');
     $scope.page.bodyClasses = 'page--profile';
     $scope.page.isMain = false;
 
@@ -30,6 +30,8 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter) {
                         newPassRepeat:''
                     };
                     $scope.methods.closePopup();
+                } else {
+                    $scope.notificate($filter('translate')('notification.wrong_pass'));
                 }
 
 

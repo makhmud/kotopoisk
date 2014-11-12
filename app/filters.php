@@ -76,6 +76,13 @@ Route::filter('auth.token', function()
     }
 });
 
+Route::filter('auth.admin', function()
+{
+    if (!Auth::check() || Auth::user()->is_admin != 1){
+        return Redirect::to('/admin/login');
+    }
+});
+
 /*
 |--------------------------------------------------------------------------
 | Guest Filter

@@ -1,4 +1,4 @@
-app.controller('AddCatCtrl', function($scope, Cat, AddressService, $timeout, $cookies) {
+app.controller('AddCatCtrl', function($scope, Cat, AddressService, $timeout, $cookies, $location) {
 
     console.log('In AddCat Controller');
 
@@ -28,7 +28,9 @@ app.controller('AddCatCtrl', function($scope, Cat, AddressService, $timeout, $co
 
     $scope.saveCat = function() {
         $scope.newCat.$save().then( function(response){
-            console.log(response);
+            if (response.success) {
+                $location.path('/feed');
+            }
         });
     }
 

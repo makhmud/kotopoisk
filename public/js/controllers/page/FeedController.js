@@ -18,7 +18,7 @@ app.controller('FeedCtrl', function($scope, $filter, Cat) {
     $scope.settings.catsOrder = null;
     $scope.settings.popupState.showControls = true;
 
-    $scope.page.title = 'Feed';
+    $scope.page.title = $filter('translate')('page.feed.title');
     $scope.page.isMain = false;
     $scope.page.bodyClasses = 'page--feed';
     $scope.page.search = false;

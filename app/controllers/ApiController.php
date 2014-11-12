@@ -40,12 +40,14 @@ class ApiController extends BaseController {
 
     public function getUserPic() {
 
-        $destination =  public_path() . DIRECTORY_SEPARATOR . 'user' . DIRECTORY_SEPARATOR . 'blured-' . Input::get('destination');
+        $bluredPrefix = !Input::has('notBlured') ? 'blured-' : '';
+
+        $destination =  public_path() . DIRECTORY_SEPARATOR . 'user' . DIRECTORY_SEPARATOR . $bluredPrefix . Input::get('destination');
 
         if (!file_exists($destination)) {
             $destination = Input::get('destination');
             $parts = explode(DIRECTORY_SEPARATOR, $destination);
-            $parts[count($parts)-1] = 'blured-' . $parts[count($parts)-1];
+            $parts[count($parts)-1] = $bluredPrefix . $parts[count($parts)-1];
             $destination = implode(DIRECTORY_SEPARATOR, $parts);
         }
 

@@ -16,6 +16,9 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+
+Route::controller('/admin', 'AdminController');
+
 Route::group( array('prefix'=>'/pages/', 'before' => 'ajax'), function()
 {
 

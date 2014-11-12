@@ -18,23 +18,20 @@
                 <input type="search" class="search-icon" ng-model="search" placeholder="Поиск..."/>
                 <input type="submit" class="search-icon" ng-click="find(search)" ng-disabled="search==''" value=""/>
             </form>
-            <a href="/add-cat" class="add-cat">+ Добавить котэ</a>
+            <a href="/add-cat" class="add-cat" ng-bind="'menu.add_cat' | translate "></a>
 
             <nav>
-                <a href="/feed" class="icon-feed">Лента</a>
-                <a href="/map" class="icon-map">Карта</a>
-                <a href="/profile" class="icon-profile" ng-if="settings.auth">Профиль</a>
-                <a href="/about" class="icon-about">О проекте</a>
+                <a href="/feed" class="icon-feed" ng-bind="'page.feed.title' | translate "></a>
+                <a href="/map" class="icon-map" ng-bind="'page.map.title' | translate "></a>
+                <a href="/profile" class="icon-profile" ng-if="settings.auth" ng-bind="'page.profile.title' | translate "></a>
+                <a href="/about" class="icon-about" ng-bind="'page.about.title' | translate "></a>
             </nav>
             <a href="/" class="signin" ng-if="!settings.auth" ng-bind="'menu.in' | translate"></a>
             <a ng-click="logout()" class="signin" ng-if="settings.auth" ng-bind="'menu.out' | translate"></a>
         </div>
     </div>
-    <div class="notification" ng-if="notification!=''" ng-click="notificate('')">
-       <span ng-bind="notification"></span>
-    </div>
     <header class="clearfix" ng-if="page.isMain">
-        <div class="member-counter"><span><span ng-bind="page.userCount"></span> участников</span></div>
+        <div class="member-counter"><span><span ng-bind="page.userCount"></span> <span ng-bind="'page.main.participants' | translate"></span></span></div>
         <nav class="language-switch">
             <ul>
                 <li><a ng-click="changeLocale('ru')" ng-class="{active : isLocale('ru') }">Рус</a></li>
@@ -45,10 +42,13 @@
     </header>
 
     <header class="wrapper clearfix" ng-if="!page.isMain">
-        <a href="#" class="menu-button" ng-click="methods.toggleSideMenu()">Меню</a>
+        <a href="#" class="menu-button" ng-click="methods.toggleSideMenu()" ng-bind="'menu.name' | translate "></a>
 
         <div class="member-counter ta-right"><span ng-bind="page.userCount"></span></div>
     </header>
+    <div class="notification" ng-if="notification!=''" ng-click="notificate('')">
+        <span ng-bind="notification"></span>
+    </div>
 
     <div class="main wrapper clearfix">
         <h1 ng-bind="page.title"  ng-if="!page.isMain"></h1>
@@ -63,7 +63,7 @@
     <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <script src="/js/lib/jquery/jquery.js"></script>
-    <script src="/js/lib/jquery.formstyler/jquery.formstyler.js"></script>
+    <script src="/js/lib/jquery.formstyler/jquery.formstyler.min.js"></script>
 
     <!--Angular primary libs-->
     <script src="/js/lib/angular/angular.min.js"></script>

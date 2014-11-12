@@ -25,4 +25,16 @@ class LanguageRepository {
         return $returnArray;
     }
 
+    public function getFormattedList () {
+        $translations = \Translation::all();
+
+        $formatted = [];
+
+        foreach($translations as $item) {
+            $formatted[$item->key][] = ['lng' => $item->lng, 'value' => $item->value];
+        }
+
+        return $formatted;
+    }
+
 } 

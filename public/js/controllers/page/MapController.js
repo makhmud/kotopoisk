@@ -1,20 +1,22 @@
-app.controller('MapCtrl', function($scope, $resource, Cat) {
+app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
 
     console.log('In Map Controller');
 
-    $scope.page.title = 'Map';
+    $scope.page.title = $filter('translate')('page.map.title');
     $scope.page.bodyClasses = 'page--map';
     $scope.page.isMain = false;
 
-    var currentPosition = 0;
-
-    $scope.ids.first = null;
-    $scope.ids.last = null;
-    $scope.data.cats = [];
-    $scope.settings.lockDelayLoad = false;
     $scope.settings.popupState.showControls = false;
 
-    $scope.catsLoad(currentPosition);
+    console.log($scope.data.cats.length);
+
+    if ($scope.data.cats.length == 0) {
+        $scope.ids.first = null;
+        $scope.ids.last = null;
+        $scope.settings.lockDelayLoad = false;
+        $scope.catsLoad(0);
+    }
+    //
 
     $scope.parseCatToMarker = function(cat) {
         return '<div class="map-info '+(($scope.settings.map.zoom<7)?'ng-hide':'')+'" > \
@@ -29,6 +31,4 @@ app.controller('MapCtrl', function($scope, $resource, Cat) {
                 </div> \
             </div>';
     }
-
-    $scope.catsLoad(0);
 });

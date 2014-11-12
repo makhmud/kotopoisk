@@ -37,7 +37,7 @@ class UserTableSeeder extends Seeder {
         foreach ($contactsIds as $contactsId){
             User::insert(
                 array(
-                    array('email' => Str::random(10).'@mail.com', 'password'=>Hash::make('123123'), 'is_admin'=>true, 'id_contacts' => $contactsId),
+                    array('email' => Str::random(10).'@mail.com', 'password'=>Hash::make('123123'), 'is_admin'=>false, 'id_contacts' => $contactsId),
                 ));
             $userIds[] = DB::getPdo()->lastInsertId();
         }
@@ -73,82 +73,30 @@ class UserTableSeeder extends Seeder {
             ));
         }
 
-        DB::table('translations')->delete();
-
-        Translation::insert([
-            [
-                'lng' => 'en',
-                'key' => 'page.about.title',
-                'value' => 'About project'
-            ],
-            [
-                'lng' => 'ru',
-                'key' => 'page.about.title',
-                'value' => 'О проекте'
-            ],
-            [
-                'lng' => 'en',
-                'key' => 'menu.in',
-                'value' => 'Enter'
-            ],
-            [
-                'lng' => 'ru',
-                'key' => 'menu.in',
-                'value' => 'Войти'
-            ],
-            [
-                'lng' => 'en',
-                'key' => 'menu.out',
-                'value' => 'Exit'
-            ],
-            [
-                'lng' => 'ru',
-                'key' => 'menu.out',
-                'value' => 'Выйти'
-            ],
-            [
-                'lng' => 'en',
-                'key' => 'notification.register',
-                'value' => 'Almost done.'
-            ],
-            [
-                'lng' => 'ru',
-                'key' => 'notification.register',
-                'value' => 'Почти все. Для завершения регистрации
-проверьте свою почту. Для входа на сайт,
-введите ваш e-mail и пароль здесь'
-            ],
-            [
-                'lng' => 'en',
-                'key' => 'notification.register.already_exists',
-                'value' => 'User already in database.'
-            ],
-            [
-                'lng' => 'ru',
-                'key' => 'notification.register.already_exists',
-                'value' => 'Пользователь уже существует.'
-            ],
-            [
-                'lng' => 'en',
-                'key' => 'notification.register.wrong_credentials',
-                'value' => 'Wrong E-mail or passwrod.'
-            ],
-            [
-                'lng' => 'ru',
-                'key' => 'notification.register.wrong_credentials',
-                'value' => 'Неверный E-mail или пароль.'
-            ],
-            [
-                'lng' => 'en',
-                'key' => 'notification.remind',
-                'value' => 'New rassword sent on your e-mail.'
-            ],
-            [
-                'lng' => 'ru',
-                'key' => 'notification.remind',
-                'value' => 'Новый пароль отправлен на Ваш e-mail.'
-            ]
-        ]);
+//        DB::table('translations')->delete();
+//
+//        Translation::insert([
+//            [ 'lng' => 'en', 'key' => 'page.about.title', 'value' => 'About project' ],
+//            [ 'lng' => 'ru', 'key' => 'page.about.title', 'value' => 'О проекте' ],
+//            [ 'lng' => 'en', 'key' => 'menu.in', 'value' => 'Enter' ],
+//            [ 'lng' => 'ru', 'key' => 'menu.in', 'value' => 'Войти'  ],
+//            [ 'lng' => 'en', 'key' => 'menu.out',  'value' => 'Exit' ],
+//            [ 'lng' => 'ru', 'key' => 'menu.out', 'value' => 'Выйти' ],
+//            ['lng' => 'en', 'key' => 'notification.register', 'value' => 'Almost done.' ],
+//            ['lng' => 'ru', 'key' => 'notification.register', 'value' => 'Почти все. Для завершения регистрации
+//проверьте свою почту. Для входа на сайт,
+//введите ваш e-mail и пароль здесь' ],
+//            [  'lng' => 'en', 'key' => 'notification.register.already_exists', 'value' => 'User already in database.' ],
+//            [ 'lng' => 'ru', 'key' => 'notification.register.already_exists', 'value' => 'Пользователь уже существует.' ],
+//            [ 'lng' => 'en', 'key' => 'notification.register.wrong_credentials', 'value' => 'Wrong E-mail or passwrod.' ],
+//            [ 'lng' => 'ru', 'key' => 'notification.register.wrong_credentials', 'value' => 'Неверный E-mail или пароль.' ],
+//            [ 'lng' => 'en', 'key' => 'notification.remind', 'value' => 'New rassword sent on your e-mail.' ],
+//            [  'lng' => 'ru', 'key' => 'notification.remind',  'value' => 'Новый пароль отправлен на Ваш e-mail.' ],
+//            [  'lng' => 'ru', 'key' => 'notification.pass_changed',  'value' => 'Пароль изменен.' ],
+//            [  'lng' => 'en', 'key' => 'notification.pass_changed',  'value' => 'Password changed.' ],
+//            [  'lng' => 'en', 'key' => 'notification.wrong_pass',  'value' => 'Wrong password.' ],
+//            [  'lng' => 'ru', 'key' => 'notification.wrong_pass',  'value' => 'Неверный пароль.' ],
+//        ]);
 
     }
 
