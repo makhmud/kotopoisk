@@ -1568,53 +1568,58 @@ main h3 {
 }
 /* line 769, ../compass/scss/_content.scss */
 #overlay .popup .controls .close {
-  display: none;
+  display: inline-block;
+  top: -40px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  right: 90px;
 }
-/* line 774, ../compass/scss/_content.scss */
+/* line 779, ../compass/scss/_content.scss */
 #overlay .popup .content {
   margin: auto;
   width: 540px;
   background-color: #ffffff;
   text-align: left;
 }
-/* line 781, ../compass/scss/_content.scss */
+/* line 786, ../compass/scss/_content.scss */
 #overlay .popup .content .text-panel {
   padding: 12px;
 }
-/* line 783, ../compass/scss/_content.scss */
+/* line 788, ../compass/scss/_content.scss */
 #overlay .popup .content .text-panel * {
   margin-bottom: 6px;
 }
-/* line 785, ../compass/scss/_content.scss */
+/* line 790, ../compass/scss/_content.scss */
 #overlay .popup .content .text-panel *:last-child {
   margin-bottom: 0;
 }
-/* line 791, ../compass/scss/_content.scss */
+/* line 796, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel {
   height: 300px;
   overflow: hidden;
   position: relative;
 }
-/* line 795, ../compass/scss/_content.scss */
+/* line 800, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel a {
   text-decoration: none;
   color: #ffffff;
 }
-/* line 799, ../compass/scss/_content.scss */
+/* line 804, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div {
   position: absolute;
 }
-/* line 801, ../compass/scss/_content.scss */
+/* line 806, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.likes span {
   vertical-align: middle;
   margin: 0 6px;
 }
-/* line 806, ../compass/scss/_content.scss */
+/* line 811, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.likes {
   top: 0;
   right: 0;
 }
-/* line 811, ../compass/scss/_content.scss */
+/* line 816, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.line {
   bottom: 0;
   height: 50px;
@@ -1622,33 +1627,33 @@ main h3 {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
 }
-/* line 817, ../compass/scss/_content.scss */
+/* line 822, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.line * {
   vertical-align: middle;
   margin: 0 6px;
 }
-/* line 821, ../compass/scss/_content.scss */
+/* line 826, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.line div {
   display: inline-block;
 }
-/* line 825, ../compass/scss/_content.scss */
+/* line 830, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.line .like {
   float: right;
 }
-/* line 831, ../compass/scss/_content.scss */
+/* line 836, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel img {
   width: 100%;
 }
-/* line 836, ../compass/scss/_content.scss */
+/* line 841, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview {
   overflow: hidden;
   width: 100%;
 }
-/* line 839, ../compass/scss/_content.scss */
+/* line 844, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview ul {
   width: 20000em;
 }
-/* line 841, ../compass/scss/_content.scss */
+/* line 846, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview ul li {
   text-align: center;
   display: inline-block;
@@ -1656,45 +1661,45 @@ main h3 {
   margin-right: 10px;
   opacity: .5;
 }
-/* line 848, ../compass/scss/_content.scss */
+/* line 853, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview ul li:hover {
   opacity: 1;
 }
-/* line 851, ../compass/scss/_content.scss */
+/* line 856, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview ul li img {
   max-width: 116px;
   max-height: 75px;
   width: auto;
   height: auto;
 }
-/* line 861, ../compass/scss/_content.scss */
+/* line 866, ../compass/scss/_content.scss */
 #overlay .popup .content time {
   font-size: 15px;
   font-weight: bold;
 }
-/* line 865, ../compass/scss/_content.scss */
+/* line 870, ../compass/scss/_content.scss */
 #overlay .popup .content .body, #overlay .popup .content .contacts {
   font-size: 18px;
   line-height: 1.5;
 }
-/* line 869, ../compass/scss/_content.scss */
+/* line 874, ../compass/scss/_content.scss */
 #overlay .popup .content .social {
   text-align: center;
 }
-/* line 873, ../compass/scss/_content.scss */
+/* line 878, ../compass/scss/_content.scss */
 #overlay .popup#cat-item-popup {
   width: 720px;
 }
-/* line 878, ../compass/scss/_content.scss */
+/* line 883, ../compass/scss/_content.scss */
 #overlay .popup#change-password-popup {
   padding-top: 40px;
   width: 634px;
 }
-/* line 882, ../compass/scss/_content.scss */
+/* line 887, ../compass/scss/_content.scss */
 #overlay .popup#change-password-popup .content {
   padding: 45px 48px 0;
 }
-/* line 886, ../compass/scss/_content.scss */
+/* line 891, ../compass/scss/_content.scss */
 #overlay .popup#change-password-popup .controls .close {
   display: inline-block;
   right: 0;
@@ -1704,7 +1709,7 @@ main h3 {
   line-height: 35px;
 }
 
-/* line 899, ../compass/scss/_content.scss */
+/* line 904, ../compass/scss/_content.scss */
 [class^="gallery-controls-"] {
   width: 17px;
   height: 28px;
@@ -1714,17 +1719,17 @@ main h3 {
   background-size: 34px 28px;
 }
 
-/* line 907, ../compass/scss/_content.scss */
+/* line 912, ../compass/scss/_content.scss */
 [class^="gallery-controls-"]:hover, *:hover > [class^="gallery-controls-"] {
   opacity: .5;
 }
 
-/* line 910, ../compass/scss/_content.scss */
+/* line 915, ../compass/scss/_content.scss */
 .gallery-controls-next {
   background-position: -17px 0;
 }
 
-/* line 913, ../compass/scss/_content.scss */
+/* line 918, ../compass/scss/_content.scss */
 .gallery-controls-close {
   width: 28px;
   height: 28px;
@@ -1734,7 +1739,7 @@ main h3 {
   display: none;
 }
 
-/* line 922, ../compass/scss/_content.scss */
+/* line 927, ../compass/scss/_content.scss */
 .main-switch {
   text-transform: uppercase;
   border-bottom: 2px solid #d5d5d5;
@@ -1742,7 +1747,7 @@ main h3 {
   margin: auto;
   margin-bottom: 10px;
 }
-/* line 929, ../compass/scss/_content.scss */
+/* line 934, ../compass/scss/_content.scss */
 .main-switch a {
   color: #d5d5d5;
   text-decoration: none;
@@ -1751,11 +1756,11 @@ main h3 {
   margin-right: 10px;
   padding-bottom: 6px;
 }
-/* line 937, ../compass/scss/_content.scss */
+/* line 942, ../compass/scss/_content.scss */
 .main-switch a:last-child {
   margin-right: 0;
 }
-/* line 941, ../compass/scss/_content.scss */
+/* line 946, ../compass/scss/_content.scss */
 .main-switch a:after {
   content: '';
   display: inline-block;
@@ -1768,34 +1773,34 @@ main h3 {
   left: calc( 50% - 7px );
   border-radius: 5px;
 }
-/* line 954, ../compass/scss/_content.scss */
+/* line 959, ../compass/scss/_content.scss */
 .main-switch a.active {
   color: #f6c34f;
   border-bottom: 2px solid #f6c34f;
   margin-bottom: -2px;
 }
-/* line 959, ../compass/scss/_content.scss */
+/* line 964, ../compass/scss/_content.scss */
 .main-switch a.active:after {
   border-color: #f6c34f;
   background-color: #ffffff;
 }
 
-/* line 967, ../compass/scss/_content.scss */
+/* line 972, ../compass/scss/_content.scss */
 #map-wrap {
   position: relative;
 }
 
-/* line 970, ../compass/scss/_content.scss */
+/* line 975, ../compass/scss/_content.scss */
 #map {
   height: 1100px;
 }
 
-/* line 974, ../compass/scss/_content.scss */
+/* line 979, ../compass/scss/_content.scss */
 .map-info {
   width: 390px;
   text-align: left;
 }
-/* line 978, ../compass/scss/_content.scss */
+/* line 983, ../compass/scss/_content.scss */
 .map-info .image {
   width: 56px;
   height: 56px;
@@ -1805,12 +1810,12 @@ main h3 {
   margin-top: 10px;
   position: relative;
 }
-/* line 987, ../compass/scss/_content.scss */
+/* line 992, ../compass/scss/_content.scss */
 .map-info .image img {
   width: 56px;
   height: 56px;
 }
-/* line 993, ../compass/scss/_content.scss */
+/* line 998, ../compass/scss/_content.scss */
 .map-info .info {
   display: inline-block;
   padding: 10px 10px 10px 44px;
@@ -1821,29 +1826,29 @@ main h3 {
   box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
 }
-/* line 1004, ../compass/scss/_content.scss */
+/* line 1009, ../compass/scss/_content.scss */
 .map-info .info .name {
   height: 24px;
 }
-/* line 1008, ../compass/scss/_content.scss */
+/* line 1013, ../compass/scss/_content.scss */
 .map-info .info .line > * {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 1013, ../compass/scss/_content.scss */
+/* line 1018, ../compass/scss/_content.scss */
 .map-info .info time {
   margin-right: 10px;
 }
-/* line 1016, ../compass/scss/_content.scss */
+/* line 1021, ../compass/scss/_content.scss */
 .map-info .info .refresh {
   margin-right: 8px;
 }
-/* line 1020, ../compass/scss/_content.scss */
+/* line 1025, ../compass/scss/_content.scss */
 .map-info .info span {
   vertical-align: middle;
 }
 
-/* line 1027, ../compass/scss/_content.scss */
+/* line 1032, ../compass/scss/_content.scss */
 #short-cat-item-wrap {
   position: absolute;
   z-index: 100;
@@ -1852,7 +1857,7 @@ main h3 {
   display: none;
 }
 
-/* line 1034, ../compass/scss/_content.scss */
+/* line 1039, ../compass/scss/_content.scss */
 #short-cat-item {
   background-color: rgba(0, 0, 0, 0.7);
   width: 850px;
@@ -1863,45 +1868,45 @@ main h3 {
   font-size: 18px;
   line-height: 1.5;
 }
-/* line 1044, ../compass/scss/_content.scss */
+/* line 1049, ../compass/scss/_content.scss */
 #short-cat-item .name {
   color: #f6c34f;
   font-size: 30px;
 }
-/* line 1049, ../compass/scss/_content.scss */
+/* line 1054, ../compass/scss/_content.scss */
 #short-cat-item .image {
   position: relative;
   float: left;
   margin-right: 10px;
 }
-/* line 1053, ../compass/scss/_content.scss */
+/* line 1058, ../compass/scss/_content.scss */
 #short-cat-item .image .line {
   width: 100%;
   text-align: center;
   position: absolute;
   bottom: 0;
 }
-/* line 1058, ../compass/scss/_content.scss */
+/* line 1063, ../compass/scss/_content.scss */
 #short-cat-item .image .line > div {
   display: inline-block;
   margin: 0 10px;
 }
-/* line 1061, ../compass/scss/_content.scss */
+/* line 1066, ../compass/scss/_content.scss */
 #short-cat-item .image .line > div span {
   vertical-align: middle;
 }
-/* line 1067, ../compass/scss/_content.scss */
+/* line 1072, ../compass/scss/_content.scss */
 #short-cat-item .image img {
   width: 233px;
   height: 183px;
 }
 
-/* line 1074, ../compass/scss/_content.scss */
+/* line 1079, ../compass/scss/_content.scss */
 .page--map h1 {
   line-height: 1;
 }
 
-/* line 1078, ../compass/scss/_content.scss */
+/* line 1083, ../compass/scss/_content.scss */
 .angular-google-map-container {
   height: 1100px;
 }

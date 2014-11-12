@@ -16,6 +16,7 @@ app.controller('FeedCtrl', function($scope, $filter, Cat) {
      * @type {null}
      */
     $scope.settings.catsOrder = null;
+    $scope.settings.popupState.showControls = true;
 
     $scope.page.title = 'Feed';
     $scope.page.isMain = false;

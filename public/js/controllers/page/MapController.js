@@ -12,6 +12,7 @@ app.controller('MapCtrl', function($scope, $resource, Cat) {
     $scope.ids.last = null;
     $scope.data.cats = [];
     $scope.settings.lockDelayLoad = false;
+    $scope.settings.popupState.showControls = false;
 
     $scope.catsLoad(currentPosition);
 

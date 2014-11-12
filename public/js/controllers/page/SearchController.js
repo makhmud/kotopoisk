@@ -14,6 +14,7 @@ app.controller('SearchCtrl', function($scope, $routeParams) {
     $scope.page.search = true;
 
     $scope.searchString = $routeParams.find;
+    $scope.settings.popupState.showControls = true;
 
     $scope.ids.first = null;
     $scope.ids.last = null;

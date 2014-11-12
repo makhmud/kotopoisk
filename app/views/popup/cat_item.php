@@ -1,8 +1,8 @@
 <div id="cat-item-popup" class="popup" ng-show="methods.isPopupOpened('cat-item')">
     <div class="controls">
         <a href="#" class="close" ng-click="settings.popupId = null"><span class="gallery-controls-close"></span></a>
-        <a href="#" class="prev" ng-hide="settings.popupState.isFirst()" ng-click="settings.popupState.prev()"><span class="gallery-controls-prev"></span></a>
-        <a href="#" class="next" ng-hide="settings.popupState.isLast()" ng-click="settings.popupState.next()"><span class="gallery-controls-next"></span></a>
+        <a href="#" class="prev" ng-hide="settings.popupState.isFirst()" ng-if="settings.popupState.showControls" ng-click="settings.popupState.prev()"><span class="gallery-controls-prev"></span></a>
+        <a href="#" class="next" ng-hide="settings.popupState.isLast()" ng-if="settings.popupState.showControls" ng-click="settings.popupState.next()"><span class="gallery-controls-next"></span></a>
     </div>
     <div class="content">
         <div class="image-panel">

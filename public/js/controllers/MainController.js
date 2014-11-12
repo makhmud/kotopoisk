@@ -283,7 +283,9 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
             var prevCatId = $scope.data.cats[$scope.data.cats.indexOf(currentCat) - 1].id;
 
             $scope.showCat(prevCatId);
-        }
+        },
+
+        showControls: true
     }
 
     /**

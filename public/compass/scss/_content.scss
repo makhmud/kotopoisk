@@ -767,7 +767,12 @@ $list: adam john wynn mason kuroir;
         right: 0;
       }
       .close{
-        display: none;
+        display: inline-block;
+        top: -40px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        right: 90px;
       }
     }
 
