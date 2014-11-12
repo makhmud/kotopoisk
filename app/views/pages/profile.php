@@ -1,5 +1,5 @@
 <div id="profile-menu">
-    <a href="#" id="password-change-link"><span class="profile-icon-1"></span>
+    <a ng-click="methods.showPopup('change-password-popup')" id="password-change-link"><span class="profile-icon-1"></span>
 
         <div class="text">Сменить пароль</div>
     </a>

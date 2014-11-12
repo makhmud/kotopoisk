@@ -13,7 +13,7 @@
                     <a href="#" ng-click="mapView(data.currentCat.position)"><span class="gallery-item-icon-2"></span><span class="text" >Посмотреть на карте</span></a>
                 </div>
                 <div class="like">
-                    <a href="#"><span class="gallery-item-icon-1"></span><span class="text">Мне нравится</span></a>
+                    <a ng-click="like(data.currentCat.id)"><span class="gallery-item-icon-1"></span><span class="text">Мне нравится</span></a>
                 </div>
             </div>
         </div>

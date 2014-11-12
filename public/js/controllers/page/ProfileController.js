@@ -1,4 +1,4 @@
-app.controller('ProfileCtrl', function($scope, User, $cookies) {
+app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter) {
 
     $('select').styler();
 
@@ -12,6 +12,32 @@ app.controller('ProfileCtrl', function($scope, User, $cookies) {
     $scope.page.title = 'Profile';
     $scope.page.bodyClasses = 'page--profile';
     $scope.page.isMain = false;
+
+    $scope.changePassForm = {
+        data : {
+            oldPass:'',
+            newPass:'',
+            newPassRepeat:''
+        },
+        submit: function() {
+            $scope.changePassForm.data.auth_token = $cookies.auth_token;
+            $http.post('/api/auth/change-pass', $scope.changePassForm.data).success(function(response) {
+                if(response.success){
+                    $scope.notificate($filter('translate')('notification.pass_changed'));
+                    $scope.changePassForm.data = {
+                        oldPass:'',
+                        newPass:'',
+                        newPassRepeat:''
+                    };
+                    $scope.methods.closePopup();
+                }
+
+
+            }).error(function(response) {
+                $scope.notificate($filter('translate')('notification.wrong_pass'));
+            });
+        }
+    }
 
     $scope.user = {};
 

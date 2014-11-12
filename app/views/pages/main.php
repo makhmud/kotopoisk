@@ -34,8 +34,8 @@
             </form>
 
             <form ng-if="isActive('remind')" name="remind">
-                <input type="text" placeholder="Введите ваш Email" ng-model="settings.loginForms.remind.email"/>
-                <input type="submit" value="Напомнить пароль"  ng-disabled="remind.$invalid" />
+                <input type="text" placeholder="Введите ваш Email" required="required" ng-model="settings.loginForms.remind.email"/>
+                <input type="submit" ng-click="formSubmits.remind()" value="Напомнить пароль"  ng-disabled="remind.$invalid" />
 
                 <div class="info-links">
                     <a href="#">Политика конфиденциальности</a>

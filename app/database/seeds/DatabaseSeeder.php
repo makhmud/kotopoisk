@@ -137,6 +137,16 @@ class UserTableSeeder extends Seeder {
                 'lng' => 'ru',
                 'key' => 'notification.register.wrong_credentials',
                 'value' => 'Неверный E-mail или пароль.'
+            ],
+            [
+                'lng' => 'en',
+                'key' => 'notification.remind',
+                'value' => 'New rassword sent on your e-mail.'
+            ],
+            [
+                'lng' => 'ru',
+                'key' => 'notification.remind',
+                'value' => 'Новый пароль отправлен на Ваш e-mail.'
             ]
         ]);
 

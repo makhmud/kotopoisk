@@ -24,7 +24,7 @@ app.controller('SearchCtrl', function($scope, $routeParams) {
      * @type {number}
      */
     var currentPosition = 0;
-    $scope.catsLoad(currentPosition, $routeParams.find)
+    $scope.catsLoad(currentPosition, $routeParams.find);
 
     /**
      * Live scroll load

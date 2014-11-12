@@ -6,6 +6,15 @@ app.controller('MapCtrl', function($scope, $resource, Cat) {
     $scope.page.bodyClasses = 'page--map';
     $scope.page.isMain = false;
 
+    var currentPosition = 0;
+
+    $scope.ids.first = null;
+    $scope.ids.last = null;
+    $scope.data.cats = [];
+    $scope.settings.lockDelayLoad = false;
+
+    $scope.catsLoad(currentPosition);
+
     $scope.parseCatToMarker = function(cat) {
         return '<div class="map-info '+(($scope.settings.map.zoom<7)?'ng-hide':'')+'" > \
                 <div class="image"><img src="/user/small_'+cat.path+'" alt=""/></div> \

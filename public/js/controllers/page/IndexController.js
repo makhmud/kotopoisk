@@ -66,6 +66,15 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route,
             }).error(function(response) {
                 $scope.notificate($filter('translate')('notification.register.already_exists'));
             });
+        },
+
+        remind : function() {
+            $http.post('/api/auth/remind', $scope.settings.loginForms.remind).success(function(response) {
+                $scope.notificate($filter('translate')('notification.remind'));
+                $scope.settings.loginForms.remind.email = '';
+            }).error(function(response) {
+                $scope.notificate($filter('translate')('notification.register.already_exists'));
+            });
         }
 
     }

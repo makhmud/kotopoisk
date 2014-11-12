@@ -31,6 +31,8 @@ Route::group(array('prefix' => '/api/', 'before' => 'ajax' ), function() {
 
     Route::resource('language', 'LanguageController');
 
+    Route::controller('auth', 'AuthController');
+
     Route::group(array('before' => array('auth.token') ), function() {
 
         Route::resource('user', 'UserController');
@@ -39,6 +41,7 @@ Route::group(array('prefix' => '/api/', 'before' => 'ajax' ), function() {
         Route::post('language', 'LanguageController@store');
         Route::put('language', 'LanguageController@update');
         Route::any('upload', 'ApiController@upload');
+        Route::post('auth/change-pass', 'AuthController@changePass');
 
     });
 
@@ -46,7 +49,7 @@ Route::group(array('prefix' => '/api/', 'before' => 'ajax' ), function() {
 
     Route::any('getUserPic', 'ApiController@getUserPic');
 
-    Route::controller('auth', 'AuthController');
+
 });
 
 App::missing(function($exception)

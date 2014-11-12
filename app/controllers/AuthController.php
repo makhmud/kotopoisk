@@ -61,6 +61,57 @@ class AuthController extends \BaseController {
         ));
     }
 
+    public function postRemind () {
+
+        $email = Input::get('email');
+        $password = Str::random(8);
+
+        $user = User::where('email', '=', $email)->first();
+
+        Log::info(array(
+            'email' => $email,
+            'password' => $password
+        ));
+
+        if ( !is_null($user) ){
+            $user->password = Hash::make($password);
+            $user->save();
+            return Response::answer([]);
+        } else {
+            return Response::answer([], false, 'Not found');
+        }
+    }
+
+    public function postChangePass() {
+
+        $oldPass = Input::get('oldPass');
+        $newPass = Input::get('newPass');
+        $newPassRepeat = Input::get('newPassRepeat');
+
+        if ($newPass != $newPassRepeat) {
+            return Response::answer([], false, 'Not equal new password');
+        } else {
+            $user = User::where('auth_token', '=', Input::get('auth_token') )->first();
+            if (!is_null($user)){
+                if ( Auth::attempt(array( 'email' => $user->email, 'password' => $oldPass )) ){
+
+                    $user->password = Hash::make($newPass);
+                    $user->save();
+
+                    return Response::answer([]);
+                } else {
+                    return Response::answer([], false, 'Wrong password');
+                }
+            } else {
+                return Response::answer([], false, 'Wrong token');
+            }
+        }
+
+
+
+        return Response::answer($user);
+    }
+
     public function postRegister () {
 
         $email = Input::get('email');
