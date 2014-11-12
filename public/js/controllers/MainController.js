@@ -142,6 +142,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
 
         var fullItem = $filter('filter')($scope.data.catsFull,{id:id}, true)[0];
         var success = true;
+        $scope.settings.galleryPreview.position = 0;
 
         if ( typeof(fullItem) != 'undefined' ) {
             $scope.data.currentCat = fullItem;
