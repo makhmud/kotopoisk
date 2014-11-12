@@ -334,4 +334,19 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         $location.path('/search/' + find);
     }
 
+    $scope.settings.galleryPreview = {position : 0};
+
+    $scope.galleryBack = function() {
+        if ($scope.settings.galleryPreview.position + 126 <= 0) {
+            $scope.settings.galleryPreview.position += 126;
+        }
+    }
+
+    $scope.galleryNext = function(max) {
+        console.log(max, $scope.settings.galleryPreview.position);
+        if ($scope.settings.galleryPreview.position >= -(max - 516)) {
+            $scope.settings.galleryPreview.position -= 126;
+        }
+    }
+
 });

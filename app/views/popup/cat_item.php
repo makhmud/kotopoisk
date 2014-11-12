@@ -19,9 +19,15 @@
         </div>
         <div class="text-panel">
             <div class="gallery-preview">
-                <ul>
-                    <li ng-repeat="photo in data.currentCat.photos"><a href="#" ng-click="data.currentCat.current_photo = photo.path"><img src="/user/small_{{photo.path}}" alt=""/></a></li>
+                <ul style="margin-left: {{settings.galleryPreview.position}}px">
+                    <li ng-repeat="photo in data.currentCat.photos">
+                        <a href="#" ng-click="data.currentCat.current_photo = photo.path"><img src="/user/small_{{photo.path}}" alt=""/></a>
+                    </li>
                 </ul>
+                <div class="preview-controls">
+                    <a href="#" ng-mouseover="galleryBack()"></a>
+                    <a href="#" ng-mouseover="galleryNext(data.currentCat.photos.length*120)"></a>
+                </div>
             </div>
             <time>{{data.currentCat.created_at}}</time>
             <div class="body">

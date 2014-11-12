@@ -859,8 +859,10 @@ $list: adam john wynn mason kuroir;
         .gallery-preview{
           overflow: hidden;
           width: 100%;
+          position: relative;
           ul{
             width: 20000em;
+            transition:80ms margin-left linear;
             li{
               text-align: center;
               display: inline-block;
@@ -878,6 +880,21 @@ $list: adam john wynn mason kuroir;
                 height: auto;
               }
             }
+          }
+
+          .preview-controls a{
+            display: inline-block;
+            width: 30px;
+            height: 75px;
+            position: absolute;
+            top: 0;
+            z-index: 100;
+          }
+          .preview-controls a:first-child{
+            left: 0;
+          }
+          .preview-controls a:last-child{
+            right: 0;
           }
         }
 
