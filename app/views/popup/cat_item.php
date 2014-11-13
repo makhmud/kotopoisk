@@ -35,10 +35,10 @@
             </div>
             <div class="contacts"><span class="tbold">Контакты:</span> {{data.currentCat.author.contacts.phone}}</div>
             <div class="social-icons" ng-social-buttons="{counter:false}"
-                 data-url="'{{$host}}/feed'"
+                 data-url="$host + '/feed'"
                  data-title="'Котопоиск'"
-                 data-description="'{{data.currentCat.content}}'"
-                 data-image="'{{$host}}/user/big_{{data.currentCat.current_photo}}'"
+                 data-description="data.currentCat.content"
+                 data-image="$host + '/user/big_' + data.currentCat.current_photo"
                  data-counter="false"
                 >
                 <a href="#" class="ng-social-vk"><span class="social-icon-1"></span></a>
