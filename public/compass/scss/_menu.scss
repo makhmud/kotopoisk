@@ -134,7 +134,7 @@
     outline: none;
 
     &:disabled{
-      background-image: url(../images/search.png);
+      opacity: .5;
     }
   }
 	input[type=search] {
@@ -157,24 +157,24 @@
 		}
 		&::-webkit-input-placeholder {
 			/* WebKit browsers */
-			color: #343434;
+			color: #d7d7d7d;
 		}
 
 		&:-moz-placeholder {
 			/* Mozilla Firefox 4 to 18 */
-			color: #343434;
+			color: #d7d7d7d;
 			opacity: 1;
 		}
 
 		&::-moz-placeholder {
 			/* Mozilla Firefox 19+ */
-			color: #343434;
+			color: #d7d7d7d;
 			opacity: 1;
 		}
 
 		&:-ms-input-placeholder {
 			/* Internet Explorer 10+ */
-			color: #343434;
+			color: #d7d7d7d;
 		}
 
 	}

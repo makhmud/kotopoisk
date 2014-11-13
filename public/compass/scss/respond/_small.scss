@@ -216,6 +216,14 @@
     }
   }
 
+  .side-menu + header a.menu-button{
+    color: rgba(0, 0, 0, 0);
+  }
+
+  .side-menu.open ~ * {
+    left: 283px;
+  }
+
   #overlay{
     .popup{
       padding-top: 40px;

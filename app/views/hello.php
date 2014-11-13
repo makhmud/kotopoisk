@@ -16,7 +16,7 @@
         <div class="element-container">
             <form>
                 <input type="search" class="search-icon" ng-model="search" placeholder="Поиск..."/>
-                <input type="submit" class="search-icon" ng-click="find(search)" ng-disabled="search==''" value=""/>
+                <input type="submit" class="search-icon" ng-click="find(search)" ng-disabled="search.length==0" value=""/>
             </form>
             <a href="/add-cat" class="add-cat" ng-bind="'menu.add_cat' | translate "></a>
 

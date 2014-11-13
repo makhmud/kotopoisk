@@ -212,7 +212,6 @@ app.directive('ngSocialTwitter', function() {
             }
             scope.options = options;
             scope.ctrl = ctrl;
-            console.log(ctrl);
             ctrl.init(scope, element, options);
         }
     }
