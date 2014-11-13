@@ -763,7 +763,7 @@ $list: adam john wynn mason kuroir;
     background-color: rgba(0, 0, 0, .5);
     text-align: center;
     z-index: 1000;
-    top: 20px;
+    top: 0;
     left: 0;
 
     .close-overlay{
@@ -775,7 +775,7 @@ $list: adam john wynn mason kuroir;
     }
 
     .popup{
-      margin: 40px auto;
+      margin: 80px auto;
       position: relative;
       .controls{
         *{

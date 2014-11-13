@@ -1551,7 +1551,7 @@ main h3 {
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   z-index: 1000;
-  top: 20px;
+  top: 0;
   left: 0;
 }
 /* line 769, ../compass/scss/_content.scss */
@@ -1564,7 +1564,7 @@ main h3 {
 }
 /* line 777, ../compass/scss/_content.scss */
 #overlay .popup, #inner-popup .popup {
-  margin: 40px auto;
+  margin: 80px auto;
   position: relative;
 }
 /* line 781, ../compass/scss/_content.scss */
