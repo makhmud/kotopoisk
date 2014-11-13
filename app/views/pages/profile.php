@@ -41,10 +41,10 @@
         </div>
         <div class="form-item" ng-class="{active: user.data.contacts.cats_amount>0}">
             <select name="amount" id="amount" ng-model="user.data.contacts.cats_amount">
-                <option value="0" disabled selected ng-bind="'placeholders.cats_amount' | translate"></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
+                <option value="0" disabled selected >{{'placeholders.cats_amount' | translate}}</option>
+                <option value="1">0</option>
+                <option value="2">1</option>
+                <option value="3">2 и более</option>
             </select>
         </div>
         <input type="submit" value="{{ 'page.profile.ready' | translate }}" ng-disabled="ProfileForm.$invalid" ng-click="saveUser()"/>

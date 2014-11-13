@@ -225,6 +225,14 @@
         .body, .contacts{
           font-size: 9px;
         }
+        .image-panel{
+          > div{
+            &.line{
+              height: 30px;
+              line-height: 30px;
+            }
+          }
+        }
       }
       .controls{
         *{
@@ -335,14 +343,14 @@
     text-align: left;
 
     .image{
-      width: 22px;
-      height: 22px;
-      border-radius: 11px;
+      width: 30px;
+      height: 30px;
+      border-radius: 16px;
       margin-top: 5px;
 
       img{
-        width: 22px;
-        height: 22px;
+        width: 30px;
+        height: 30px;
       }
     }
 
@@ -364,5 +372,13 @@
       }
     }
 
+  }
+
+  .social-icons a{
+    margin-left: 9px;
+  }
+
+  .popup .content time{
+    font-size: 12px;
   }
 }

@@ -60,7 +60,7 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route,
         },
 
         signup : function() {
-            $http.post('/api/auth/register', $scope.settings.loginForms.signup).success(function(response) {
+            $http.post('/api/auth/register', $.extend({}, $scope.settings.loginForms.signup, {lng: $cookies.lng}) ).success(function(response) {
                 $scope.notificate($filter('translate')('notification.register'));
                 $scope.settings.loginForms.signup.email = '';
             }).error(function(response) {
@@ -69,7 +69,7 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route,
         },
 
         remind : function() {
-            $http.post('/api/auth/remind', $scope.settings.loginForms.remind).success(function(response) {
+            $http.post('/api/auth/remind', $.extend({}, $scope.settings.loginForms.remind, {lng: $cookies.lng})).success(function(response) {
                 $scope.notificate($filter('translate')('notification.remind'));
                 $scope.settings.loginForms.remind.email = '';
             }).error(function(response) {

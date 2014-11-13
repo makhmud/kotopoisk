@@ -73,6 +73,14 @@ class AuthController extends \BaseController {
             'password' => $password
         ));
 
+        Mail::send('mails.'.Input::get('lng').'.remind', array(
+            'email' => $email,
+            'password' => $password
+        ), function($message) use ($email)
+        {
+            $message->to($email)->subject('Your login and password');
+        });
+
         if ( !is_null($user) ){
             $user->password = Hash::make($password);
             $user->save();
@@ -127,6 +135,14 @@ class AuthController extends \BaseController {
             'email' => $email,
             'password' => $password
         ));
+
+        Mail::send('mails.'.Input::get('lng').'.register', array(
+            'email' => $email,
+            'password' => $password
+        ), function($message) use ($email)
+        {
+            $message->to($email)->subject('Данные для входа на сайт');
+        });
 
         return Response::answer([]);
     }

@@ -58,4 +58,8 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter) {
         $scope.user.auth_token = $cookies.auth_token;
         User.update({id:1}, $scope.user.data);
     }
+
+    $scope.$watch(function() {
+        $('select').trigger('refresh');
+    })
 });

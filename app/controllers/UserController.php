@@ -81,6 +81,7 @@ class UserController extends \BaseController {
             $user->contacts->phone = Input::get('contacts.phone');
             $user->contacts->web = Input::get('contacts.web');
             $user->contacts->city = Input::get('contacts.city');
+            $user->contacts->cats_amount = Input::get('contacts.cats_amount');
             $contacts = $user->contacts;
         }
         $contacts->save();
