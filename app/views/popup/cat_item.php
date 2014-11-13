@@ -34,12 +34,18 @@
                 {{data.currentCat.content}}
             </div>
             <div class="contacts"><span class="tbold">Контакты:</span> {{data.currentCat.author.contacts.phone}}</div>
-            <div class="social-icons">
-                <a href="#"><span class="social-icon-1"></span></a>
-                <a href="#"><span class="social-icon-2"></span></a>
-                <a href="#"><span class="social-icon-3"></span></a>
-                <a href="#"><span class="social-icon-4"></span></a>
-                <a href="#"><span class="social-icon-5"></span></a>
+            <div class="social-icons" ng-social-buttons="{counter:false}"
+                 data-url="'{{$host}}/feed'"
+                 data-title="'Котопоиск'"
+                 data-description="'{{data.currentCat.content}}'"
+                 data-image="'{{$host}}/user/big_{{data.currentCat.current_photo}}'"
+                 data-counter="false"
+                >
+                <a href="#" class="ng-social-vk"><span class="social-icon-1"></span></a>
+<!--                <a href="#" class="ng-social-facebook"><span class="social-icon-2"></span></a>-->
+                <a href="#" class="ng-social-twitter"><span class="social-icon-3"></span></a>
+<!--                <a href="#" class="ng-social-google-plus"><span class="social-icon-4"></span></a>-->
+                <a href="#" class="ng-social-odnoklassniki"><span class="social-icon-5"></span></a>
             </div>
         </div>
 

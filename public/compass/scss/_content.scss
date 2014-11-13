@@ -208,10 +208,21 @@ main {
 	width: 100%;
 }
 
+
 .social-icons {
 	display: inline-block;
 	margin-top: 25px;
 	margin-bottom: 50px;
+  text-align: center;
+    ul{
+      display: inline-block;
+      li{
+        display: inline-block;
+        .ng-social-counter{
+          display: none;
+        }
+      }
+    }
 	a {
 		width: em(68px);
 		height: em(68px);
@@ -236,6 +247,10 @@ main {
 			}
 		}
 	}
+}
+
+.text-panel .social-icons{
+  display: block;
 }
 
 #add-cat {

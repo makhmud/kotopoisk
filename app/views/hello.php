@@ -78,6 +78,7 @@
     <script src="/js/lib/ng-flow/dist/ng-flow.min.js"></script>
     <script src="/js/lib/angular-translate/angular-translate.min.js"></script>
     <script src="/js/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="/js/lib/angular-social/angular-social.src.js"></script>
     <!--End Angular secondary libs-->
 
     <!--GMap Directive with dependencies-->
