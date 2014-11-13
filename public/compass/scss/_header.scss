@@ -126,6 +126,7 @@
 		line-height: em(31px);
 		top: 50%;
 		margin-top: em(-18px);
+      font-weight: normal;
 		@extend %member-counter-style;
 		@include main-sprite-icon(members-big, 10, "before") {
 			margin-top: em(3px);

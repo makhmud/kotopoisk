@@ -1,27 +1,21 @@
 %slide-animation
 {
-	-webkit-transform: translate(0px, 0);
-	-webkit-transition: -webkit-transform 0.5s ease-in;
-	-moz-transform: translate(0px, 0);
-	-moz-transition: -webkit-transform 0.5s ease-in;
-	transform: translate(0px, 0);
-	transition: -webkit-transform 0.5s ease-in;
+
 }
 
 %slide-animation-open
-{	-ms-transform: translate(400px,0); /* IE 9 */
-	-webkit-transform: translate(400px,0); /* Chrome, Safari, Opera */
-	-moz-transform: translate(400px,0); /* Chrome, Safari, Opera */
-	transform: translate(400px,0);
+{
 }
 
 .side-menu ~ *
 {
-	@extend %slide-animation;
+  left: 0;
+  transition:left 0.5s ease-in;
+  position: relative;
 }
 
 .side-menu.open ~ * {
-	@extend %slide-animation-open;
+  left: 400px;
 }
 
 
@@ -32,12 +26,14 @@
 	height: 100%;
 	z-index: 50;
 	left: -400px;
+  transition:left 0.5s ease-in;
 
-	@extend %slide-animation;
+
 
 	&.open {
 		display: inline-block;
-		@extend %slide-animation-open;
+      left: 0;
+
 	}
 
 	.element-container {
