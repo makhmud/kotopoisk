@@ -44,7 +44,7 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter) {
     $scope.user = {};
 
     $scope.user = User.get(
-        { id:1, 'auth_token' : $cookies.auth_token },
+        { id:$cookies.auth_id, 'auth_token' : $cookies.auth_token },
         function (user) {
             if (user.success) {
                 $scope.user = user;
@@ -56,7 +56,7 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter) {
 
     $scope.saveUser = function() {
         $scope.user.auth_token = $cookies.auth_token;
-        User.update({id:1}, $scope.user.data);
+        User.update({id:$cookies.auth_id}, $scope.user.data);
     }
 
     $scope.$watch(function() {
