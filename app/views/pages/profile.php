@@ -47,7 +47,10 @@
                 <option value="3">2 и более</option>
             </select>
         </div>
-        <input type="submit" value="{{ 'page.profile.ready' | translate }}" ng-disabled="ProfileForm.$invalid" ng-click="saveUser()"/>
+        <div class="form-item submit">
+            <input type="submit" value="{{ 'page.profile.ready' | translate }}" ng-disabled="ProfileForm.$invalid" ng-click="saveUser()"/>
+        </div>
+
     </form>
 </main>
 

@@ -158,6 +158,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
                     if (cat.success) {
                         $scope.data.currentCat = cat.data;
                         $scope.data.currentCat.current_photo = ( typeof( cat.data.photos[0] ) != 'undefined' ) ? cat.data.photos[0].path : 'default.png';
+                        $scope.data.currentCat.hasLike = $filter('filter')($scope.data.currentCat.likes,{id_author:$cookies.auth_id}, true)[0];
                         $scope.data.catsFull.push(cat.data);
                         $scope.methods.showPopup('cat-item');
                     } else {
@@ -307,6 +308,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         $http.post('/api/like', {idCat : idCat, idUser : $cookies.auth_id, auth_token : $cookies.auth_token }).then( function (response) {
             if (response.data.success) {
                 $scope.data.currentCat.likes.push(response.data.data);
+                $scope.data.currentCat.hasLike = true;
                 $filter('filter')($scope.data.cats,{id:$scope.data.currentCat.id}, true)[0].count_likes++;
             }
         })
@@ -347,7 +349,6 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
     }
 
     $scope.galleryNext = function(max) {
-        console.log(max, $scope.settings.galleryPreview.position);
         if ($scope.settings.galleryPreview.position >= -(max - 516)) {
             $scope.settings.galleryPreview.position -= 126;
         }

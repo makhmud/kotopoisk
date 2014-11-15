@@ -557,6 +557,10 @@ $list: adam john wynn mason kuroir;
         opacity: .5;
       }
     }
+
+    #photos{
+      margin-left: -30px;
+    }
     #password-change-link{
       float: left;
       margin: 40px 0 0 30px;
@@ -606,18 +610,42 @@ $list: adam john wynn mason kuroir;
     }
   }
 
+%form-prefix
+{
+  content: '';
+  background: url(../images/form-prefix.png) center center repeat-y;
+  height: 50px;
+  display: block;
+  -webkit-background-size: 2px 9px;
+  background-size: 2px 9px;
+}
+
   #profile-form{
+
+    &:before{
+      @extend %form-prefix
+    }
+
     width: 695px;
-    margin: 0 auto;
+    margin: -11px auto 0;
     padding-bottom: 120px;
     .form-item{
       text-align: right;
-      background: url(../images/profile-form-item.png) top center no-repeat;
-      background-size:20px 47px;
+      background: url(../images/form-item.png) center center no-repeat;
+      opacity: .65;
     }
     .form-item.active{
-      background-image: url(../images/profile-form-item-active.png);
+      opacity: 1;
     }
+    .form-item.submit{
+      text-align: center !important;
+      background: none;
+      &:before{
+        @extend %form-prefix
+      }
+
+    }
+
 
     input{
       color: #ffffff;
@@ -626,17 +654,12 @@ $list: adam john wynn mason kuroir;
       font-size: 18px;
       font-weight: 500;
       padding: 10px;
-      opacity: .65;
       width: 290px;
       &[type="submit"]{
-        margin-top: 30px;
         width: 350px;
       }
     }
     input:disabled{
-      opacity: 1;
-    }
-    .active input{
       opacity: 1;
     }
     .form-item:nth-child(2n){
@@ -673,6 +696,44 @@ $list: adam john wynn mason kuroir;
       border-radius: 5px;
     }
   }
+
+  [class^="gallery-item-"]{
+    background-image: url(../images/gallery-icons.png);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    -webkit-background-size: 60px 40px;
+    background-size: 60px 40px;
+  }
+  .gallery-item-white-1{
+    background-position: 0 0;
+  }
+  .gallery-item-white-2{
+    background-position: -20px 0;
+  }
+  .gallery-item-white-3{
+    background-position: -40px 0;
+  }
+.gallery-item-gray-1{
+  background-position: 0 -20px;
+}
+.gallery-item-gray-2{
+  background-position: -20px -20px;
+}
+.gallery-item-gray-3{
+  background-position: -40px -20px;
+}
+.like-icon{
+  width: 20px;
+  height: 18px;
+  display: inline-block;
+  background-image: url(../images/like.png);
+  -webkit-background-size: 40px 18px;
+  background-size: 40px 18px;
+}
+.like-icon.active{
+  background-position: -20px 0;
+}
 
   .file-button-container-big {
     background: transparent url('../images/add-photo-button.png') center 100% no-repeat;
@@ -754,21 +815,28 @@ $list: adam john wynn mason kuroir;
   }
 
   [class^="social-icon-"]{
-    width: 54px;
-    height: 54px;
+    width: 58px;
+    height: 58px;
     display: inline-block;
     background-image: url(../images/social.png);
-    -webkit-background-size: 270px 108px;
-    background-size: 270px 108px;
+    -webkit-background-size: 290px 116px;
+    background-size: 290px 116px;
   }
   @for $i from 1 through 5{
     .social-icon-#{$i}{
-      background-position: -#{$i*54 - 54}px 0;
+      background-position: -#{$i*58 - 58}px 0;
     }
     .social-icon-#{$i}:hover{
-      background-position: -#{$i*54 - 54}px -54px;
+      background-position: -#{$i*58 - 58}px -58px;
     }
   }
+
+.social-icon-1:hover{
+  background-position: 0 -59px;
+}
+.social-icon-5:hover{
+  background-position: -232px -59px;
+}
 
   #inner-popup{
     background-color: rgba(0, 0, 0, 0);

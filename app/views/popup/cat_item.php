@@ -7,13 +7,15 @@
     <div class="content">
         <div class="image-panel">
             <img src="/user/big_{{data.currentCat.current_photo}}" alt=""/>
-            <div class="likes"><a ng-click="like(data.currentCat.id)"><span class="gallery-item-icon-1"></span><span class="text">{{data.currentCat.likes.length}}</span></a></div>
+            <div class="likes"><a ng-click="like(data.currentCat.id)">
+                    <span class="like-icon" ng-class="{active : data.currentCat.hasLike}"></span>
+                    <span class="text">{{data.currentCat.likes.length}}</span></a></div>
             <div class="line">
                 <div class="map">
-                    <a href="#" ng-click="mapView(data.currentCat.position)"><span class="gallery-item-icon-2"></span><span class="text" >Посмотреть на карте</span></a>
+                    <a href="#" ng-click="mapView(data.currentCat.position)"><span class="gallery-item-white-2"></span><span class="text" >Посмотреть на карте</span></a>
                 </div>
                 <div class="like">
-                    <a ng-click="like(data.currentCat.id)"><span class="gallery-item-icon-1"></span><span class="text">Мне нравится</span></a>
+                    <a ng-click="like(data.currentCat.id)"><span class="like-icon" ng-class="{active : data.currentCat.hasLike}"></span><span class="text">Мне нравится</span></a>
                 </div>
             </div>
         </div>
@@ -42,9 +44,9 @@
                  data-counter="false"
                 >
                 <a href="#" class="ng-social-vk"><span class="social-icon-1"></span></a>
-<!--                <a href="#" class="ng-social-facebook"><span class="social-icon-2"></span></a>-->
+                <a href="#" class="ng-social-facebook"><span class="social-icon-2"></span></a>
                 <a href="#" class="ng-social-twitter"><span class="social-icon-3"></span></a>
-<!--                <a href="#" class="ng-social-google-plus"><span class="social-icon-4"></span></a>-->
+                <a href="#" class="ng-social-google-plus"><span class="social-icon-4"></span></a>
                 <a href="#" class="ng-social-odnoklassniki"><span class="social-icon-5"></span></a>
             </div>
         </div>
