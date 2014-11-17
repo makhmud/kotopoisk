@@ -14,6 +14,11 @@ class User extends Eloquent implements UserInterface {
         return $this->belongsTo('Contact', 'id_contacts');
     }
 
+    public function social()
+    {
+        return $this->hasMany('Social', 'id_user');
+    }
+
     /**
      * Get the unique identifier for the user.
      *

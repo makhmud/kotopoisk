@@ -1,7 +1,6 @@
 app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $http, Auth, $route) {
 
     console.log('In Main Controller');
-    console.log($location.host())
 
     $scope.$host = 'http://'+$location.host();
 

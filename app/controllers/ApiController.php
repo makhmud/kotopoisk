@@ -42,6 +42,8 @@ class ApiController extends BaseController {
 
         $bluredPrefix = !Input::has('notBlured') ? 'blured-' : '';
 
+        $defaulPath = public_path() . DIRECTORY_SEPARATOR . 'user' . DIRECTORY_SEPARATOR . $bluredPrefix . 'default.png';
+
         $destination =  public_path() . DIRECTORY_SEPARATOR . 'user' . DIRECTORY_SEPARATOR . $bluredPrefix . Input::get('destination');
 
         if (!file_exists($destination)) {
@@ -51,7 +53,12 @@ class ApiController extends BaseController {
             $destination = implode(DIRECTORY_SEPARATOR, $parts);
         }
 
-        return Image::make($destination)->response();
+        if(file_exists($destination)) {
+            return Image::make($destination)->response();
+        } else {
+            return Image::make($defaulPath)->response();
+        }
+
     }
 
 }

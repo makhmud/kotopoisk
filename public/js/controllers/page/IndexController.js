@@ -1,4 +1,10 @@
-app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route, $filter) {
+app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route, $filter, social_auth, auth) {
+
+    $scope.settings.auth = social_auth || auth;
+
+    if ($scope.settings.auth) {
+        $location.path('/feed')
+    }
 
     console.log('In Index Controller');
 

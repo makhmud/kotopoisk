@@ -209,7 +209,7 @@ main {
 }
 
 
-.social-icons {
+.social-icons{
 	display: inline-block;
 	margin-top: 25px;
 	margin-bottom: 50px;
@@ -813,7 +813,7 @@ $list: adam john wynn mason kuroir;
     }
   }
 
-  [class^="social-icon-"]{
+  [class^="social-icon-"], #uLogin [data-uloginbutton]{
     width: 58px;
     height: 58px;
     display: inline-block;

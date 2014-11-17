@@ -11,9 +11,15 @@
 |
 */
 
-Route::get('/', function()
+Route::any('/', function()
 {
-	return View::make('hello');
+    $view = View::make('hello');
+
+    if (Input::has('token')) {
+        $view->with(['social_token' => Input::get('token')]);
+    }
+
+	return $view;
 });
 
 Route::controller('/admin/user', 'AdminUserController');

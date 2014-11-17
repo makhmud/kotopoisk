@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="/css/normalize.min.css"/>
     <link rel="stylesheet" href="/js/lib/jquery.formstyler/jquery.formstyler.css"/>
     <link rel="stylesheet" href="/css/style.css"/>
+    <script>
+        window.socialToken = <?= isset($social_token) ? '"'.$social_token.'"' : 'null' ?>
+    </script>
 </head>
 <body class="{{page.bodyClasses}}">
 

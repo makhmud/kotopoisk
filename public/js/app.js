@@ -15,6 +15,7 @@ app.config(['$locationProvider', '$routeProvider', '$httpProvider', '$translateP
         templateUrl: '/pages/main',
         controller: 'IndexCtrl',
         resolve: {
+            social_auth : ['Auth', function(Auth){ return Auth.checkSocial() }],
             auth : ['Auth', function(Auth){ return Auth.check() }]
         }
     });

@@ -33,6 +33,58 @@ class AuthController extends \BaseController {
         }
     }
 
+    public function postSocialLogin() {
+        $s = file_get_contents('http://ulogin.ru/token.php?token=' . Input::get('token') . '&host=' . $_SERVER['HTTP_HOST']);
+        $user = json_decode($s, true);
+
+        Log::info($user);
+
+        if (isset($user['uid'])){
+            $uid = $user['uid'];
+            $link = $user['identity'];
+            $name = $user['first_name'];
+            $surname = $user['last_name'];
+            $user = Repo::make('user')->getUserBySocialId($uid);
+
+            if (!is_null($user)) {
+                $user = User::find($user->id);
+                $user->auth_token = Hash::make( time() );
+                $user->save();
+
+                return Response::json( array(
+                    'success' => true,
+                    'auth_id' => $user->id,
+                    'auth_token' => $user->auth_token
+                ));
+            } else {
+                $user = new User();
+                $user->auth_token = Hash::make( time() );
+
+                $contacts = new Contact( ['name' => $name, 'surname' => $surname, 'web'=> $link]);
+                $contacts->save();
+
+                $user->contacts()->associate($contacts);
+
+                $user->save();
+                $user->social()->save( new Social( ['uid' => $uid]) );
+
+                return Response::json( array(
+                    'success' => true,
+                    'auth_id' => $user->id,
+                    'auth_token' => $user->auth_token
+                ));
+            }
+        } else {
+            return Response::answer([], false, $user['error']);
+        }
+
+        //Log::info($user);
+        //$user['network'] - соц. сеть, через которую авторизовался пользователь
+        //$user['identity'] - уникальная строка определяющая конкретного пользователя соц. сети
+        //$user['first_name'] - имя пользователя
+        //$user['last_name'] - фамилия пользователя
+    }
+
     public function getCheck() {
 
         if (Input::has('auth_token')) {

@@ -1564,7 +1564,7 @@ main h3 {
 }
 
 /* line 816, ../compass/scss/_content.scss */
-[class^="social-icon-"] {
+[class^="social-icon-"], #uLogin [data-uloginbutton] {
   width: 58px;
   height: 58px;
   display: inline-block;
