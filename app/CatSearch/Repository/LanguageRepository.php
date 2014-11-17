@@ -25,13 +25,20 @@ class LanguageRepository {
         return $returnArray;
     }
 
-    public function getFormattedList () {
-        $translations = \Translation::all();
+    public function getFormattedList ($search = null) {
+
+
+        $translations = \Translation::orderBy('key', 'asc')->where('value', 'LIKE', '%'.$search.'%')->get();
 
         $formatted = [];
 
         foreach($translations as $item) {
             $formatted[$item->key][] = ['lng' => $item->lng, 'value' => $item->value];
+            $other = \Translation::orderBy('key', 'asc')
+                ->where('key', '=', $item->key)
+                ->where('lng', '!=', $item->lng)
+                ->first();
+            $formatted[$item->key][] = ['lng' => $other->lng, 'value' => $other->value];
         }
 
         return $formatted;

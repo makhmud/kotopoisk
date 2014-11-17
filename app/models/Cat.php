@@ -17,7 +17,7 @@ class Cat extends Eloquent {
      */
     public function author()
     {
-        return $this->belongsTo('User', 'id_author')->with('contacts')->select(array('id', 'id_contacts'));
+        return $this->belongsTo('User', 'id_author')->with('contacts')->select(array('id', 'email', 'id_contacts'));
     }
 
     /**
@@ -49,6 +49,15 @@ class Cat extends Eloquent {
             'longitude' => $tempCoords[1]
         );
         return $this;
+    }
+
+    /**
+     * Changing output value
+     * @param $value
+     * @return string
+     */
+    public function getContentAttribute($value) {
+        return nl2br($value);
     }
 
 }

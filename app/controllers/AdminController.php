@@ -14,6 +14,12 @@ class AdminController extends \BaseController {
         $this->layout->content = View::make('admin.index', array('trans' => Repo::make('language')->getFormattedList()));
     }
 
+    public function getSearch() {
+
+        $search = Input::get('search');
+        $this->layout->content = View::make('admin.index', array('trans' => Repo::make('language')->getFormattedList($search)));
+    }
+
     public function postTrans() {
 
         foreach (Input::get('item') as $key => $item) {
@@ -28,9 +34,6 @@ class AdminController extends \BaseController {
     }
 
     public function postTransNew() {
-
-//        echo '<pre>';
-//        var_dump(Input::all());exit;
 
         $keyTrans = Input::get('key');
         $itemTrans = Input::get('item');
@@ -67,6 +70,10 @@ class AdminController extends \BaseController {
 
         $this->layout->content = View::make('admin.login');
 
+    }
+
+    public function missingMethod($parameters = array()){
+        exit;
     }
 
 }
