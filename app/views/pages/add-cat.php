@@ -33,7 +33,7 @@
             <ui-gmap-marker idKey='choose-position'
                             options="{ draggable : true }"
                             coords='newCat.position'
-                            icon="'http://localhost:8000/images/map-marker.png'"></ui-gmap-marker>
+                            icon="$host + '/images/map-marker.png'"></ui-gmap-marker>
 
     </ui-gmap-google-map>
 </div>
