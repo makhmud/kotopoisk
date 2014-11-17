@@ -1,7 +1,7 @@
 <table class="table table-hover col-md-12">
     <thead>
         <tr>
-            <th>ID</th><th>Автор</th><th>Дата</th><th class="col-md-7">Содержание</th><th>Операции</th>
+            <th>ID</th><th>Автор</th><th>Дата</th><th class="col-md-6">Содержание</th><th>Операции</th>
         </tr>
     </thead>
     <tbody>

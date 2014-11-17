@@ -1,7 +1,7 @@
 <table class="table table-hover col-md-12">
     <thead>
         <tr>
-            <th>ID</th><th>Автор</th><th>Дата</th><th>Содержание</th><th>Операции</th>
+            <th>ID</th><th>Имя</th><th>Добавлен</th><th>E-mail</th><th>Город</th><th>Телефон</th><th>Операции</th>
         </tr>
     </thead>
     <tbody>
@@ -13,6 +13,7 @@
                     {{ $user->contacts->name }} {{ $user->contacts->surname }}
                 @endif
             </td>
+            <td>{{ $user->created_at  }}</td>
             <td>{{ $user->email  }}</td>
             <td>
                 @if(!is_null($user->contacts))

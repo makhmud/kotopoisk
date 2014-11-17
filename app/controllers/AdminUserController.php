@@ -11,7 +11,7 @@ class AdminUserController extends \BaseController {
     public function getIndex() {
 
 
-        $this->layout->content = View::make('admin.users', array('users' => User::with('contacts')->get() ));
+        $this->layout->content = View::make('admin.users', array('users' => User::with('contacts')->orderBy('created_at', 'desc')->get() ));
 
     }
 
