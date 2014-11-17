@@ -34,11 +34,13 @@ class LanguageRepository {
 
         foreach($translations as $item) {
             $formatted[$item->key][] = ['lng' => $item->lng, 'value' => $item->value];
-            $other = \Translation::orderBy('key', 'asc')
-                ->where('key', '=', $item->key)
-                ->where('lng', '!=', $item->lng)
-                ->first();
-            $formatted[$item->key][] = ['lng' => $other->lng, 'value' => $other->value];
+            if (!is_null($search)) {
+                $other = \Translation::orderBy('key', 'asc')
+                    ->where('key', '=', $item->key)
+                    ->where('lng', '!=', $item->lng)
+                    ->first();
+                $formatted[$item->key][] = ['lng' => $other->lng, 'value' => $other->value];
+            }
         }
 
         return $formatted;
