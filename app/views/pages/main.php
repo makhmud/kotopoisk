@@ -44,7 +44,7 @@
 
             <p>Авторизация через социальные сети</p>
             <div id="uLogin"
-                 data-ulogin="display=small;fields=first_name,last_name;providers=vkontakte,facebook;hidden=other;redirect_uri={{$host}}:8000">
+                 data-ulogin="display=small;fields=first_name,last_name;providers=vkontakte,facebook;hidden=other;redirect_uri={{$host}}">
             </div>
         </footer>
     </div>
