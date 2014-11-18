@@ -204,8 +204,8 @@
     }
   }
   #gallery li img{
-    width: 479px !important;
-    height: 479px !important;
+    max-width: 479px;
+    max-height: 479px;
   }
   #gallery .line{
     font-size: 18px;
