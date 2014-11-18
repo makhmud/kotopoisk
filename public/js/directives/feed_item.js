@@ -7,7 +7,7 @@ app.directive('feedItem', function() {
         replace: true,
         template:
             '<li ng-click="showCat(cat.id)"> \
-                <div class="image"><img src="/user/medium_{{cat.path}}" alt=""/></div> \
+                <div class="image"><img src="/user/big_{{cat.path}}" alt=""/></div> \
                 <div class="info"> \
                     <div class="line"> \
                         <div class="name">{{cat.full_name}}</div> \
