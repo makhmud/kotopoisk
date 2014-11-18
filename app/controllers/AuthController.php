@@ -8,7 +8,10 @@ class AuthController extends \BaseController {
      */
 	public function postLogin () {
 
-        if ( Auth::attempt( Input::only( array('email', 'password') )))
+        $email = trim(Input::get('email'));
+        $password = Input::get('password');
+
+        if ( Auth::attempt( ['email' => $email, 'password' => $password] ))
         {
             $user = Auth::user();
             $user->auth_token = Hash::make( time() );

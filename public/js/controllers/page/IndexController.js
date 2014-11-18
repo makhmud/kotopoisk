@@ -1,10 +1,10 @@
-app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route, $filter, social_auth, auth) {
+app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route, $filter, social_auth) {
 
-    $scope.settings.auth = social_auth || auth;
+    //$scope.settings.auth = social_auth;
 
-    if ($scope.settings.auth) {
-        $location.path('/feed')
-    }
+    //if ($scope.settings.auth) {
+    //    $location.path('/feed')
+    //}
 
     console.log('In Index Controller');
 
@@ -45,6 +45,13 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route,
      * @type {{first: null, last: null}}
      */
     $scope.ids = {first:null, last:null};
+
+    $scope.formStates = {
+        signinValid : true,
+        signupValid : true,
+        remindValid : true
+    }
+
     /**
      * Forms submit functions
      * @type {{signin: Function}}
@@ -60,6 +67,7 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route,
                     $location.path('/feed');
                     $route.reload();
                 } else {
+                    $scope.formStates.signinValid = false;
                     $scope.notificate($filter('translate')('notification.register.wrong_credentials'));
                 }
             });
@@ -70,6 +78,7 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route,
                 $scope.notificate($filter('translate')('notification.register'));
                 $scope.settings.loginForms.signup.email = '';
             }).error(function(response) {
+                $scope.formStates.signupValid = false;
                 $scope.notificate($filter('translate')('notification.register.already_exists'));
             });
         },
@@ -79,6 +88,7 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route,
                 $scope.notificate($filter('translate')('notification.remind'));
                 $scope.settings.loginForms.remind.email = '';
             }).error(function(response) {
+                $scope.formStates.remindValid = false;
                 $scope.notificate($filter('translate')('notification.register.already_exists'));
             });
         }

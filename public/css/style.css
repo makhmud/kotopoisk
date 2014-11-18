@@ -2055,7 +2055,7 @@ main h3 {
 }
 
 /* line 1223, ../compass/scss/_content.scss */
-.ng-invalid {
+form.invalid input {
   border-color: #ce3a3a !important;
 }
 
