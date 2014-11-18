@@ -2652,19 +2652,19 @@ input[type=text]::-moz-placeholder {
 
   /* line 202, ../compass/scss/respond/_small.scss */
   #gallery li .image {
-    width: 160px;
-    height: 159px;
+    width: 240px;
+    height: 240px;
   }
 
   /* line 207, ../compass/scss/respond/_small.scss */
   #gallery li img {
-    max-width: 160px;
-    max-height: 160px;
+    max-width: 240px;
+    max-height: 240px;
   }
 
   /* line 211, ../compass/scss/respond/_small.scss */
   #gallery .line {
-    font-size: 8px;
+    font-size: 18px;
   }
   /* line 213, ../compass/scss/respond/_small.scss */
   #gallery .line *:first-child {
