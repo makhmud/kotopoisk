@@ -2239,7 +2239,7 @@ input[type=text]::-moz-placeholder {
 @media only screen and (max-device-width: 480px), (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 320px) {
   /* line 4, ../compass/scss/respond/_small.scss */
   .wrapper {
-    width: 480px;
+    width: 960px;
   }
 
   /* line 8, ../compass/scss/respond/_small.scss */
