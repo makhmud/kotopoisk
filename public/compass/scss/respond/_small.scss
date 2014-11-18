@@ -200,13 +200,13 @@
 
   #gallery li{
     .image {
-      width: 479px;
-      height: 479px;
+      width: 475px;
+      height: 475px;
     }
   }
   #gallery li img{
-    max-width: 479px;
-    max-height: 479px;
+    width: 475px;
+    height: 475px;
   }
   #gallery .line{
     font-size: 18px;
