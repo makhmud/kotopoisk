@@ -22,6 +22,10 @@
   }
 
   #gallery{
+    .image {
+      width: 240px;
+      height: 239px;
+    }
     li{
       img{
         max-width: 240px;
