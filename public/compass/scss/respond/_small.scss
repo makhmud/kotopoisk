@@ -1,4 +1,4 @@
-@media only screen and (max-device-width: 480px),
+@media only screen and (max-device-width: 719px),
 (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 320px) {
 
     .wrapper{
@@ -19,9 +19,11 @@
 	}
 
 	body {
-		font-size: 20px !important;
+		font-size: 10px !important;
 		background: none !important;
 		margin-bottom: 80px;
+      width: 100%;
+      min-width: 320px;
 	}
 
 
@@ -148,7 +150,7 @@
     height: 107px;
     margin-top: -70px;
     border-width: 6px;
-    margin-left: -24px;
+    margin-left: -58px;
   }
   .file-button-container-big{
     margin-top: 90px;
@@ -161,10 +163,16 @@
     font-size: 15px;
   }
   #profile-form input[type="text"]{
-    width: 120px;
+    width: 39%;
   }
   #profile-form input, .jqselect .text, .jqselect li{
-    font-size: 9px;
+    font-size: 12px;
+  }
+  #profile-form .jqselect{
+    width: 43%;
+  }
+  #profile-form .jqselect .select{
+    width: 100%;
   }
   #profile-menu #password-change-link{
     margin-left: 10px;
@@ -199,36 +207,39 @@
 
   #gallery li{
     .image {
-      width: 479px;
-      height: 479px;
+      width: 159px;
+      height: 159px;
     }
   }
   #gallery li img{
-    max-width: 479px;
-    max-height: 479px;
+    max-width: 159px;
+    max-height: 159px;
   }
   #gallery .line{
-    font-size: 18px;
+    font-size: 8px;
     *:first-child{
-      margin-left: 4px !important;
+      margin-left: 1px !important;
     }
     *:last-child{
-      margin-right: 4px !important;
+      margin-right: 1px !important;
     }
   }
   #gallery li .info{
     padding: 4px 0;
   }
 
-  [class^="gallery-item-icon-"]{
-    width: 8px;
+  [class^="gallery-item-"]{
+    width: 9px;
     height: 9px;
-    -webkit-background-size: 24px 9px;
-    background-size: 24px 9px;
+    -webkit-background-size: 27px 9px;
+    background-size: 27px 18px;
   }
   @for $i from 1 through 3{
-    .gallery-item-icon-#{$i}{
-      background-position: -#{$i*8 - 8}px 0;
+    .gallery-item-white-#{$i}{
+      background-position: -#{$i*9 - 9}px 0;
+    }
+    .gallery-item-gray-#{$i}{
+      background-position: -#{$i*9 - 9}px -9px;
     }
   }
 
