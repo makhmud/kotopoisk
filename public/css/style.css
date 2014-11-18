@@ -2652,14 +2652,14 @@ input[type=text]::-moz-placeholder {
 
   /* line 202, ../compass/scss/respond/_small.scss */
   #gallery li .image {
-    width: 475px;
-    height: 475px;
+    width: 450px;
+    height: 450px;
   }
 
   /* line 207, ../compass/scss/respond/_small.scss */
   #gallery li img {
-    width: 475px;
-    height: 475px;
+    width: 450px !important;
+    height: 450px !important;
   }
 
   /* line 211, ../compass/scss/respond/_small.scss */
