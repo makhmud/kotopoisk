@@ -22,11 +22,12 @@
   }
 
   #gallery{
-    .image {
-      width: 240px;
-      height: 239px;
-    }
+
     li{
+      .image {
+        width: 240px;
+        height: 239px;
+      }
       img{
         max-width: 240px;
         max-height: 240px;

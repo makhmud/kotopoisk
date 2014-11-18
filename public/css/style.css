@@ -2175,35 +2175,35 @@ input[type=text]::-moz-placeholder {
     width: 235px;
   }
 
-  /* line 25, ../compass/scss/respond/_medium.scss */
-  #gallery .image {
+  /* line 27, ../compass/scss/respond/_medium.scss */
+  #gallery li .image {
     width: 240px;
     height: 239px;
   }
-  /* line 30, ../compass/scss/respond/_medium.scss */
+  /* line 31, ../compass/scss/respond/_medium.scss */
   #gallery li img {
     max-width: 240px;
     max-height: 240px;
   }
 
-  /* line 37, ../compass/scss/respond/_medium.scss */
+  /* line 38, ../compass/scss/respond/_medium.scss */
   #change-password-popup {
     margin: 0 0 0 -330px !important;
   }
 
-  /* line 41, ../compass/scss/respond/_medium.scss */
+  /* line 42, ../compass/scss/respond/_medium.scss */
   #short-cat-item {
     width: 700px;
     margin: 10px auto;
     font-size: 14px;
   }
-  /* line 46, ../compass/scss/respond/_medium.scss */
+  /* line 47, ../compass/scss/respond/_medium.scss */
   #short-cat-item .image img {
     width: 200px;
     height: 157px;
   }
 
-  /* line 53, ../compass/scss/respond/_medium.scss */
+  /* line 54, ../compass/scss/respond/_medium.scss */
   .main-big-marker, #add-cat #location-selector:before, #add-cat #location-selector:before {
     -webkit-background-size: 35px 475px;
     -moz-background-size: 35px 475px;
@@ -2236,7 +2236,7 @@ input[type=text]::-moz-placeholder {
     width: 1366px;
   }
 }
-@media only screen and (max-device-width: 719px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+@media only screen and (max-width: 719px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
   /* line 6, ../compass/scss/respond/_small.scss */
   header .language-switch {
     margin: 0 3.75em !important;
