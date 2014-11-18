@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'admiral.happiness@gmail.com', 'name' => null),
+	'from' => array('address' => 'welcome@kotopoisk.com', 'name' => 'КотоПоиск'),
 
 	/*
 	|--------------------------------------------------------------------------

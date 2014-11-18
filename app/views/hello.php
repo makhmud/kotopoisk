@@ -15,6 +15,9 @@
         window.socialToken = <?= isset($social_token) ? '"'.$social_token.'"' : 'null' ?>
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0; user-scalable=no;">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body class="{{page.bodyClasses}}">
 
