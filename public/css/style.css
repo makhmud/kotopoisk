@@ -2236,41 +2236,46 @@ input[type=text]::-moz-placeholder {
     width: 1366px;
   }
 }
-@media only screen and (max-width: 719px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
-  /* line 4, ../compass/scss/respond/_small.scss */
+@media only screen and (max-device-width: 719px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+  /* line 6, ../compass/scss/respond/_small.scss */
   header .language-switch {
     margin: 0 3.75em !important;
   }
 
-  /* line 8, ../compass/scss/respond/_small.scss */
+  /* line 10, ../compass/scss/respond/_small.scss */
   main {
     width: 100%;
     margin: 0 0;
   }
 
-  /* line 13, ../compass/scss/respond/_small.scss */
+  /* line 15, ../compass/scss/respond/_small.scss */
   .main-container {
     margin: 0 0 !important;
   }
 
-  /* line 17, ../compass/scss/respond/_small.scss */
+  /* line 19, ../compass/scss/respond/_small.scss */
   body {
     font-size: 10px !important;
     background: none !important;
     margin-bottom: 80px;
   }
 
-  /* line 23, ../compass/scss/respond/_small.scss */
+  /* line 25, ../compass/scss/respond/_small.scss */
+  body {
+    background-color: #ff0000;
+  }
+
+  /* line 29, ../compass/scss/respond/_small.scss */
   .side-menu {
     width: 283px;
     left: -283px;
   }
-  /* line 27, ../compass/scss/respond/_small.scss */
+  /* line 33, ../compass/scss/respond/_small.scss */
   .side-menu header a {
     line-height: 2.6875em;
   }
 
-  /* line 32, ../compass/scss/respond/_small.scss */
+  /* line 38, ../compass/scss/respond/_small.scss */
   #add-cat {
     font-size: 12px;
   }
@@ -2440,12 +2445,12 @@ input[type=text]::-moz-placeholder {
     background-position: 0 -441px;
   }
 
-  /* line 45, ../compass/scss/respond/_small.scss */
+  /* line 51, ../compass/scss/respond/_small.scss */
   .notification {
     top: 15.78947em;
   }
 
-  /* line 49, ../compass/scss/respond/_small.scss */
+  /* line 55, ../compass/scss/respond/_small.scss */
   .mob-banner {
     display: block;
     position: fixed;
@@ -2456,61 +2461,61 @@ input[type=text]::-moz-placeholder {
     background: url(../images/ibanner.jpg) no-repeat bottom center;
   }
 
-  /* line 59, ../compass/scss/respond/_small.scss */
+  /* line 65, ../compass/scss/respond/_small.scss */
   [class^="profile-icon-"] {
     width: 45px;
     height: 37px;
     background-size: 135px 74px;
   }
 
-  /* line 66, ../compass/scss/respond/_small.scss */
+  /* line 72, ../compass/scss/respond/_small.scss */
   .profile-icon-1 {
     background-position: -0px 0;
   }
 
-  /* line 66, ../compass/scss/respond/_small.scss */
+  /* line 72, ../compass/scss/respond/_small.scss */
   .profile-icon-2 {
     background-position: -45px 0;
   }
 
-  /* line 66, ../compass/scss/respond/_small.scss */
+  /* line 72, ../compass/scss/respond/_small.scss */
   .profile-icon-3 {
     background-position: -90px 0;
   }
 
-  /* line 71, ../compass/scss/respond/_small.scss */
+  /* line 77, ../compass/scss/respond/_small.scss */
   #change-password-popup {
     margin: 0 0 0 -168px !important;
     top: 203px;
   }
-  /* line 74, ../compass/scss/respond/_small.scss */
+  /* line 80, ../compass/scss/respond/_small.scss */
   #change-password-popup .icon {
     top: -30px;
   }
-  /* line 77, ../compass/scss/respond/_small.scss */
+  /* line 83, ../compass/scss/respond/_small.scss */
   #change-password-popup .content {
     width: auto !important;
     padding: 24px 22px;
   }
-  /* line 81, ../compass/scss/respond/_small.scss */
+  /* line 87, ../compass/scss/respond/_small.scss */
   #change-password-popup .profile-icon-1 {
     background-position: 0 -37px;
   }
-  /* line 85, ../compass/scss/respond/_small.scss */
+  /* line 91, ../compass/scss/respond/_small.scss */
   #change-password-popup input {
     font-size: 14px;
     padding: 12px;
     width: 222px;
   }
-  /* line 90, ../compass/scss/respond/_small.scss */
+  /* line 96, ../compass/scss/respond/_small.scss */
   #change-password-popup input:first-child {
     margin-bottom: 30px;
   }
-  /* line 93, ../compass/scss/respond/_small.scss */
+  /* line 99, ../compass/scss/respond/_small.scss */
   #change-password-popup input:nth-child(2) {
     margin-bottom: 12px;
   }
-  /* line 97, ../compass/scss/respond/_small.scss */
+  /* line 103, ../compass/scss/respond/_small.scss */
   #change-password-popup input[type="submit"] {
     font-size: 18px;
     box-shadow: 0 -20px 20px rgba(0, 0, 0, 0.1);
@@ -2519,13 +2524,13 @@ input[type=text]::-moz-placeholder {
     margin: 22px -12px 0;
   }
 
-  /* line 106, ../compass/scss/respond/_small.scss */
+  /* line 112, ../compass/scss/respond/_small.scss */
   .page--profile main {
     padding-top: 10px;
     margin-top: -140px;
   }
 
-  /* line 110, ../compass/scss/respond/_small.scss */
+  /* line 116, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big .photo-file-preview {
     height: auto;
     left: -190px;
@@ -2535,34 +2540,34 @@ input[type=text]::-moz-placeholder {
     width: auto;
   }
 
-  /* line 118, ../compass/scss/respond/_small.scss */
+  /* line 124, ../compass/scss/respond/_small.scss */
   #profile-menu #photos {
     margin-left: 40px;
   }
 
-  /* line 121, ../compass/scss/respond/_small.scss */
+  /* line 127, ../compass/scss/respond/_small.scss */
   #profile-menu #profile-change-link {
     margin-top: 110px;
     margin-right: 10px;
   }
 
-  /* line 125, ../compass/scss/respond/_small.scss */
+  /* line 131, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big {
     width: 130px;
     height: 130px;
   }
 
-  /* line 129, ../compass/scss/respond/_small.scss */
+  /* line 135, ../compass/scss/respond/_small.scss */
   #profile-menu #password-change-link {
     margin-top: 0;
   }
 
-  /* line 132, ../compass/scss/respond/_small.scss */
+  /* line 138, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big .profile-icon-3 {
     margin-top: 30px;
   }
 
-  /* line 135, ../compass/scss/respond/_small.scss */
+  /* line 141, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big input {
     opacity: 0;
     width: 130px;
@@ -2570,7 +2575,7 @@ input[type=text]::-moz-placeholder {
     left: -190px;
   }
 
-  /* line 141, ../compass/scss/respond/_small.scss */
+  /* line 147, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big img {
     width: 107px;
     height: 107px;
@@ -2579,103 +2584,103 @@ input[type=text]::-moz-placeholder {
     margin-left: -24px;
   }
 
-  /* line 148, ../compass/scss/respond/_small.scss */
+  /* line 154, ../compass/scss/respond/_small.scss */
   .file-button-container-big {
     margin-top: 90px;
   }
 
-  /* line 151, ../compass/scss/respond/_small.scss */
+  /* line 157, ../compass/scss/respond/_small.scss */
   #profile-form {
     margin-top: 50px;
     width: 100%;
   }
 
-  /* line 155, ../compass/scss/respond/_small.scss */
+  /* line 161, ../compass/scss/respond/_small.scss */
   #profile-form input, .jqselect .text, .jqselect li {
     font-size: 15px;
   }
 
-  /* line 158, ../compass/scss/respond/_small.scss */
+  /* line 164, ../compass/scss/respond/_small.scss */
   #profile-form input[type="text"] {
     width: 120px;
   }
 
-  /* line 161, ../compass/scss/respond/_small.scss */
+  /* line 167, ../compass/scss/respond/_small.scss */
   #profile-form input, .jqselect .text, .jqselect li {
     font-size: 9px;
   }
 
-  /* line 164, ../compass/scss/respond/_small.scss */
+  /* line 170, ../compass/scss/respond/_small.scss */
   #profile-menu #password-change-link {
     margin-left: 10px;
   }
 
-  /* line 167, ../compass/scss/respond/_small.scss */
+  /* line 173, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big:hover .photo-file-preview {
     background: none;
   }
 
-  /* line 170, ../compass/scss/respond/_small.scss */
+  /* line 176, ../compass/scss/respond/_small.scss */
   #profile-menu #profile-change-link {
     margin-left: -30px;
   }
 
-  /* line 174, ../compass/scss/respond/_small.scss */
+  /* line 180, ../compass/scss/respond/_small.scss */
   .page--profile .main-container {
     background-position: center 290px;
   }
 
-  /* line 178, ../compass/scss/respond/_small.scss */
+  /* line 184, ../compass/scss/respond/_small.scss */
   .jqselect .select {
     width: 145px;
   }
-  /* line 181, ../compass/scss/respond/_small.scss */
+  /* line 187, ../compass/scss/respond/_small.scss */
   .jqselect .text {
     padding: 0 10px;
   }
-  /* line 184, ../compass/scss/respond/_small.scss */
+  /* line 190, ../compass/scss/respond/_small.scss */
   .jqselect .trigger .arrow {
     width: 27px;
     height: 24px;
     -webkit-background-size: 27px 24px;
     background-size: 27px 24px;
   }
-  /* line 190, ../compass/scss/respond/_small.scss */
+  /* line 196, ../compass/scss/respond/_small.scss */
   .jqselect .dropdown {
     top: 28px;
   }
 
-  /* line 196, ../compass/scss/respond/_small.scss */
+  /* line 202, ../compass/scss/respond/_small.scss */
   #gallery li .image {
     width: 160px;
     height: 159px;
   }
 
-  /* line 201, ../compass/scss/respond/_small.scss */
+  /* line 207, ../compass/scss/respond/_small.scss */
   #gallery li img {
     max-width: 160px;
     max-height: 160px;
   }
 
-  /* line 205, ../compass/scss/respond/_small.scss */
+  /* line 211, ../compass/scss/respond/_small.scss */
   #gallery .line {
     font-size: 8px;
   }
-  /* line 207, ../compass/scss/respond/_small.scss */
+  /* line 213, ../compass/scss/respond/_small.scss */
   #gallery .line *:first-child {
     margin-left: 4px !important;
   }
-  /* line 210, ../compass/scss/respond/_small.scss */
+  /* line 216, ../compass/scss/respond/_small.scss */
   #gallery .line *:last-child {
     margin-right: 4px !important;
   }
 
-  /* line 214, ../compass/scss/respond/_small.scss */
+  /* line 220, ../compass/scss/respond/_small.scss */
   #gallery li .info {
     padding: 4px 0;
   }
 
-  /* line 218, ../compass/scss/respond/_small.scss */
+  /* line 224, ../compass/scss/respond/_small.scss */
   [class^="gallery-item-icon-"] {
     width: 8px;
     height: 9px;
@@ -2683,22 +2688,22 @@ input[type=text]::-moz-placeholder {
     background-size: 24px 9px;
   }
 
-  /* line 225, ../compass/scss/respond/_small.scss */
+  /* line 231, ../compass/scss/respond/_small.scss */
   .gallery-item-icon-1 {
     background-position: -0px 0;
   }
 
-  /* line 225, ../compass/scss/respond/_small.scss */
+  /* line 231, ../compass/scss/respond/_small.scss */
   .gallery-item-icon-2 {
     background-position: -8px 0;
   }
 
-  /* line 225, ../compass/scss/respond/_small.scss */
+  /* line 231, ../compass/scss/respond/_small.scss */
   .gallery-item-icon-3 {
     background-position: -16px 0;
   }
 
-  /* line 230, ../compass/scss/respond/_small.scss */
+  /* line 236, ../compass/scss/respond/_small.scss */
   [class^="social-icon-"] {
     width: 45px;
     height: 45px;
@@ -2706,129 +2711,129 @@ input[type=text]::-moz-placeholder {
     background-size: 225px 90px;
   }
 
-  /* line 237, ../compass/scss/respond/_small.scss */
+  /* line 243, ../compass/scss/respond/_small.scss */
   .social-icon-1 {
     background-position: -0px 0;
   }
 
-  /* line 240, ../compass/scss/respond/_small.scss */
+  /* line 246, ../compass/scss/respond/_small.scss */
   .social-icon-1:hover {
     background-position: -0px -45px;
   }
 
-  /* line 237, ../compass/scss/respond/_small.scss */
+  /* line 243, ../compass/scss/respond/_small.scss */
   .social-icon-2 {
     background-position: -45px 0;
   }
 
-  /* line 240, ../compass/scss/respond/_small.scss */
+  /* line 246, ../compass/scss/respond/_small.scss */
   .social-icon-2:hover {
     background-position: -45px -45px;
   }
 
-  /* line 237, ../compass/scss/respond/_small.scss */
+  /* line 243, ../compass/scss/respond/_small.scss */
   .social-icon-3 {
     background-position: -90px 0;
   }
 
-  /* line 240, ../compass/scss/respond/_small.scss */
+  /* line 246, ../compass/scss/respond/_small.scss */
   .social-icon-3:hover {
     background-position: -90px -45px;
   }
 
-  /* line 237, ../compass/scss/respond/_small.scss */
+  /* line 243, ../compass/scss/respond/_small.scss */
   .social-icon-4 {
     background-position: -135px 0;
   }
 
-  /* line 240, ../compass/scss/respond/_small.scss */
+  /* line 246, ../compass/scss/respond/_small.scss */
   .social-icon-4:hover {
     background-position: -135px -45px;
   }
 
-  /* line 237, ../compass/scss/respond/_small.scss */
+  /* line 243, ../compass/scss/respond/_small.scss */
   .social-icon-5 {
     background-position: -180px 0;
   }
 
-  /* line 240, ../compass/scss/respond/_small.scss */
+  /* line 246, ../compass/scss/respond/_small.scss */
   .social-icon-5:hover {
     background-position: -180px -45px;
   }
 
-  /* line 245, ../compass/scss/respond/_small.scss */
+  /* line 251, ../compass/scss/respond/_small.scss */
   .side-menu + header a.menu-button {
     color: transparent;
   }
 
-  /* line 249, ../compass/scss/respond/_small.scss */
+  /* line 255, ../compass/scss/respond/_small.scss */
   .side-menu.open ~ * {
     left: 283px;
   }
 
-  /* line 254, ../compass/scss/respond/_small.scss */
+  /* line 260, ../compass/scss/respond/_small.scss */
   #overlay .popup {
     padding-top: 40px;
   }
-  /* line 257, ../compass/scss/respond/_small.scss */
+  /* line 263, ../compass/scss/respond/_small.scss */
   #overlay .popup .content {
     width: 300px;
   }
-  /* line 259, ../compass/scss/respond/_small.scss */
+  /* line 265, ../compass/scss/respond/_small.scss */
   #overlay .popup .content .body, #overlay .popup .content .contacts {
     font-size: 9px;
   }
-  /* line 264, ../compass/scss/respond/_small.scss */
+  /* line 270, ../compass/scss/respond/_small.scss */
   #overlay .popup .content .image-panel > div.line {
     height: 30px;
     line-height: 30px;
   }
-  /* line 272, ../compass/scss/respond/_small.scss */
+  /* line 278, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls * {
     opacity: .5;
   }
-  /* line 275, ../compass/scss/respond/_small.scss */
+  /* line 281, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls *:hover {
     opacity: 1;
   }
-  /* line 278, ../compass/scss/respond/_small.scss */
+  /* line 284, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls .prev, #overlay .popup .controls .next, #overlay .popup .controls .close {
     top: 0;
     width: 35px;
     height: 35px;
     line-height: 35px;
   }
-  /* line 284, ../compass/scss/respond/_small.scss */
+  /* line 290, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls .prev {
     left: 0;
   }
-  /* line 287, ../compass/scss/respond/_small.scss */
+  /* line 293, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls .next {
     left: 35px;
   }
-  /* line 290, ../compass/scss/respond/_small.scss */
+  /* line 296, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls .close {
     display: inline-block;
     right: 0;
   }
-  /* line 295, ../compass/scss/respond/_small.scss */
+  /* line 301, ../compass/scss/respond/_small.scss */
   #overlay .popup#cat-item-popup {
     width: 300px;
   }
-  /* line 297, ../compass/scss/respond/_small.scss */
+  /* line 303, ../compass/scss/respond/_small.scss */
   #overlay .popup#cat-item-popup .map .text {
     display: none;
   }
-  /* line 302, ../compass/scss/respond/_small.scss */
+  /* line 308, ../compass/scss/respond/_small.scss */
   #overlay .popup#change-password-popup {
     width: 278px;
   }
-  /* line 304, ../compass/scss/respond/_small.scss */
+  /* line 310, ../compass/scss/respond/_small.scss */
   #overlay .popup#change-password-popup .content {
     padding: 30px 13px 0;
   }
 
-  /* line 311, ../compass/scss/respond/_small.scss */
+  /* line 317, ../compass/scss/respond/_small.scss */
   [class^="gallery-controls-"] {
     width: 11px;
     height: 19px;
@@ -2836,12 +2841,12 @@ input[type=text]::-moz-placeholder {
     background-size: 22px 19px;
   }
 
-  /* line 317, ../compass/scss/respond/_small.scss */
+  /* line 323, ../compass/scss/respond/_small.scss */
   .gallery-controls-next {
     background-position: -11px 0;
   }
 
-  /* line 320, ../compass/scss/respond/_small.scss */
+  /* line 326, ../compass/scss/respond/_small.scss */
   .gallery-controls-close {
     width: 19px;
     height: 19px;
@@ -2850,17 +2855,17 @@ input[type=text]::-moz-placeholder {
     display: inline-block;
   }
 
-  /* line 328, ../compass/scss/respond/_small.scss */
+  /* line 334, ../compass/scss/respond/_small.scss */
   .main-switch {
     border-bottom-width: 1px;
     margin-bottom: 5px;
   }
-  /* line 332, ../compass/scss/respond/_small.scss */
+  /* line 338, ../compass/scss/respond/_small.scss */
   .main-switch a {
     margin-right: 6px;
     padding-bottom: 4px;
   }
-  /* line 336, ../compass/scss/respond/_small.scss */
+  /* line 342, ../compass/scss/respond/_small.scss */
   .main-switch a:after {
     width: 4px;
     height: 4px;
@@ -2871,76 +2876,76 @@ input[type=text]::-moz-placeholder {
     left: calc( 50% - 3px );
     border-radius: 3px;
   }
-  /* line 347, ../compass/scss/respond/_small.scss */
+  /* line 353, ../compass/scss/respond/_small.scss */
   .main-switch a.active {
     border-bottom-width: 1px;
     margin-bottom: -1px;
   }
 
-  /* line 354, ../compass/scss/respond/_small.scss */
+  /* line 360, ../compass/scss/respond/_small.scss */
   #short-cat-item {
     width: 320px;
     margin: 0;
     font-size: 9px;
   }
-  /* line 359, ../compass/scss/respond/_small.scss */
+  /* line 365, ../compass/scss/respond/_small.scss */
   #short-cat-item .name {
     font-size: 15px;
   }
-  /* line 364, ../compass/scss/respond/_small.scss */
+  /* line 370, ../compass/scss/respond/_small.scss */
   #short-cat-item .image img {
     width: 120px;
     height: 100px;
   }
 
-  /* line 371, ../compass/scss/respond/_small.scss */
+  /* line 377, ../compass/scss/respond/_small.scss */
   #map {
     height: 470px;
   }
 
-  /* line 375, ../compass/scss/respond/_small.scss */
+  /* line 381, ../compass/scss/respond/_small.scss */
   .map-info {
     width: 195px;
     text-align: left;
   }
-  /* line 379, ../compass/scss/respond/_small.scss */
+  /* line 385, ../compass/scss/respond/_small.scss */
   .map-info .image {
     width: 30px;
     height: 30px;
     border-radius: 16px;
     margin-top: 5px;
   }
-  /* line 385, ../compass/scss/respond/_small.scss */
+  /* line 391, ../compass/scss/respond/_small.scss */
   .map-info .image img {
     width: 30px;
     height: 30px;
   }
-  /* line 391, ../compass/scss/respond/_small.scss */
+  /* line 397, ../compass/scss/respond/_small.scss */
   .map-info .info {
     padding: 5px 5px 5px 20px;
     margin-left: -10px;
     font-size: 10px;
     line-height: 1.5;
   }
-  /* line 397, ../compass/scss/respond/_small.scss */
+  /* line 403, ../compass/scss/respond/_small.scss */
   .map-info .info .name {
     height: auto;
   }
-  /* line 401, ../compass/scss/respond/_small.scss */
+  /* line 407, ../compass/scss/respond/_small.scss */
   .map-info .info time {
     margin-right: 15px;
   }
-  /* line 404, ../compass/scss/respond/_small.scss */
+  /* line 410, ../compass/scss/respond/_small.scss */
   .map-info .info .refresh {
     margin-right: 7px;
   }
 
-  /* line 411, ../compass/scss/respond/_small.scss */
+  /* line 417, ../compass/scss/respond/_small.scss */
   .social-icons a {
     margin-left: 9px;
   }
 
-  /* line 415, ../compass/scss/respond/_small.scss */
+  /* line 421, ../compass/scss/respond/_small.scss */
   .popup .content time {
     font-size: 12px;
   }

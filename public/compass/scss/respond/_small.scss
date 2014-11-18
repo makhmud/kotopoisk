@@ -1,5 +1,7 @@
-@media only screen and (max-width: 719px),
+@media only screen and (max-device-width: 719px),
 (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+
+
 
 	header .language-switch {
 		margin: 0 em(60px) !important;
@@ -19,6 +21,10 @@
 		background: none !important;
 		margin-bottom: 80px;
 	}
+
+  body{
+    background-color: #ff0000;
+  }
 
 	.side-menu {
 		width: 283px;
