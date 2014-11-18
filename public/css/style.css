@@ -2260,22 +2260,17 @@ input[type=text]::-moz-placeholder {
     margin-bottom: 80px;
   }
 
-  /* line 25, ../compass/scss/respond/_small.scss */
-  body {
-    background-color: #ff0000;
-  }
-
-  /* line 29, ../compass/scss/respond/_small.scss */
+  /* line 26, ../compass/scss/respond/_small.scss */
   .side-menu {
     width: 283px;
     left: -283px;
   }
-  /* line 33, ../compass/scss/respond/_small.scss */
+  /* line 30, ../compass/scss/respond/_small.scss */
   .side-menu header a {
     line-height: 2.6875em;
   }
 
-  /* line 38, ../compass/scss/respond/_small.scss */
+  /* line 35, ../compass/scss/respond/_small.scss */
   #add-cat {
     font-size: 12px;
   }
@@ -2445,12 +2440,12 @@ input[type=text]::-moz-placeholder {
     background-position: 0 -441px;
   }
 
-  /* line 51, ../compass/scss/respond/_small.scss */
+  /* line 48, ../compass/scss/respond/_small.scss */
   .notification {
     top: 15.78947em;
   }
 
-  /* line 55, ../compass/scss/respond/_small.scss */
+  /* line 52, ../compass/scss/respond/_small.scss */
   .mob-banner {
     display: block;
     position: fixed;
@@ -2461,61 +2456,61 @@ input[type=text]::-moz-placeholder {
     background: url(../images/ibanner.jpg) no-repeat bottom center;
   }
 
-  /* line 65, ../compass/scss/respond/_small.scss */
+  /* line 62, ../compass/scss/respond/_small.scss */
   [class^="profile-icon-"] {
     width: 45px;
     height: 37px;
     background-size: 135px 74px;
   }
 
-  /* line 72, ../compass/scss/respond/_small.scss */
+  /* line 69, ../compass/scss/respond/_small.scss */
   .profile-icon-1 {
     background-position: -0px 0;
   }
 
-  /* line 72, ../compass/scss/respond/_small.scss */
+  /* line 69, ../compass/scss/respond/_small.scss */
   .profile-icon-2 {
     background-position: -45px 0;
   }
 
-  /* line 72, ../compass/scss/respond/_small.scss */
+  /* line 69, ../compass/scss/respond/_small.scss */
   .profile-icon-3 {
     background-position: -90px 0;
   }
 
-  /* line 77, ../compass/scss/respond/_small.scss */
+  /* line 74, ../compass/scss/respond/_small.scss */
   #change-password-popup {
     margin: 0 0 0 -168px !important;
     top: 203px;
   }
-  /* line 80, ../compass/scss/respond/_small.scss */
+  /* line 77, ../compass/scss/respond/_small.scss */
   #change-password-popup .icon {
     top: -30px;
   }
-  /* line 83, ../compass/scss/respond/_small.scss */
+  /* line 80, ../compass/scss/respond/_small.scss */
   #change-password-popup .content {
     width: auto !important;
     padding: 24px 22px;
   }
-  /* line 87, ../compass/scss/respond/_small.scss */
+  /* line 84, ../compass/scss/respond/_small.scss */
   #change-password-popup .profile-icon-1 {
     background-position: 0 -37px;
   }
-  /* line 91, ../compass/scss/respond/_small.scss */
+  /* line 88, ../compass/scss/respond/_small.scss */
   #change-password-popup input {
     font-size: 14px;
     padding: 12px;
     width: 222px;
   }
-  /* line 96, ../compass/scss/respond/_small.scss */
+  /* line 93, ../compass/scss/respond/_small.scss */
   #change-password-popup input:first-child {
     margin-bottom: 30px;
   }
-  /* line 99, ../compass/scss/respond/_small.scss */
+  /* line 96, ../compass/scss/respond/_small.scss */
   #change-password-popup input:nth-child(2) {
     margin-bottom: 12px;
   }
-  /* line 103, ../compass/scss/respond/_small.scss */
+  /* line 100, ../compass/scss/respond/_small.scss */
   #change-password-popup input[type="submit"] {
     font-size: 18px;
     box-shadow: 0 -20px 20px rgba(0, 0, 0, 0.1);
@@ -2524,13 +2519,13 @@ input[type=text]::-moz-placeholder {
     margin: 22px -12px 0;
   }
 
-  /* line 112, ../compass/scss/respond/_small.scss */
+  /* line 109, ../compass/scss/respond/_small.scss */
   .page--profile main {
     padding-top: 10px;
     margin-top: -140px;
   }
 
-  /* line 116, ../compass/scss/respond/_small.scss */
+  /* line 113, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big .photo-file-preview {
     height: auto;
     left: -190px;
@@ -2540,34 +2535,34 @@ input[type=text]::-moz-placeholder {
     width: auto;
   }
 
-  /* line 124, ../compass/scss/respond/_small.scss */
+  /* line 121, ../compass/scss/respond/_small.scss */
   #profile-menu #photos {
     margin-left: 40px;
   }
 
-  /* line 127, ../compass/scss/respond/_small.scss */
+  /* line 124, ../compass/scss/respond/_small.scss */
   #profile-menu #profile-change-link {
     margin-top: 110px;
     margin-right: 10px;
   }
 
-  /* line 131, ../compass/scss/respond/_small.scss */
+  /* line 128, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big {
     width: 130px;
     height: 130px;
   }
 
-  /* line 135, ../compass/scss/respond/_small.scss */
+  /* line 132, ../compass/scss/respond/_small.scss */
   #profile-menu #password-change-link {
     margin-top: 0;
   }
 
-  /* line 138, ../compass/scss/respond/_small.scss */
+  /* line 135, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big .profile-icon-3 {
     margin-top: 30px;
   }
 
-  /* line 141, ../compass/scss/respond/_small.scss */
+  /* line 138, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big input {
     opacity: 0;
     width: 130px;
@@ -2575,7 +2570,7 @@ input[type=text]::-moz-placeholder {
     left: -190px;
   }
 
-  /* line 147, ../compass/scss/respond/_small.scss */
+  /* line 144, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big img {
     width: 107px;
     height: 107px;
@@ -2584,103 +2579,103 @@ input[type=text]::-moz-placeholder {
     margin-left: -24px;
   }
 
-  /* line 154, ../compass/scss/respond/_small.scss */
+  /* line 151, ../compass/scss/respond/_small.scss */
   .file-button-container-big {
     margin-top: 90px;
   }
 
-  /* line 157, ../compass/scss/respond/_small.scss */
+  /* line 154, ../compass/scss/respond/_small.scss */
   #profile-form {
     margin-top: 50px;
     width: 100%;
   }
 
-  /* line 161, ../compass/scss/respond/_small.scss */
+  /* line 158, ../compass/scss/respond/_small.scss */
   #profile-form input, .jqselect .text, .jqselect li {
     font-size: 15px;
   }
 
-  /* line 164, ../compass/scss/respond/_small.scss */
+  /* line 161, ../compass/scss/respond/_small.scss */
   #profile-form input[type="text"] {
     width: 120px;
   }
 
-  /* line 167, ../compass/scss/respond/_small.scss */
+  /* line 164, ../compass/scss/respond/_small.scss */
   #profile-form input, .jqselect .text, .jqselect li {
     font-size: 9px;
   }
 
-  /* line 170, ../compass/scss/respond/_small.scss */
+  /* line 167, ../compass/scss/respond/_small.scss */
   #profile-menu #password-change-link {
     margin-left: 10px;
   }
 
-  /* line 173, ../compass/scss/respond/_small.scss */
+  /* line 170, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big:hover .photo-file-preview {
     background: none;
   }
 
-  /* line 176, ../compass/scss/respond/_small.scss */
+  /* line 173, ../compass/scss/respond/_small.scss */
   #profile-menu #profile-change-link {
     margin-left: -30px;
   }
 
-  /* line 180, ../compass/scss/respond/_small.scss */
+  /* line 177, ../compass/scss/respond/_small.scss */
   .page--profile .main-container {
     background-position: center 290px;
   }
 
-  /* line 184, ../compass/scss/respond/_small.scss */
+  /* line 181, ../compass/scss/respond/_small.scss */
   .jqselect .select {
     width: 145px;
   }
-  /* line 187, ../compass/scss/respond/_small.scss */
+  /* line 184, ../compass/scss/respond/_small.scss */
   .jqselect .text {
     padding: 0 10px;
   }
-  /* line 190, ../compass/scss/respond/_small.scss */
+  /* line 187, ../compass/scss/respond/_small.scss */
   .jqselect .trigger .arrow {
     width: 27px;
     height: 24px;
     -webkit-background-size: 27px 24px;
     background-size: 27px 24px;
   }
-  /* line 196, ../compass/scss/respond/_small.scss */
+  /* line 193, ../compass/scss/respond/_small.scss */
   .jqselect .dropdown {
     top: 28px;
   }
 
-  /* line 202, ../compass/scss/respond/_small.scss */
+  /* line 199, ../compass/scss/respond/_small.scss */
   #gallery li .image {
-    width: 450px;
-    height: 450px;
+    width: 319px;
+    height: 319px;
   }
 
-  /* line 207, ../compass/scss/respond/_small.scss */
+  /* line 204, ../compass/scss/respond/_small.scss */
   #gallery li img {
-    width: 450px !important;
-    height: 450px !important;
+    width: 319px !important;
+    height: 319px !important;
   }
 
-  /* line 211, ../compass/scss/respond/_small.scss */
+  /* line 208, ../compass/scss/respond/_small.scss */
   #gallery .line {
     font-size: 18px;
   }
-  /* line 213, ../compass/scss/respond/_small.scss */
+  /* line 210, ../compass/scss/respond/_small.scss */
   #gallery .line *:first-child {
     margin-left: 4px !important;
   }
-  /* line 216, ../compass/scss/respond/_small.scss */
+  /* line 213, ../compass/scss/respond/_small.scss */
   #gallery .line *:last-child {
     margin-right: 4px !important;
   }
 
-  /* line 220, ../compass/scss/respond/_small.scss */
+  /* line 217, ../compass/scss/respond/_small.scss */
   #gallery li .info {
     padding: 4px 0;
   }
 
-  /* line 224, ../compass/scss/respond/_small.scss */
+  /* line 221, ../compass/scss/respond/_small.scss */
   [class^="gallery-item-icon-"] {
     width: 8px;
     height: 9px;
@@ -2688,22 +2683,22 @@ input[type=text]::-moz-placeholder {
     background-size: 24px 9px;
   }
 
-  /* line 231, ../compass/scss/respond/_small.scss */
+  /* line 228, ../compass/scss/respond/_small.scss */
   .gallery-item-icon-1 {
     background-position: -0px 0;
   }
 
-  /* line 231, ../compass/scss/respond/_small.scss */
+  /* line 228, ../compass/scss/respond/_small.scss */
   .gallery-item-icon-2 {
     background-position: -8px 0;
   }
 
-  /* line 231, ../compass/scss/respond/_small.scss */
+  /* line 228, ../compass/scss/respond/_small.scss */
   .gallery-item-icon-3 {
     background-position: -16px 0;
   }
 
-  /* line 236, ../compass/scss/respond/_small.scss */
+  /* line 233, ../compass/scss/respond/_small.scss */
   [class^="social-icon-"] {
     width: 45px;
     height: 45px;
@@ -2711,129 +2706,129 @@ input[type=text]::-moz-placeholder {
     background-size: 225px 90px;
   }
 
-  /* line 243, ../compass/scss/respond/_small.scss */
+  /* line 240, ../compass/scss/respond/_small.scss */
   .social-icon-1 {
     background-position: -0px 0;
   }
 
-  /* line 246, ../compass/scss/respond/_small.scss */
+  /* line 243, ../compass/scss/respond/_small.scss */
   .social-icon-1:hover {
     background-position: -0px -45px;
   }
 
-  /* line 243, ../compass/scss/respond/_small.scss */
+  /* line 240, ../compass/scss/respond/_small.scss */
   .social-icon-2 {
     background-position: -45px 0;
   }
 
-  /* line 246, ../compass/scss/respond/_small.scss */
+  /* line 243, ../compass/scss/respond/_small.scss */
   .social-icon-2:hover {
     background-position: -45px -45px;
   }
 
-  /* line 243, ../compass/scss/respond/_small.scss */
+  /* line 240, ../compass/scss/respond/_small.scss */
   .social-icon-3 {
     background-position: -90px 0;
   }
 
-  /* line 246, ../compass/scss/respond/_small.scss */
+  /* line 243, ../compass/scss/respond/_small.scss */
   .social-icon-3:hover {
     background-position: -90px -45px;
   }
 
-  /* line 243, ../compass/scss/respond/_small.scss */
+  /* line 240, ../compass/scss/respond/_small.scss */
   .social-icon-4 {
     background-position: -135px 0;
   }
 
-  /* line 246, ../compass/scss/respond/_small.scss */
+  /* line 243, ../compass/scss/respond/_small.scss */
   .social-icon-4:hover {
     background-position: -135px -45px;
   }
 
-  /* line 243, ../compass/scss/respond/_small.scss */
+  /* line 240, ../compass/scss/respond/_small.scss */
   .social-icon-5 {
     background-position: -180px 0;
   }
 
-  /* line 246, ../compass/scss/respond/_small.scss */
+  /* line 243, ../compass/scss/respond/_small.scss */
   .social-icon-5:hover {
     background-position: -180px -45px;
   }
 
-  /* line 251, ../compass/scss/respond/_small.scss */
+  /* line 248, ../compass/scss/respond/_small.scss */
   .side-menu + header a.menu-button {
     color: transparent;
   }
 
-  /* line 255, ../compass/scss/respond/_small.scss */
+  /* line 252, ../compass/scss/respond/_small.scss */
   .side-menu.open ~ * {
     left: 283px;
   }
 
-  /* line 260, ../compass/scss/respond/_small.scss */
+  /* line 257, ../compass/scss/respond/_small.scss */
   #overlay .popup {
     padding-top: 40px;
   }
-  /* line 263, ../compass/scss/respond/_small.scss */
+  /* line 260, ../compass/scss/respond/_small.scss */
   #overlay .popup .content {
     width: 300px;
   }
-  /* line 265, ../compass/scss/respond/_small.scss */
+  /* line 262, ../compass/scss/respond/_small.scss */
   #overlay .popup .content .body, #overlay .popup .content .contacts {
     font-size: 9px;
   }
-  /* line 270, ../compass/scss/respond/_small.scss */
+  /* line 267, ../compass/scss/respond/_small.scss */
   #overlay .popup .content .image-panel > div.line {
     height: 30px;
     line-height: 30px;
   }
-  /* line 278, ../compass/scss/respond/_small.scss */
+  /* line 275, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls * {
     opacity: .5;
   }
-  /* line 281, ../compass/scss/respond/_small.scss */
+  /* line 278, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls *:hover {
     opacity: 1;
   }
-  /* line 284, ../compass/scss/respond/_small.scss */
+  /* line 281, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls .prev, #overlay .popup .controls .next, #overlay .popup .controls .close {
     top: 0;
     width: 35px;
     height: 35px;
     line-height: 35px;
   }
-  /* line 290, ../compass/scss/respond/_small.scss */
+  /* line 287, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls .prev {
     left: 0;
   }
-  /* line 293, ../compass/scss/respond/_small.scss */
+  /* line 290, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls .next {
     left: 35px;
   }
-  /* line 296, ../compass/scss/respond/_small.scss */
+  /* line 293, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls .close {
     display: inline-block;
     right: 0;
   }
-  /* line 301, ../compass/scss/respond/_small.scss */
+  /* line 298, ../compass/scss/respond/_small.scss */
   #overlay .popup#cat-item-popup {
     width: 300px;
   }
-  /* line 303, ../compass/scss/respond/_small.scss */
+  /* line 300, ../compass/scss/respond/_small.scss */
   #overlay .popup#cat-item-popup .map .text {
     display: none;
   }
-  /* line 308, ../compass/scss/respond/_small.scss */
+  /* line 305, ../compass/scss/respond/_small.scss */
   #overlay .popup#change-password-popup {
     width: 278px;
   }
-  /* line 310, ../compass/scss/respond/_small.scss */
+  /* line 307, ../compass/scss/respond/_small.scss */
   #overlay .popup#change-password-popup .content {
     padding: 30px 13px 0;
   }
 
-  /* line 317, ../compass/scss/respond/_small.scss */
+  /* line 314, ../compass/scss/respond/_small.scss */
   [class^="gallery-controls-"] {
     width: 11px;
     height: 19px;
@@ -2841,12 +2836,12 @@ input[type=text]::-moz-placeholder {
     background-size: 22px 19px;
   }
 
-  /* line 323, ../compass/scss/respond/_small.scss */
+  /* line 320, ../compass/scss/respond/_small.scss */
   .gallery-controls-next {
     background-position: -11px 0;
   }
 
-  /* line 326, ../compass/scss/respond/_small.scss */
+  /* line 323, ../compass/scss/respond/_small.scss */
   .gallery-controls-close {
     width: 19px;
     height: 19px;
@@ -2855,17 +2850,17 @@ input[type=text]::-moz-placeholder {
     display: inline-block;
   }
 
-  /* line 334, ../compass/scss/respond/_small.scss */
+  /* line 331, ../compass/scss/respond/_small.scss */
   .main-switch {
     border-bottom-width: 1px;
     margin-bottom: 5px;
   }
-  /* line 338, ../compass/scss/respond/_small.scss */
+  /* line 335, ../compass/scss/respond/_small.scss */
   .main-switch a {
     margin-right: 6px;
     padding-bottom: 4px;
   }
-  /* line 342, ../compass/scss/respond/_small.scss */
+  /* line 339, ../compass/scss/respond/_small.scss */
   .main-switch a:after {
     width: 4px;
     height: 4px;
@@ -2876,76 +2871,76 @@ input[type=text]::-moz-placeholder {
     left: calc( 50% - 3px );
     border-radius: 3px;
   }
-  /* line 353, ../compass/scss/respond/_small.scss */
+  /* line 350, ../compass/scss/respond/_small.scss */
   .main-switch a.active {
     border-bottom-width: 1px;
     margin-bottom: -1px;
   }
 
-  /* line 360, ../compass/scss/respond/_small.scss */
+  /* line 357, ../compass/scss/respond/_small.scss */
   #short-cat-item {
     width: 320px;
     margin: 0;
     font-size: 9px;
   }
-  /* line 365, ../compass/scss/respond/_small.scss */
+  /* line 362, ../compass/scss/respond/_small.scss */
   #short-cat-item .name {
     font-size: 15px;
   }
-  /* line 370, ../compass/scss/respond/_small.scss */
+  /* line 367, ../compass/scss/respond/_small.scss */
   #short-cat-item .image img {
     width: 120px;
     height: 100px;
   }
 
-  /* line 377, ../compass/scss/respond/_small.scss */
+  /* line 374, ../compass/scss/respond/_small.scss */
   #map {
     height: 470px;
   }
 
-  /* line 381, ../compass/scss/respond/_small.scss */
+  /* line 378, ../compass/scss/respond/_small.scss */
   .map-info {
     width: 195px;
     text-align: left;
   }
-  /* line 385, ../compass/scss/respond/_small.scss */
+  /* line 382, ../compass/scss/respond/_small.scss */
   .map-info .image {
     width: 30px;
     height: 30px;
     border-radius: 16px;
     margin-top: 5px;
   }
-  /* line 391, ../compass/scss/respond/_small.scss */
+  /* line 388, ../compass/scss/respond/_small.scss */
   .map-info .image img {
     width: 30px;
     height: 30px;
   }
-  /* line 397, ../compass/scss/respond/_small.scss */
+  /* line 394, ../compass/scss/respond/_small.scss */
   .map-info .info {
     padding: 5px 5px 5px 20px;
     margin-left: -10px;
     font-size: 10px;
     line-height: 1.5;
   }
-  /* line 403, ../compass/scss/respond/_small.scss */
+  /* line 400, ../compass/scss/respond/_small.scss */
   .map-info .info .name {
     height: auto;
   }
-  /* line 407, ../compass/scss/respond/_small.scss */
+  /* line 404, ../compass/scss/respond/_small.scss */
   .map-info .info time {
     margin-right: 15px;
   }
-  /* line 410, ../compass/scss/respond/_small.scss */
+  /* line 407, ../compass/scss/respond/_small.scss */
   .map-info .info .refresh {
     margin-right: 7px;
   }
 
-  /* line 417, ../compass/scss/respond/_small.scss */
+  /* line 414, ../compass/scss/respond/_small.scss */
   .social-icons a {
     margin-left: 9px;
   }
 
-  /* line 421, ../compass/scss/respond/_small.scss */
+  /* line 418, ../compass/scss/respond/_small.scss */
   .popup .content time {
     font-size: 12px;
   }
