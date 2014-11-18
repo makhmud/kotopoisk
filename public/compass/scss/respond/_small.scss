@@ -1,7 +1,9 @@
 @media only screen and (max-device-width: 480px),
 (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 320px) {
 
-
+    .wrapper{
+      width: 480px;
+    }
 
 	header .language-switch {
 		margin: 0 em(60px) !important;
@@ -13,7 +15,7 @@
 	}
 
 	.main-container {
-		margin: 0 0 !important;
+		margin: 0 auto !important;
 	}
 
 	body {
