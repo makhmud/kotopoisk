@@ -2236,7 +2236,7 @@ input[type=text]::-moz-placeholder {
     width: 1366px;
   }
 }
-@media only screen and (max-width: 719px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 320px) {
+@media only screen and (max-device-width: 719px), (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 320px) {
   /* line 6, ../compass/scss/respond/_small.scss */
   header .language-switch {
     margin: 0 3.75em !important;
