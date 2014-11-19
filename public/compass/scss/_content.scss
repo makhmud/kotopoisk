@@ -299,6 +299,7 @@ main {
 			border-color: #e8e8e8;
 			color: #d1d1d1;
 			font-style: italic;
+          box-shadow: none;
 		}
 
 		&:focus {
@@ -915,20 +916,23 @@ $list: adam john wynn mason kuroir;
           height: 300px;
           overflow: hidden;
           position: relative;
+          line-height: 300px;
+          text-align: center;
           a{
             text-decoration: none;
             color: #ffffff;
           }
           > div{
             position: absolute;
+            line-height: 1;
             &.likes span{
               vertical-align: middle;
               margin: 0 6px;
             }
 
             &.likes{
-              top: 0;
-              right: 0;
+              top: 15px;
+              right: 15px;
             }
 
             &.line{
@@ -948,11 +952,19 @@ $list: adam john wynn mason kuroir;
               .like{
                 float: right;
               }
+
+              .map{
+                position: absolute;
+                left: 0;
+              }
             }
           }
 
           img{
-            width: 100%;
+            max-width: 540px;
+            max-height: 300px;
+            height: auto;
+            width: auto;
           }
         }
 
@@ -1160,6 +1172,12 @@ $list: adam john wynn mason kuroir;
 
       span{
         vertical-align: middle;
+      }
+    }
+
+    &:hover{
+      .info{
+        color: #333333;
       }
     }
 

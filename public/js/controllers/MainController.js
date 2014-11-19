@@ -46,6 +46,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         options :{
             scrollwheel: false
         }
+
     };
 
     /**
@@ -351,6 +352,18 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         if ($scope.settings.galleryPreview.position >= -(max - 516)) {
             $scope.settings.galleryPreview.position -= 126;
         }
+    }
+
+    $scope.searchPlaceholderText = $filter('translate')('search_placeholder');
+
+    $scope.searchPlaceholder = function(focus) {
+        console.log(focus);
+        if (focus) {
+            $scope.searchPlaceholderText = '';
+        } else {
+            $scope.searchPlaceholderText = $filter('translate')('search_placeholder');
+        }
+
     }
 
 });

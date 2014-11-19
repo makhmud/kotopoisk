@@ -19,13 +19,13 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
-<body class="{{page.bodyClasses}}">
+<body class="{{page.bodyClasses}}" ng-click="notificate('')">
 
 <div class="main-container wrapper">
     <div class="side-menu {{ (settings.isSideMenuOpened) ? 'open' : '' }}" ng-if="!page.isMain">
         <div class="element-container">
             <form>
-                <input type="search" class="search-icon" ng-model="search" placeholder="Поиск..."/>
+                <input type="search" class="search-icon" ng-model="search" ng-focus="searchPlaceholder(true)" ng-blur="searchPlaceholder(false)" placeholder="{{searchPlaceholderText}}"/>
                 <input type="submit" class="search-icon" ng-click="find(search)" ng-disabled="search.length==0" value=""/>
             </form>
             <a href="/add-cat" class="add-cat" ng-bind="'menu.add_cat' | translate "></a>
@@ -56,7 +56,7 @@
 
         <div class="member-counter ta-right"><span ng-bind="page.userCount"></span></div>
     </header>
-    <div class="notification" ng-if="notification!=''" ng-click="notificate('')">
+    <div class="notification" ng-if="notification!=''">
         <span ng-bind="notification"></span>
     </div>
 

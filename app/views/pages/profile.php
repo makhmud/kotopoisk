@@ -11,6 +11,7 @@
                 <div class="text"  ng-bind="'page.profile.change_photo' | translate"></div>
             </div>
             <img src="/api/getUserPic?notBlured=1&destination={{user.data.image}}" flow-img="$flow.files[$flow.files.length-1]"/>
+
         </div>
     </div>
     </a><a ng-click="logout()" id="profile-change-link"><span class="profile-icon-2"></span>
@@ -31,7 +32,7 @@
             <input type="text" ng-model="user.data.contacts.city" placeholder="{{ 'placeholders.city' | translate }}"/>
         </div>
         <div class="form-item" ng-class="{active: user.data.email.length>0}">
-            <input type="text" ng-model="user.data.email" placeholder="{{ 'placeholders.email' | translate }}" disabled />
+            <input type="text" ng-model="user.data.email" placeholder="{{ 'placeholders.email' | translate }}" ng-disabled="user.data.social == null" />
         </div>
         <div class="form-item" ng-class="{active: user.data.contacts.phone.length>0}">
             <input type="text" ng-model="user.data.contacts.phone" placeholder="{{ 'placeholders.phone' | translate }}"/>

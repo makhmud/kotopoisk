@@ -75,6 +75,7 @@
 				color: #d9d9d9;
 				margin: 4px 0;
 				background: #292929;
+              position: relative;
 
 				&.icon-feed {
 					@include main-sprite-icon(mi-feed, 20);
@@ -90,7 +91,9 @@
 				}
 
 				&:before{
-					margin-top: em(18px);
+                  margin-left: 0 !important;
+                  left: 30px;
+                  top: 25px;
 				}
 
 				&:hover {

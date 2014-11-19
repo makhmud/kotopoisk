@@ -43,7 +43,7 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$user = User::with('contacts')->find($id);
+		$user = User::with(['contacts', 'social'])->find($id);
 
         return Response::answer($user);
 	}
@@ -71,23 +71,39 @@ class UserController extends \BaseController {
 	{
         $user = User::with('contacts')->find($id);
 
-        $user->image = Input::get('image');
+        DB::beginTransaction();
+        try{
+            $user->image = Input::get('image');
+            $user->email = Input::get('email');
 
-        if ( empty($user->contacts) ){
-            $contacts = new Contact(Input::get('contacts'));
-        } else {
-            $user->contacts->name = Input::get('contacts.name');
-            $user->contacts->surname = Input::get('contacts.surname');
-            $user->contacts->phone = Input::get('contacts.phone');
-            $user->contacts->web = Input::get('contacts.web');
-            $user->contacts->city = Input::get('contacts.city');
-            $user->contacts->cats_amount = Input::get('contacts.cats_amount');
-            $contacts = $user->contacts;
+            if ( empty($user->contacts) ){
+                $contacts = new Contact(Input::get('contacts'));
+            } else {
+                $user->contacts->name = Input::get('contacts.name');
+                $user->contacts->surname = Input::get('contacts.surname');
+                $user->contacts->phone = Input::get('contacts.phone');
+                $user->contacts->web = Input::get('contacts.web');
+                $user->contacts->city = Input::get('contacts.city');
+                $user->contacts->cats_amount = Input::get('contacts.cats_amount');
+                $contacts = $user->contacts;
+            }
+            $contacts->save();
+
+            $user->contacts()->associate($contacts);
+            $user->save();
+
+            DB::commit();
+
+            return Response::answer([]);
+
+        } catch(\Exception $e){
+
+            DB::rollback();
+
+            return Response::answer([], false);
         }
-        $contacts->save();
 
-        $user->contacts()->associate($contacts);
-        $user->save();
+
 
 	}
 

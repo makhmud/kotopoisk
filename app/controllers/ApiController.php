@@ -54,10 +54,16 @@ class ApiController extends BaseController {
         }
 
         if(file_exists($destination)) {
-            return Image::make($destination)->response();
+            $image = Image::make($destination);
         } else {
-            return Image::make($defaulPath)->response();
+            $image = Image::make($defaulPath);
         }
+
+        if (Input::has('notBlured')) {
+            $image->fit(300, 300);
+        }
+
+        return $image->response();
 
     }
 

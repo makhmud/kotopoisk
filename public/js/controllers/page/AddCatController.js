@@ -1,10 +1,11 @@
-app.controller('AddCatCtrl', function($scope, Cat, AddressService, $timeout, $cookies, $location) {
+app.controller('AddCatCtrl', function($scope, Cat, AddressService, $timeout, $cookies, $location, $filter) {
 
     console.log('In AddCat Controller');
 
-    $scope.page.title = 'Add cat';
+    $scope.page.title = $filter('translate')('page.add_cat.title');
     $scope.page.isMain = false;
     $scope.page.bodyClasses = 'page--add-cat';
+    $scope.notification = '';
 
     $scope.ngFlowParams = {
         target: '/api/upload?auth_token=' + $cookies.auth_token ,
@@ -40,9 +41,12 @@ app.controller('AddCatCtrl', function($scope, Cat, AddressService, $timeout, $co
         $scope.settings.map.positionMap.center = coords;
     }
 
-    navigator.geolocation.getCurrentPosition(function(pos) {
-        applyPosition(pos.coords);
-    });
+    $scope.showCurrentMap = function() {
+        navigator.geolocation.getCurrentPosition(function(pos) {
+            applyPosition(pos.coords);
+        });
+        $scope.settings.showChooseMapPosition = true;
+    }
 
     var searchTimeout;
     $scope.doSearch = function() {

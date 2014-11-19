@@ -5,6 +5,7 @@ app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
     $scope.page.title = $filter('translate')('page.map.title');
     $scope.page.bodyClasses = 'page--map';
     $scope.page.isMain = false;
+    $scope.notification = '';
 
     $scope.settings.popupState.showControls = false;
 
@@ -30,5 +31,17 @@ app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
                     </div> \
                 </div> \
             </div>';
+    }
+
+    $scope.ser
+
+    $scope.settings.map.MarkerOptions = function(cat) {
+        return {
+            labelContent:$scope.parseCatToMarker(cat),
+                labelAnchor: '-25 70',
+                mouseover : function(mapModel, eventName, originalEventArgs) {
+                    console.log(123);
+                }
+        }
     }
 });

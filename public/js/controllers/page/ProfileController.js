@@ -12,6 +12,7 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter) {
     $scope.page.title = $filter('translate')('page.profile.title');
     $scope.page.bodyClasses = 'page--profile';
     $scope.page.isMain = false;
+    $scope.notification = '';
 
     $scope.changePassForm = {
         data : {
@@ -56,7 +57,15 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter) {
 
     $scope.saveUser = function() {
         $scope.user.auth_token = $cookies.auth_token;
-        User.update({id:$cookies.auth_id}, $scope.user.data);
+        User.update(
+            {id:$cookies.auth_id},
+            $scope.user.data,
+            function(response){
+                if (!response.success) {
+                    $scope.notificate($filter('translate')('notification.register.already_exists'))
+                }
+            }
+        );
     }
 
     $scope.$watch(function() {
