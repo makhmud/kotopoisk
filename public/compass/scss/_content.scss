@@ -918,6 +918,9 @@ $list: adam john wynn mason kuroir;
           position: relative;
           line-height: 300px;
           text-align: center;
+          -webkit-background-size: 100% auto;
+          background-size: 100% auto;
+          background-position: center center;
           a{
             text-decoration: none;
             color: #ffffff;
@@ -1048,6 +1051,14 @@ $list: adam john wynn mason kuroir;
     }
   }
 
+  .page--about main{
+    text-align: left;
+    h3, .social-icons{
+      text-align: center;
+      display: block;
+    }
+  }
+
   [class^="gallery-controls-"]{
     width: 17px;
     height: 28px;
@@ -1083,9 +1094,8 @@ $list: adam john wynn mason kuroir;
       text-decoration: none;
       display: inline-block;
       position: relative;
-      margin-right: 10px;
       padding-bottom: 6px;
-      width: 100px;
+      width: 120px;
 
       &:last-child{
         margin-right: 0;
@@ -1100,7 +1110,7 @@ $list: adam john wynn mason kuroir;
         background-color: #d5d5d5;
         position: absolute;
         bottom: -6px;
-        left: calc( 50% - 5px );
+        left: calc( 50% - 6px );
         border-radius: 5px;
       }
 

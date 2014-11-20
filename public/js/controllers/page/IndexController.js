@@ -90,7 +90,7 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route,
                 $scope.settings.loginForms.remind.email = '';
             }).error(function(response) {
                 $scope.formStates.remindValid = false;
-                $scope.notificate($filter('translate')('notification.register.already_exists'));
+                $scope.notificate($filter('translate')('notification.remind.success'));
             });
         }
 

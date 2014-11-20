@@ -1,4 +1,4 @@
-app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $http, Auth) {
+app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $http, Auth, $sce) {
 
     console.log('In Main Controller');
 
@@ -317,7 +317,8 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
     $scope.notification = '';
 
     $scope.notificate = function(message) {
-        $scope.notification = message;
+        console.log(message);
+        $scope.notification = $sce.trustAsHtml(message);
     }
 
     $scope.logout = function() {
@@ -364,6 +365,15 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
             $scope.searchPlaceholderText = $filter('translate')('search_placeholder');
         }
 
+    }
+
+    $scope.addCatLink = function() {
+        if ($scope.settings.auth) {
+            $location.path('/add-cat');
+        } else {
+            $scope.settings.isSideMenuOpened = false;
+            $scope.notificate('Чтобы добавить котэ, пожалуйста, <a href="/">зарегистрируйтесь</a>.')
+        }
     }
 
 });

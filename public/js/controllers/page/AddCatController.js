@@ -41,10 +41,12 @@ app.controller('AddCatCtrl', function($scope, Cat, AddressService, $timeout, $co
         $scope.settings.map.positionMap.center = coords;
     }
 
+    navigator.geolocation.getCurrentPosition(function(pos) {
+        applyPosition(pos.coords);
+    });
+    //
+
     $scope.showCurrentMap = function() {
-        navigator.geolocation.getCurrentPosition(function(pos) {
-            applyPosition(pos.coords);
-        });
         $scope.settings.showChooseMapPosition = true;
     }
 

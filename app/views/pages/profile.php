@@ -32,20 +32,20 @@
             <input type="text" ng-model="user.data.contacts.city" placeholder="{{ 'placeholders.city' | translate }}"/>
         </div>
         <div class="form-item" ng-class="{active: user.data.email.length>0}">
-            <input type="text" ng-model="user.data.email" placeholder="{{ 'placeholders.email' | translate }}" ng-disabled="user.data.social == null" />
+            <input type="text" ng-model="user.data.email" placeholder="{{ 'placeholders.email' | translate }}" ng-disabled="user.data.social.length == 0" />
         </div>
         <div class="form-item" ng-class="{active: user.data.contacts.phone.length>0}">
-            <input type="text" ng-model="user.data.contacts.phone" placeholder="{{ 'placeholders.phone' | translate }}"/>
+            <input type="text" id="phone"  placeholder="{{ 'placeholders.phone' | translate }}" />
         </div>
         <div class="form-item" ng-class="{active: user.data.contacts.web.length>0}">
-            <input type="text" ng-model="user.data.contacts.web" placeholder="{{ 'placeholders.social_link' | translate }}"/>
+            <input type="text" id="web" ng-model="user.data.contacts.web" placeholder="{{ 'placeholders.social_link' | translate }}"/>
         </div>
         <div class="form-item" ng-class="{active: user.data.contacts.cats_amount>0}">
             <select name="amount" id="amount" ng-model="user.data.contacts.cats_amount">
                 <option value="0" disabled selected >{{'placeholders.cats_amount' | translate}}</option>
                 <option value="1">0</option>
                 <option value="2">1</option>
-                <option value="3">2 и более</option>
+                <option value="3" ng-bind="'placeholders.more_than_2' | translate"></option>
             </select>
         </div>
         <div class="form-item submit">

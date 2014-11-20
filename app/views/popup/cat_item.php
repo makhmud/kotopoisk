@@ -5,8 +5,7 @@
         <a href="#" class="next" ng-hide="settings.popupState.isLast()" ng-if="settings.popupState.showControls" ng-click="settings.popupState.next()"><span class="gallery-controls-next"></span></a>
     </div>
     <div class="content">
-        <div class="image-panel">
-            <img src="/user/big_{{data.currentCat.current_photo}}" alt=""/>
+        <div class="image-panel" style="background-image: url('/user/big_{{data.currentCat.current_photo}}');">
             <div class="likes"><a ng-click="like(data.currentCat.id)">
                     <span class="like-icon" ng-class="{active : data.currentCat.hasLike}"></span>
                     <span class="text">{{data.currentCat.likes.length}}</span></a></div>

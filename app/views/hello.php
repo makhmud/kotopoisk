@@ -19,7 +19,7 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
-<body class="{{page.bodyClasses}}" ng-click="notificate('')">
+<body class="{{page.bodyClasses}}">
 
 <div class="main-container wrapper">
     <div class="side-menu {{ (settings.isSideMenuOpened) ? 'open' : '' }}" ng-if="!page.isMain">
@@ -28,7 +28,7 @@
                 <input type="search" class="search-icon" ng-model="search" ng-focus="searchPlaceholder(true)" ng-blur="searchPlaceholder(false)" placeholder="{{searchPlaceholderText}}"/>
                 <input type="submit" class="search-icon" ng-click="find(search)" ng-disabled="search.length==0" value=""/>
             </form>
-            <a href="/add-cat" class="add-cat" ng-bind="'menu.add_cat' | translate "></a>
+            <a ng-click="addCatLink()" class="add-cat" ng-bind="'menu.add_cat' | translate "></a>
 
             <nav>
                 <a href="/feed" class="icon-feed" ng-bind="'page.feed.title' | translate "></a>
@@ -56,11 +56,11 @@
 
         <div class="member-counter ta-right"><span ng-bind="page.userCount"></span></div>
     </header>
-    <div class="notification" ng-if="notification!=''">
-        <span ng-bind="notification"></span>
+    <div class="notification" ng-if="notification!=''"  ng-click="notificate('')">
+        <span ng-bind-html="notification"></span>
     </div>
 
-    <div class="main wrapper clearfix">
+    <div class="main wrapper clearfix"  ng-click="notificate('')">
         <h1 ng-bind="page.title"  ng-if="!page.isMain"></h1>
 
             <div ng-view></div>
@@ -74,6 +74,8 @@
 
     <script src="/js/lib/jquery/jquery.js"></script>
     <script src="/js/lib/jquery.formstyler/jquery.formstyler.min.js"></script>
+    <script src="/js/lib/jquery.inputmask/dist/inputmask/jquery.inputmask.js"></script>
+    <script src="/js/lib/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js"></script>
 
     <!--Angular primary libs-->
     <script src="/js/lib/angular/angular.min.js"></script>

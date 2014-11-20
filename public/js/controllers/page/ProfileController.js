@@ -1,6 +1,23 @@
 app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter) {
 
-    $('select').styler();
+    $('select').styler({
+        selectSmartPositioning : false
+    });
+
+    $('#web').inputmask({
+        mask: "http://*{2,20}.*{2,5}[*{2,80}]",
+        greedy: false,
+        definitions: {
+            '*': {
+                validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+                cardinality: 1,
+                casing: "lower"
+            }
+        }
+    });
+    $('#phone').inputmask({
+        mask: "+79 999 99 99"
+    });
 
     console.log('In Profile Controller');
 
