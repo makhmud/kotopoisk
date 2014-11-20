@@ -3,7 +3,7 @@
         <div ng-repeat="cat in data.cats">
             <ui-gmap-marker idKey='marker-cat.id'
                             coords='cat.position'
-                            icon="$host + ':8000/images/map-marker.png'"
+                            icon="$host + '/images/map-marker.png'"
                             options="{
                                 labelContent:parseCatToMarker(cat),
                                     labelAnchor: '-25 70'
