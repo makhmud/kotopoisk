@@ -2610,7 +2610,7 @@ input[type=text]::-moz-placeholder {
     position: absolute;
     width: 100px;
     height: 50px;
-    left: -130px;
+    left: -110px;
     top: 40px;
   }
 
@@ -2665,7 +2665,7 @@ input[type=text]::-moz-placeholder {
 
   /* line 179, ../compass/scss/respond/_small.scss */
   #profile-menu #password-change-link {
-    margin-left: 10px;
+    margin-left: 5px;
   }
 
   /* line 182, ../compass/scss/respond/_small.scss */
