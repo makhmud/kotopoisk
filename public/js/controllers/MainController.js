@@ -154,7 +154,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
     var countSharedAll = function() {
 
         $('#gallery > li').each(function (indx, elm) {
-            
+
             $timeout(function(){
                 var total = 0;
                 $(elm).find('.social-icons .ng-social-counter').each(function(indx, elm1){
@@ -162,7 +162,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
                 });
 
                 $(elm).find('.refresh .text').text(total);
-            }, 500)
+            }, 1000)
         })
 
     }
