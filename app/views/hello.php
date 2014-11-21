@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="/css/normalize.min.css"/>
     <link rel="stylesheet" href="/js/lib/jquery.formstyler/jquery.formstyler.css"/>
     <link rel="stylesheet" href="/css/style.css"/>
-    <script>
-        window.socialToken = <?= isset($social_token) ? '"'.$social_token.'"' : 'null' ?>
-    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0; user-scalable=no;">
     <meta name="MobileOptimized" content="320">
     <meta name="HandheldFriendly" content="true">

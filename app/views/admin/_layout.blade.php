@@ -14,6 +14,7 @@
         <li><a href="/admin">Переводы</a></li>
         <li><a href="/admin/user">Пользователи</a></li>
         <li><a href="/admin/cat">Объявления</a></li>
+        <li><a href="/admin/general">Администрация</a></li>
     </ul>
     
     {{ $content }}

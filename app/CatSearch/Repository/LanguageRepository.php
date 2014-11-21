@@ -19,7 +19,7 @@ class LanguageRepository {
 
         $returnArray = array();
         foreach ($results as $item) {
-            $returnArray[$item->key] = $item->value;
+            $returnArray[$item->key] = nl2br($item->value);
         }
 
         return $returnArray;

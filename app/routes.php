@@ -23,6 +23,7 @@ Route::any('/', function()
 });
 
 Route::controller('/admin/user', 'AdminUserController');
+Route::controller('/admin/general', 'AdminGeneralController');
 Route::controller('/admin/cat', 'AdminCatsController');
 Route::controller('/admin', 'AdminController');
 

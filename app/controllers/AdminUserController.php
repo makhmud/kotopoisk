@@ -10,7 +10,6 @@ class AdminUserController extends \BaseController {
 
     public function getIndex() {
 
-
         $this->layout->content = View::make('admin.users', array('users' => User::with('contacts')->orderBy('created_at', 'desc')->get() ));
 
     }
@@ -18,7 +17,7 @@ class AdminUserController extends \BaseController {
     public function getDelete($id) {
         User::find($id)->delete();
 
-        return Redirect::action('AdminUserController@getIndex');
+        return Redirect::back();
     }
 
     public function getLock($id) {
@@ -26,7 +25,7 @@ class AdminUserController extends \BaseController {
         $user->locked = 1;
         $user->save();
 
-        return Redirect::action('AdminUserController@getIndex');
+        return Redirect::back();
     }
 
     public function getUnlock($id) {
@@ -34,7 +33,7 @@ class AdminUserController extends \BaseController {
         $user->locked = 0;
         $user->save();
 
-        return Redirect::action('AdminUserController@getIndex');
+        return Redirect::back();
     }
 
 }
