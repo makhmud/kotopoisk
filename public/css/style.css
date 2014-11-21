@@ -2082,7 +2082,7 @@ main h3 {
 
 /* line 1247, ../compass/scss/_content.scss */
 .angular-google-map-container {
-  height: 1100px;
+  height: 660px;
 }
 
 /* line 1251, ../compass/scss/_content.scss */
@@ -3017,5 +3017,10 @@ input[type=text]::-moz-placeholder {
   /* line 440, ../compass/scss/respond/_small.scss */
   #profile-form input[type="submit"] {
     width: 310px;
+  }
+
+  /* line 444, ../compass/scss/respond/_small.scss */
+  .angular-google-map-container {
+    height: 450px;
   }
 }

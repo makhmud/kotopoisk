@@ -44,7 +44,6 @@ app.controller('AddCatCtrl', function($scope, Cat, AddressService, $timeout, $co
     navigator.geolocation.getCurrentPosition(function(pos) {
         applyPosition(pos.coords);
     });
-    //
 
     $scope.showCurrentMap = function() {
         $scope.settings.showChooseMapPosition = true;
