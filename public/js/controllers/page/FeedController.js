@@ -23,6 +23,7 @@ app.controller('FeedCtrl', function($scope, $filter, Cat) {
     $scope.page.bodyClasses = 'page--feed';
     $scope.page.search = false;
     $scope.notification = '';
+    $scope.settings.isSideMenuOpened = false;
 
     /**
      * Current offset position, depends on scroll position

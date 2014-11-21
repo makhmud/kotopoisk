@@ -17,7 +17,7 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
-<body class="{{page.bodyClasses}}">
+<body class="{{page.bodyClasses}}" ng-swipe-right="swipeRight()" ng-swipe-left="swipeLeft()">
 
 <div class="main-container wrapper">
     <div class="side-menu {{ (settings.isSideMenuOpened) ? 'open' : '' }}" ng-if="!page.isMain">
@@ -89,6 +89,7 @@
     <script src="/js/lib/angular-translate/angular-translate.min.js"></script>
     <script src="/js/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
     <script src="/js/lib/angular-social/angular-social.src.js"></script>
+    <script src="/js/lib/angular-touch/angular-touch.min.js"></script>
     <!--End Angular secondary libs-->
 
     <!--GMap Directive with dependencies-->

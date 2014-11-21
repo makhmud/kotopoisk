@@ -6,6 +6,7 @@ app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
     $scope.page.bodyClasses = 'page--map';
     $scope.page.isMain = false;
     $scope.notification = '';
+    $scope.settings.isSideMenuOpened = false;
 
     $scope.settings.popupState.showControls = false;
 

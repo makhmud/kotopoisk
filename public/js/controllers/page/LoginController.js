@@ -6,4 +6,5 @@ app.controller('LoginCtrl', function($scope) {
     $scope.page.isMain = false;
     $scope.page.bodyClasses = 'page--login';
     $scope.notification = '';
+    $scope.settings.isSideMenuOpened = false;
 });

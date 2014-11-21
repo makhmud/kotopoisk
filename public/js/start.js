@@ -8,6 +8,7 @@ var app = angular.module('app',
         'flow',
         'google-maps'.ns(),
         'pascalprecht.translate',
-        'ngSocial'
+        'ngSocial',
+        'ngTouch'
     ]
 );

@@ -374,4 +374,12 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         }
     }
 
+    $scope.swipeLeft = function(){
+        $scope.settings.isSideMenuOpened = false;
+    }
+
+    $scope.swipeRight = function(){
+        $scope.settings.isSideMenuOpened = true;
+    }
+
 });

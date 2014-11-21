@@ -6,6 +6,7 @@ app.controller('AddCatCtrl', function($scope, Cat, AddressService, $timeout, $co
     $scope.page.isMain = false;
     $scope.page.bodyClasses = 'page--add-cat';
     $scope.notification = '';
+    $scope.settings.isSideMenuOpened = false;
 
     $scope.ngFlowParams = {
         target: '/api/upload?auth_token=' + $cookies.auth_token ,

@@ -30,6 +30,7 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter) {
     $scope.page.bodyClasses = 'page--profile';
     $scope.page.isMain = false;
     $scope.notification = '';
+    $scope.settings.isSideMenuOpened = false;
 
     $scope.changePassForm = {
         data : {

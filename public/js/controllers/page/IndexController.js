@@ -11,6 +11,7 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route,
     $scope.page.isMain = true;
     $scope.page.bodyClasses = 'page--home';
     $scope.notification = '';
+    $scope.settings.isSideMenuOpened = false;
 
     $scope.settings.loginForms = {
         active:'signup',

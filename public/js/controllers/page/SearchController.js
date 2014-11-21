@@ -13,6 +13,7 @@ app.controller('SearchCtrl', function($scope, $routeParams) {
     $scope.page.bodyClasses = 'page--search';
     $scope.page.search = true;
     $scope.notification = '';
+    $scope.settings.isSideMenuOpened = false;
 
     $scope.searchString = $routeParams.find;
     $scope.settings.popupState.showControls = true;
