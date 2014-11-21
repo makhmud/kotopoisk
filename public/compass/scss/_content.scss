@@ -544,6 +544,7 @@ $list: adam john wynn mason kuroir;
   }
 
   #profile-menu{
+    position: relative;
     > *{
       display: inline-block;
     }
@@ -562,12 +563,14 @@ $list: adam john wynn mason kuroir;
     #photos{
     }
     #password-change-link{
-      float: left;
-      margin: 40px 0 0 30px;
+      position: absolute;
+      left: 30px;
+      top: 40px;
     }
     #profile-change-link{
-      float: right;
-      margin: 40px 30px 0 0;
+      position: absolute;
+      right: 30px;
+      top: 40px;
     }
     .file-button-container-big{
       background: none;

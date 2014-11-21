@@ -126,15 +126,17 @@
     margin-left: 40px;
   }
   #profile-menu #profile-change-link{
-    margin-top: 110px;
-    margin-right: 10px;
+    top: auto;
+    bottom: 0;
+    right: 0;
   }
   #profile-menu .file-button-container-big{
     width: 130px;
     height: 130px;
   }
   #profile-menu #password-change-link{
-    margin-top: 0;
+    top: 0;
+    left: 0;
   }
   #profile-menu .file-button-container-big .profile-icon-3{
     margin-top: 30px;
@@ -227,6 +229,9 @@
   #gallery li .info{
     padding: 4px 0;
   }
+  #gallery li:hover .info{
+    display: block;
+  }
 
   [class^="gallery-item-"]{
     width: 9px;
@@ -291,7 +296,7 @@
       }
       .controls{
         *{
-          opacity: .5;
+          opacity: 1;
         }
         *:hover{
           opacity: 1;
