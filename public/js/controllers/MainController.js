@@ -142,6 +142,15 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
      * @param id
      */
     $scope.showCat = function (id) {
+        var mainMargin = parseInt($('.main-container').css('margin-top'));
+        var top = $(window).scrollTop() - mainMargin;
+        top = top < 0 ? 0 : top;
+        if(mainMargin != 0) { top+=50; }
+        $('.popup').css(
+            {'margin-top':top + 'px'}
+        );
+
+        console.log($('.main-container').css('margin-top'))
 
         var fullItem = $filter('filter')($scope.data.catsFull,{id:id}, true)[0];
         var success = true;

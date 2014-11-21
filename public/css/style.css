@@ -1654,7 +1654,7 @@ main h3 {
 
 /* line 851, ../compass/scss/_content.scss */
 #overlay, #inner-popup {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
