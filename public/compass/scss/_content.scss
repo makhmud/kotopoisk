@@ -1258,3 +1258,14 @@ $list: adam john wynn mason kuroir;
   form.invalid input{
     border-color: #ce3a3a !important;
   }
+  .banner{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    z-index: 60;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }

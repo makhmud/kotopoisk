@@ -66,7 +66,12 @@
     </div>
 
 
+
+
     </div>
+<div class="banner">
+    <img src="/images/iphone.jpg" alt=""/>
+</div>
 
     <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
 

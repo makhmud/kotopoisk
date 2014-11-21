@@ -2100,6 +2100,20 @@ form.invalid input {
   border-color: #ce3a3a !important;
 }
 
+/* line 1261, ../compass/scss/_content.scss */
+.banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  z-index: 60;
+}
+/* line 1267, ../compass/scss/_content.scss */
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
 /* line 3, ../compass/scss/_forms.scss */
 .page--home footer form input[type=text], .page--home footer form input[type=password], .page--home footer form input[type=submit] {
   height: 3.75em;
@@ -3058,5 +3072,10 @@ input[type=text]::-moz-placeholder {
   /* line 464, ../compass/scss/respond/_small.scss */
   .wrapper-half.right {
     padding-left: 0;
+  }
+
+  /* line 469, ../compass/scss/respond/_small.scss */
+  .banner {
+    display: block;
   }
 }
