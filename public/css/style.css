@@ -632,19 +632,21 @@ a, a:visited {
 /* line 129, ../compass/scss/_menu.scss */
 .side-menu input[type="submit"] {
   background: url(../images/search-active.png) center center no-repeat transparent;
-  height: 3.43em;
+  height: 1.715em;
+  border-radius: 1.715em;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 11px;
+  top: calc( 50% - 1.33em );
   border: none;
-  width: 3.43em;
+  width: 1.715em;
+  padding: 0;
   outline: none;
 }
-/* line 139, ../compass/scss/_menu.scss */
+/* line 142, ../compass/scss/_menu.scss */
 .side-menu input[type="submit"]:disabled {
   opacity: .5;
 }
-/* line 143, ../compass/scss/_menu.scss */
+/* line 146, ../compass/scss/_menu.scss */
 .side-menu input[type=search] {
   padding: 0 25px;
   box-sizing: border-box;
@@ -656,7 +658,7 @@ a, a:visited {
   margin-bottom: 20px;
   background-color: #292929;
 }
-/* line 153, ../compass/scss/_menu.scss */
+/* line 156, ../compass/scss/_menu.scss */
 .side-menu input[type=search]:focus {
   border: 1px solid #f6c34f;
   outline: 0;
@@ -665,30 +667,30 @@ a, a:visited {
   box-shadow: inset 0px 0px 18px -1px rgba(246, 195, 79, 0.72);
   background-position-x: 301px;
 }
-/* line 161, ../compass/scss/_menu.scss */
+/* line 164, ../compass/scss/_menu.scss */
 .side-menu input[type=search]::-webkit-input-placeholder {
   /* WebKit browsers */
   color: #d7d7d7d;
 }
-/* line 166, ../compass/scss/_menu.scss */
+/* line 169, ../compass/scss/_menu.scss */
 .side-menu input[type=search]:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #d7d7d7d;
   opacity: 1;
 }
-/* line 172, ../compass/scss/_menu.scss */
+/* line 175, ../compass/scss/_menu.scss */
 .side-menu input[type=search]::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #d7d7d7d;
   opacity: 1;
 }
-/* line 178, ../compass/scss/_menu.scss */
+/* line 181, ../compass/scss/_menu.scss */
 .side-menu input[type=search]:-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #d7d7d7d;
 }
 
-/* line 186, ../compass/scss/_menu.scss */
+/* line 189, ../compass/scss/_menu.scss */
 .full-container.shifted {
   overflow: hidden;
 }

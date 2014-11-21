@@ -142,7 +142,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
     var countShared = function() {
         var total = 0;
         $timeout(function(){
-            $('.social-icons .ng-social-counter').each(function(indx, elm){
+            $('.popup .social-icons .ng-social-counter').each(function(indx, elm){
                 total += ($(elm).text().length == 0) ? 0 : parseInt($(elm).text());
             });
 
@@ -151,9 +151,20 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
 
     }
 
-    $scope.$watch('currentCatLoaded', function(newValue, oldValue) {
-        console.log(newValue);
-    })
+    var countSharedAll = function() {
+        var total = 0;
+        $('#gallery > li').each(function (indx, elm) {
+            $timeout(function(){
+                $(elm).find('.social-icons .ng-social-counter').each(function(indx, elm1){
+                    total += ($(elm1).text().length == 0) ? 0 : parseInt($(elm1).text());
+                });
+
+                $(elm).find('.refresh .text').text(total);
+                total = 0;
+            }, 500)
+        })
+
+    }
 
     /**
      * Showing popup by given id
@@ -218,8 +229,6 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         if(typeof(currentPosition) == 'undefined') currentPosition = 1;
         if(typeof(search) == 'undefined') search = '';
 
-
-
         if(!$scope.settings.lockDelayLoad){
 
             var cats = Cat.getAll(
@@ -246,6 +255,9 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
                         if ($scope.settings.lockDelayLoad && typeof($scope.data.cats[ $scope.data.cats.length-1 ]) != 'undefined') {
                             $scope.ids.last = $scope.data.cats[ $scope.data.cats.length-1 ].id;
                         }
+                        $timeout(function() {
+                            countSharedAll();
+                        }, 500);
                     } else {
                         $scope.errors = response.errors;
                     }
@@ -387,16 +399,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         }
     }
 
-    $scope.searchPlaceholderText = $filter('translate')('search_placeholder');
-
-    $scope.searchPlaceholder = function(focus) {
-        if (focus) {
-            $scope.searchPlaceholderText = '';
-        } else {
-            $scope.searchPlaceholderText = $filter('translate')('search_placeholder');
-        }
-
-    }
+    $scope.searchText = '';
 
     $scope.addCatLink = function() {
         if ($scope.settings.auth) {

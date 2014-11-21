@@ -128,12 +128,15 @@
   }
   input[type="submit"]{
     background: url(../images/search-active.png) center center no-repeat transparent;
-    height: 3.43em;
+    height: 1.715em;
+    border-radius: 1.715em;
+
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 11px;
+    top: calc( 50% - 1.33em );
     border: none;
-    width: 3.43em;
+    width: 1.715em;
+    padding: 0;
     outline: none;
 
     &:disabled{
