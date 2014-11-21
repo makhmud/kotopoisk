@@ -444,4 +444,30 @@
   .angular-google-map-container{
     height: 450px;
   }
+
+  .wrapper-half {
+    width: 50%;
+
+    & > div {
+      width: 180px;
+      img {
+        margin-bottom: 10px;
+      }
+    }
+    p {
+      line-height: 1.4em;
+      font-size: em(10px);
+      strong {
+        font-size: em(12px);
+      }
+    }
+
+    &.left {
+      padding-right: 0;
+    }
+
+    &.right {
+      padding-left: 0;
+    }
+  }
 }
