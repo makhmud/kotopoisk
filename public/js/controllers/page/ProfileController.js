@@ -16,7 +16,7 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter, m
                 }
             }
         });
-        
+
         $('#phone').inputmask({
             mask: "+79 999 99 99"
         });
