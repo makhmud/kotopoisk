@@ -35,7 +35,7 @@
             <input type="text" ng-model="user.data.email" placeholder="{{ 'placeholders.email' | translate }}" ng-disabled="user.data.social.length == 0" />
         </div>
         <div class="form-item" ng-class="{active: user.data.contacts.phone.length>0}">
-            <input type="text" id="phone"  placeholder="{{ 'placeholders.phone' | translate }}" />
+            <input type="text" id="phone"  ng-model="user.data.contacts.phone" placeholder="{{ 'placeholders.phone' | translate }}" />
         </div>
         <div class="form-item" ng-class="{active: user.data.contacts.web.length>0}">
             <input type="text" id="web" ng-model="user.data.contacts.web" placeholder="{{ 'placeholders.social_link' | translate }}"/>
@@ -48,7 +48,7 @@
                 <option value="3" ng-bind="'placeholders.more_than_2' | translate"></option>
             </select>
         </div>
-        <div class="form-item submit">
+        <div class="form-item submit" ng-class="{'active':isFull()}">
             <input type="submit" value="{{ 'page.profile.ready' | translate }}" ng-disabled="ProfileForm.$invalid" ng-click="saveUser()"/>
         </div>
 

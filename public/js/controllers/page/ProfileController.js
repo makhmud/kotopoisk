@@ -86,6 +86,18 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter) {
         );
     }
 
+    $scope.isFull = function() {
+
+        return $scope.user.data.contacts.name.length>0
+            && $scope.user.data.contacts.surname.length>0
+            && $scope.user.data.contacts.city.length>0
+            && $scope.user.data.email.length>0
+            && $scope.user.data.contacts.phone.length>0
+            && $scope.user.data.contacts.web.length>0
+            && $scope.user.data.contacts.cats_amount>0
+
+    }
+
     $scope.$watch(function() {
         $('select').trigger('refresh');
     })
