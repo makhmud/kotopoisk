@@ -1,4 +1,4 @@
-app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $http, Auth, $sce) {
+app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $http, Auth, $sce, $timeout) {
 
     console.log('In Main Controller');
 
@@ -128,9 +128,11 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
     $scope.data.cats = [];
     /**
      * Current cat info for popup
-     * @type {null}
+     * @type {{}}
      */
-    $scope.data.currentCat = null;
+    $scope.data.currentCat = {};
+    $scope.currentCatLoaded = false
+
     /**
      * Cashed full cat`s infos for avoid repeatable requests
      * @type {Array}
@@ -139,13 +141,19 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
 
     var countShared = function() {
         var total = 0;
+        $timeout(function(){
+            $('.social-icons .ng-social-counter').each(function(indx, elm){
+                total += ($(elm).text().length == 0) ? 0 : parseInt($(elm).text());
+            });
 
-        $('.social-icons .ng-social-counter').each(function(indx, elm){
-            total += ($(elm).text().length == 0) ? 0 : parseInt($(elm).text());
-        });
+            $('.popup .shared .text').text(total);
+        }, 500)
 
-        $('.popup .shared .text').text(total);
     }
+
+    $scope.$watch('currentCatLoaded', function(newValue, oldValue) {
+        console.log(newValue);
+    })
 
     /**
      * Showing popup by given id
@@ -160,25 +168,31 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
             {'margin-top':top + 'px'}
         );
 
+        $timeout(function() {
+            $scope.currentCatLoaded = false;
+        }, 0);
+
         var fullItem = $filter('filter')($scope.data.catsFull,{id:id}, true)[0];
-        var success = true;
         $scope.settings.galleryPreview.position = 0;
 
         if ( typeof(fullItem) != 'undefined' ) {
             $scope.data.currentCat = fullItem;
             $scope.methods.showPopup('cat-item');
+            $timeout(function() {
+                $scope.currentCatLoaded = true;
+            }, 0);
             countShared();
         } else {
             var cat = Cat.get(
                 { id:id, 'auth_token' : $cookies.auth_token },
                 function (cat) {
-                    success = cat.success;
                     if (cat.success) {
                         $scope.data.currentCat = cat.data;
                         $scope.data.currentCat.current_photo = ( typeof( cat.data.photos[0] ) != 'undefined' ) ? cat.data.photos[0].path : 'default.png';
                         $scope.data.currentCat.hasLike = $filter('filter')($scope.data.currentCat.likes,{id_author:$cookies.auth_id}, true)[0];
                         $scope.data.catsFull.push(cat.data);
                         $scope.methods.showPopup('cat-item');
+                        $scope.currentCatLoaded = true;
                         countShared();
                     } else {
                         $scope.errors = cat.errors;

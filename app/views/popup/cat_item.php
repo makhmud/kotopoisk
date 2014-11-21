@@ -38,7 +38,7 @@
                 {{data.currentCat.content}}
             </div>
             <div class="contacts"><span class="tbold">Контакты:</span> {{data.currentCat.author.contacts.phone}}</div>
-            <div class="social-icons" ng-social-buttons="{}"
+            <div class="social-icons" ng-social-buttons="{}" ng-if="currentCatLoaded"
                  data-url="$host + '/feed/' + data.currentCat.id"
                  data-title="'Котопоиск'"
                  data-description="data.currentCat.content"
