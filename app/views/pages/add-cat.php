@@ -18,8 +18,8 @@
             </div>
             <button type="button" class="text-center" id="add-more-photo" flow-btn ng-show="newCat.photos.length > 0">+ добавить еще фото</button>
         </div>
-        <textarea placeholder="Комментарий" ng-model="newCat.comment" required="required"></textarea>
-        <textarea placeholder="Контакты" ng-model="newCat.contacts" required="required"></textarea>
+        <textarea placeholder="Комментарий*" ng-model="newCat.comment" required="required"></textarea>
+        <textarea placeholder="Контакты*" ng-model="user.data.contacts.phone" required="required"></textarea>
         <input type="text" placeholder="Адрес" ng-keyup="doSearch()" ng-model="newCat.address"/>
         <span>или</span>
         <a id="location-selector" ng-click="showCurrentMap()">Указать место на карте</a>

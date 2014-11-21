@@ -1,4 +1,4 @@
-app.controller('AddCatCtrl', function($scope, Cat, AddressService, $timeout, $cookies, $location, $filter) {
+app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeout, $cookies, $location, $filter) {
 
     console.log('In AddCat Controller');
 
@@ -23,12 +23,29 @@ app.controller('AddCatCtrl', function($scope, Cat, AddressService, $timeout, $co
         photos : [],
         comment : '',
         address : '',
-        contacts : '',
         position : {latitude:50,longitude: 35},
         auth_token : $cookies.auth_token
     });
 
+    $scope.user = {};
+
+    $scope.user = User.get(
+        { id:$cookies.auth_id, 'auth_token' : $cookies.auth_token },
+        function (user) {
+            if (user.success) {
+                $scope.user = user;
+            } else {
+                $scope.errors = user.errors;
+            }
+        }
+    );
+
     $scope.saveCat = function() {
+        $scope.user.auth_token = $cookies.auth_token;
+        User.update(
+            {id:$cookies.auth_id},
+            $scope.user.data
+        );
         $scope.newCat.$save().then( function(response){
             if (response.success) {
                 $location.path('/feed');
