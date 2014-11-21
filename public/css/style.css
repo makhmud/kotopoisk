@@ -3030,26 +3030,13 @@ input[type=text]::-moz-placeholder {
   }
   /* line 451, ../compass/scss/respond/_small.scss */
   .wrapper-half > div {
-    width: 180px;
+    width: 160px;
   }
-  /* line 453, ../compass/scss/respond/_small.scss */
-  .wrapper-half > div img {
-    margin-bottom: 10px;
-  }
-  /* line 457, ../compass/scss/respond/_small.scss */
-  .wrapper-half p {
-    line-height: 1.4em;
-    font-size: 0.625em;
-  }
-  /* line 460, ../compass/scss/respond/_small.scss */
-  .wrapper-half p strong {
-    font-size: 0.75em;
-  }
-  /* line 465, ../compass/scss/respond/_small.scss */
+  /* line 455, ../compass/scss/respond/_small.scss */
   .wrapper-half.left {
     padding-right: 0;
   }
-  /* line 469, ../compass/scss/respond/_small.scss */
+  /* line 459, ../compass/scss/respond/_small.scss */
   .wrapper-half.right {
     padding-left: 0;
   }
