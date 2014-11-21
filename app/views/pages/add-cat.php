@@ -1,4 +1,4 @@
-<main ng-show="!settings.showChooseMapPosition">
+<main ng-if="!settings.showChooseMapPosition">
     <form id="add-cat" name="AddCatForm" enctype='multipart/form-data'>
         <div flow-init="ngFlowParams" flow-files-submitted="$flow.upload()" flow-file-success="newCat.photos.push($message)">
             <div id="photos" >
@@ -27,7 +27,7 @@
         <input type="submit" value="Добавить" ng-disabled="AddCatForm.$invalid" ng-click="saveCat()"/>
     </form>
 </main>
-<div id="map-wrap" ng-show="settings.showChooseMapPosition">
+<div id="map-wrap" ng-if="settings.showChooseMapPosition">
     <button ng-click="settings.showChooseMapPosition = false" id="map-location-selector">Сохранить</button>
     <ui-gmap-google-map id="map" center="settings.map.positionMap.center" zoom="settings.map.positionMap.zoom" options="settings.map.options">
             <ui-gmap-marker idKey='choose-position'

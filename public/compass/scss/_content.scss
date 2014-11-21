@@ -271,6 +271,10 @@ main {
 	width: 22.5625em;
 	margin: 0 auto;
 
+  ul.photo-preview li{
+    overflow: hidden;
+  }
+
 	#add-more-photo {
 		height: 2.473em;
 		border: 2px solid #e1e1e1;
