@@ -935,14 +935,24 @@ $list: adam john wynn mason kuroir;
           > div{
             position: absolute;
             line-height: 1;
-            &.likes span{
+            &.likes span, &.shared span{
               vertical-align: middle;
-              margin: 0 6px;
+              margin: 0 2px;
+              color: #ffffff;
+              display: inline-block;
+              &.text{
+                margin-top: 3px;
+              }
             }
 
             &.likes{
               top: 15px;
               right: 15px;
+            }
+
+            &.shared{
+              top: 15px;
+              left: 15px;
             }
 
             &.line{

@@ -137,6 +137,16 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
      */
     $scope.data.catsFull = [];
 
+    var countShared = function() {
+        var total = 0;
+
+        $('.social-icons .ng-social-counter').each(function(indx, elm){
+            total += ($(elm).text().length == 0) ? 0 : parseInt($(elm).text());
+        });
+
+        $('.popup .shared .text').text(total);
+    }
+
     /**
      * Showing popup by given id
      * @param id
@@ -157,6 +167,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         if ( typeof(fullItem) != 'undefined' ) {
             $scope.data.currentCat = fullItem;
             $scope.methods.showPopup('cat-item');
+            countShared();
         } else {
             var cat = Cat.get(
                 { id:id, 'auth_token' : $cookies.auth_token },
@@ -168,6 +179,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
                         $scope.data.currentCat.hasLike = $filter('filter')($scope.data.currentCat.likes,{id_author:$cookies.auth_id}, true)[0];
                         $scope.data.catsFull.push(cat.data);
                         $scope.methods.showPopup('cat-item');
+                        countShared();
                     } else {
                         $scope.errors = cat.errors;
                     }

@@ -6,6 +6,9 @@
     </div>
     <div class="content">
         <div class="image-panel" style="background-image: url('/user/big_{{data.currentCat.current_photo}}');">
+            <div class="shared">
+                    <span class="gallery-item-white-3"></span>
+                    <span class="text"></span></div>
             <div class="likes"><a ng-click="like(data.currentCat.id)">
                     <span class="like-icon" ng-class="{active : data.currentCat.hasLike}"></span>
                     <span class="text">{{data.currentCat.likes.length}}</span></a></div>
@@ -42,7 +45,7 @@
                  data-image="$host + '/user/big_' + data.currentCat.current_photo"
                  data-counter="true"
                 >
-                <a href="#" class="ng-social-vk" ng-init="watchSocial(this)"><span class="social-icon-1"></span></a>
+                <a href="#" class="ng-social-vk"><span class="social-icon-1"></span></a>
                 <a href="#" class="ng-social-facebook"><span class="social-icon-2"></span></a>
                 <a href="#" class="ng-social-twitter"><span class="social-icon-3"></span></a>
                 <a href="#" class="ng-social-google-plus"><span class="social-icon-4"></span></a>
