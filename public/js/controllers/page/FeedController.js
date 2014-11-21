@@ -6,6 +6,13 @@ app.controller('FeedCtrl', function($scope, $filter, Cat, $routeParams) {
     $scope.ids.last = null;
     $scope.data.cats = [];
 
+    $scope.page.title = $filter('translate')('page.feed.title');
+    $scope.page.isMain = false;
+    $scope.page.bodyClasses = 'page--feed';
+    $scope.page.search = false;
+    $scope.notification = '';
+    $scope.settings.isSideMenuOpened = false;
+
     /**
      * Sets in true when end of all cats reached
      * @type {boolean}
@@ -17,13 +24,6 @@ app.controller('FeedCtrl', function($scope, $filter, Cat, $routeParams) {
      */
     $scope.settings.catsOrder = null;
     $scope.settings.popupState.showControls = true;
-
-    $scope.page.title = $filter('translate')('page.feed.title');
-    $scope.page.isMain = false;
-    $scope.page.bodyClasses = 'page--feed';
-    $scope.page.search = false;
-    $scope.notification = '';
-    $scope.settings.isSideMenuOpened = false;
 
     /**
      * Current offset position, depends on scroll position
