@@ -18,6 +18,7 @@ app.config(['$locationProvider', '$routeProvider', '$httpProvider', '$translateP
             social_auth : ['Auth', function(Auth){ return Auth.checkSocial() || Auth.check() }]
         }
     });
+    $routeProvider.when('/feed/:id', {templateUrl: '/pages/feed', controller: 'FeedCtrl'});
     $routeProvider.when('/feed', {templateUrl: '/pages/feed', controller: 'FeedCtrl'});
     $routeProvider.when('/search/:find', {templateUrl: '/pages/feed', controller: 'SearchCtrl'});
     $routeProvider.when('/map', {templateUrl: '/pages/map', controller: 'MapCtrl'});

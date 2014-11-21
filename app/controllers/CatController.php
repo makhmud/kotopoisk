@@ -79,9 +79,13 @@ class CatController extends \BaseController {
 	 */
 	public function show($id)
 	{
-        $data = Cat::with('likes', 'author', 'photos')->find($id)->formatPosition();
-
-        return Response::answer($data);
+        $cat = Cat::with('likes', 'author', 'photos')->find($id);
+        if (is_null($cat)) {
+            return Response::answer([], false);
+        } else {
+            $data = $cat->formatPosition();
+            return Response::answer($data);
+        }
 	}
 
 

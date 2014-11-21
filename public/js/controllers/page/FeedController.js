@@ -1,4 +1,4 @@
-app.controller('FeedCtrl', function($scope, $filter, Cat) {
+app.controller('FeedCtrl', function($scope, $filter, Cat, $routeParams) {
 
     console.log('In Feed Controller');
 
@@ -57,4 +57,25 @@ app.controller('FeedCtrl', function($scope, $filter, Cat) {
         currentPosition++;
         return $scope.catsLoad(currentPosition);
     }
+
+
+
+    $scope.watchSocial = function(item) {
+
+        item.$watch('count', function(newValue, oldValue) {
+
+            console.log(newValue);
+        })
+    }
+
+    $scope.$watch('temp', function(newValue, oldValue) {
+
+        console.log(newValue);
+    });
+
+    if (typeof($routeParams.id) != 'undefined'){
+        $scope.showCat($routeParams.id);
+    }
+
+
 });

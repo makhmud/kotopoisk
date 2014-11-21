@@ -150,8 +150,6 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
             {'margin-top':top + 'px'}
         );
 
-        console.log($('.main-container').css('margin-top'))
-
         var fullItem = $filter('filter')($scope.data.catsFull,{id:id}, true)[0];
         var success = true;
         $scope.settings.galleryPreview.position = 0;
