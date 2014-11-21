@@ -2,7 +2,7 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
 
     console.log('In AddCat Controller');
 
-    $scope.page.title = $filter('translate')('page.add_cat.title');
+    $scope.page.title = 'page.add_cat.title';
     $scope.page.isMain = false;
     $scope.page.bodyClasses = 'page--add-cat';
     $scope.notification = '';

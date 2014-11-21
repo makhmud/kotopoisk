@@ -8,7 +8,7 @@ app.controller('SearchCtrl', function($scope, $routeParams) {
      */
     $scope.settings.catsOrder = null;
 
-    $scope.page.title = 'Search';
+    $scope.page.title = 'page.search.title';
     $scope.page.isMain = false;
     $scope.page.bodyClasses = 'page--search';
     $scope.page.search = true;

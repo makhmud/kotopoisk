@@ -26,7 +26,7 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter) {
         testChunks:false
     }
 
-    $scope.page.title = $filter('translate')('page.profile.title');
+    $scope.page.title = 'page.profile.title';
     $scope.page.bodyClasses = 'page--profile';
     $scope.page.isMain = false;
     $scope.notification = '';

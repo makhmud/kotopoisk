@@ -2,7 +2,7 @@ app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
 
     console.log('In Map Controller');
 
-    $scope.page.title = $filter('translate')('page.map.title');
+    $scope.page.title = 'page.map.title';
     $scope.page.bodyClasses = 'page--map';
     $scope.page.isMain = false;
     $scope.notification = '';

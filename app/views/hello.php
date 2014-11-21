@@ -59,7 +59,7 @@
     </div>
 
     <div class="main wrapper clearfix"  ng-click="notificate('')">
-        <h1 ng-bind="page.title"  ng-if="!page.isMain"></h1>
+        <h1 ng-bind="page.title | translate"  ng-if="!page.isMain"></h1>
 
             <div ng-view></div>
 

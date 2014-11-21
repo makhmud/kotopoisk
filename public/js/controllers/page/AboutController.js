@@ -4,7 +4,7 @@ app.controller('AboutCtrl', function($scope, $filter, $sce) {
 
     $scope.page.isMain = false;
     $scope.page.bodyClasses = 'page--about';
-    $scope.page.title = $filter('translate')('page.about.title');
+    $scope.page.title = 'page.about.title';
     $scope.notification = '';
     $scope.settings.isSideMenuOpened = false;
 

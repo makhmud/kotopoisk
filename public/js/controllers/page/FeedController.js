@@ -6,7 +6,7 @@ app.controller('FeedCtrl', function($scope, $filter, Cat, $routeParams) {
     $scope.ids.last = null;
     $scope.data.cats = [];
 
-    $scope.page.title = $filter('translate')('page.feed.title');
+    $scope.page.title = 'page.feed.title';
     $scope.page.isMain = false;
     $scope.page.bodyClasses = 'page--feed';
     $scope.page.search = false;
