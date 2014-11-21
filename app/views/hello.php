@@ -7,7 +7,7 @@
     <?php foreach( array(180, 120, 152, 144, 114, 60, 57, 80, 58, 40, 29, 76, 72, 50) as $size ) : ?>
         <link rel="apple-touch-icon" sizes="<?= $size ?>x<?= $size ?>" href="/images/apple-icons/touch-icon-<?= $size ?>.png">
     <?php endforeach; ?>
-	<title ng-bind="page.title"></title>
+	<title ng-bind="page.title | translate"></title>
     <link rel="stylesheet" href="/css/normalize.min.css"/>
     <link rel="stylesheet" href="/js/lib/jquery.formstyler/jquery.formstyler.css"/>
     <link rel="stylesheet" href="/css/style.css"/>
