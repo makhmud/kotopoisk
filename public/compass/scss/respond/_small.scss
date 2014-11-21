@@ -164,6 +164,13 @@
   #profile-form input, .jqselect .text, .jqselect li{
     font-size: 15px;
   }
+  .jq-selectbox {
+    li {
+      background: url(../images/list-item.png) 20px center no-repeat;
+      background-position: 10px center;
+      padding-left: 30px;
+    }
+  }
   #profile-form input[type="text"]{
     width: 39%;
   }
@@ -171,7 +178,7 @@
     font-size: 12px;
   }
   #profile-form .jqselect{
-    width: 43%;
+    width: 45%;
   }
   #profile-form .jqselect .select{
     width: 100%;
