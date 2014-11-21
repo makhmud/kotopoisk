@@ -112,23 +112,20 @@
   }
   .page--profile main{
     padding-top: 10px;
-    margin-top: -140px;
+    margin-top: -70px;
   }
   #profile-menu .file-button-container-big .photo-file-preview{
-    height: auto;
-    left: -190px;
     opacity: 1;
-    position: absolute;
-    top: -15px;
-    width: auto;
+    font-size: 12px;
+    font-weight: bold;
   }
   #profile-menu #photos{
-    margin-left: 40px;
+    margin-left: 10px;
   }
   #profile-menu #profile-change-link{
     top: auto;
-    bottom: 0;
-    right: 0;
+    bottom: -10px;
+    right: 10px;
   }
   #profile-menu .file-button-container-big{
     width: 130px;
@@ -141,21 +138,24 @@
   #profile-menu .file-button-container-big .profile-icon-3{
     margin-top: 30px;
   }
+  #profile-menu .file-button-container-big input, #profile-menu .file-button-container-big .photo-file-preview{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    left: -130px;
+    top: 40px;
+  }
   #profile-menu .file-button-container-big input{
     opacity: 0;
-    width: 130px;
-    height: 130px;
-    left: -190px;
+    top: 70px;
   }
   #profile-menu .file-button-container-big img{
     width: 107px;
     height: 107px;
-    margin-top: -70px;
     border-width: 6px;
-    margin-left: -58px;
   }
   .file-button-container-big{
-    margin-top: 90px;
+    margin-top: 0;
   }
   #profile-form{
     margin-top: 50px;

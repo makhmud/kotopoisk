@@ -2566,68 +2566,70 @@ input[type=text]::-moz-placeholder {
   /* line 113, ../compass/scss/respond/_small.scss */
   .page--profile main {
     padding-top: 10px;
-    margin-top: -140px;
+    margin-top: -70px;
   }
 
   /* line 117, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big .photo-file-preview {
-    height: auto;
-    left: -190px;
     opacity: 1;
-    position: absolute;
-    top: -15px;
-    width: auto;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  /* line 122, ../compass/scss/respond/_small.scss */
+  #profile-menu #photos {
+    margin-left: 10px;
   }
 
   /* line 125, ../compass/scss/respond/_small.scss */
-  #profile-menu #photos {
-    margin-left: 40px;
-  }
-
-  /* line 128, ../compass/scss/respond/_small.scss */
   #profile-menu #profile-change-link {
     top: auto;
-    bottom: 0;
-    right: 0;
+    bottom: -10px;
+    right: 10px;
   }
 
-  /* line 133, ../compass/scss/respond/_small.scss */
+  /* line 130, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big {
     width: 130px;
     height: 130px;
   }
 
-  /* line 137, ../compass/scss/respond/_small.scss */
+  /* line 134, ../compass/scss/respond/_small.scss */
   #profile-menu #password-change-link {
     top: 0;
     left: 0;
   }
 
-  /* line 141, ../compass/scss/respond/_small.scss */
+  /* line 138, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big .profile-icon-3 {
     margin-top: 30px;
   }
 
-  /* line 144, ../compass/scss/respond/_small.scss */
-  #profile-menu .file-button-container-big input {
-    opacity: 0;
-    width: 130px;
-    height: 130px;
-    left: -190px;
+  /* line 141, ../compass/scss/respond/_small.scss */
+  #profile-menu .file-button-container-big input, #profile-menu .file-button-container-big .photo-file-preview {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    left: -130px;
+    top: 40px;
   }
 
-  /* line 150, ../compass/scss/respond/_small.scss */
+  /* line 148, ../compass/scss/respond/_small.scss */
+  #profile-menu .file-button-container-big input {
+    opacity: 0;
+    top: 70px;
+  }
+
+  /* line 152, ../compass/scss/respond/_small.scss */
   #profile-menu .file-button-container-big img {
     width: 107px;
     height: 107px;
-    margin-top: -70px;
     border-width: 6px;
-    margin-left: -58px;
   }
 
   /* line 157, ../compass/scss/respond/_small.scss */
   .file-button-container-big {
-    margin-top: 90px;
+    margin-top: 0;
   }
 
   /* line 160, ../compass/scss/respond/_small.scss */
