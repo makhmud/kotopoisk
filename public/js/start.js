@@ -20,6 +20,7 @@ var app = angular.module('app',
         'google-maps'.ns(),
         'pascalprecht.translate',
         'ngSocial',
-        'ngTouch'
+        'ngTouch',
+        'matchmedia-ng'
     ]
 );

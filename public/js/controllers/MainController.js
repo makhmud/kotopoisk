@@ -1,4 +1,4 @@
-app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $http, Auth, $sce, $timeout) {
+app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $http, Auth, $sce, $timeout, matchmedia) {
 
     console.log('In Main Controller');
 
@@ -412,11 +412,16 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
     }
 
     $scope.swipeLeft = function(){
-        $scope.settings.isSideMenuOpened = false;
+        if(matchmedia.isPhone()){
+            $scope.settings.isSideMenuOpened = false;
+        }
+
     }
 
     $scope.swipeRight = function(){
-        $scope.settings.isSideMenuOpened = true;
+        if(matchmedia.isPhone()){
+            $scope.settings.isSideMenuOpened = true;
+        }
     }
 
 });

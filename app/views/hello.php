@@ -95,6 +95,8 @@
     <script src="/js/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
     <script src="/js/lib/angular-social/angular-social.src.js"></script>
     <script src="/js/lib/angular-touch/angular-touch.min.js"></script>
+    <script src="/js/lib/matchmedia/matchMedia.js"></script>
+    <script src="/js/lib/matchmedia-ng/matchmedia-ng.js"></script>
     <!--End Angular secondary libs-->
 
     <!--GMap Directive with dependencies-->
