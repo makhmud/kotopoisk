@@ -3,7 +3,7 @@
         <div class="logo">
             <img src="/images/logo.png" alt="Котопоиск"/>
         </div>
-        <h1>Кото<strong>поиск</strong></h1>
+        <h1>{{'main.title.first' | translate}}<strong>{{'main.title.second' | translate}}</strong></h1>
     </div>
 
     <div class="enter-switch">
