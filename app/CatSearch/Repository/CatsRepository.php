@@ -43,6 +43,7 @@ class CatsRepository {
                 'cats.id',
                 'cats.created_at',
                 'cats.position',
+                'cats.shared_count',
                 'users.email',
                 DB::Raw('CONCAT_WS(" ", contacts.name, contacts.surname) as full_name'),
                 DB::Raw('ifnull((select path from photo where id_cats = cats.id limit 1), "default.png") as path'),
