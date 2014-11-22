@@ -64,7 +64,7 @@ class CatsRepository {
             );
         }
 
-        \Log::info(DB::getQueryLog());
+//        \Log::info('http://' . \Request::server('SERVER_NAME') . '/feed/' . \Request::server('SERVER_PORT'));
 
         return new Collection($results);
     }

@@ -151,21 +151,21 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
 
     }
 
-    var countSharedAll = function() {
-
-        $('#gallery > li').each(function (indx, elm) {
-
-            $timeout(function(){
-                var total = 0;
-                $(elm).find('.social-icons .ng-social-counter').each(function(indx, elm1){
-                    total += ($(elm1).text().length == 0) ? 0 : parseInt($(elm1).text());
-                });
-
-                $(elm).find('.refresh .text').text(total);
-            }, 1000)
-        })
-
-    }
+    //var countSharedAll = function() {
+    //
+    //    $('#gallery > li').each(function (indx, elm) {
+    //
+    //        $timeout(function(){
+    //            var total = 0;
+    //            $(elm).find('.social-icons .ng-social-counter').each(function(indx, elm1){
+    //                total += ($(elm1).text().length == 0) ? 0 : parseInt($(elm1).text());
+    //            });
+    //
+    //            $(elm).find('.refresh .text').text(total);
+    //        }, 1000)
+    //    })
+    //
+    //}
 
     /**
      * Showing popup by given id
@@ -256,9 +256,9 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
                         if ($scope.settings.lockDelayLoad && typeof($scope.data.cats[ $scope.data.cats.length-1 ]) != 'undefined') {
                             $scope.ids.last = $scope.data.cats[ $scope.data.cats.length-1 ].id;
                         }
-                        $timeout(function() {
-                            countSharedAll();
-                        }, 500);
+                        //$timeout(function() {
+                        //    countSharedAll();
+                        //}, 500);
                     } else {
                         $scope.errors = response.errors;
                     }
