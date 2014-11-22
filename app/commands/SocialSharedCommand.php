@@ -42,6 +42,7 @@ class SocialSharedCommand extends Command {
         foreach ($items as $item) {
             $item->shared_count = Social::totalCount('http://' . \Request::server('SERVER_NAME') . '/feed/' . $item->id );
             $item->save();
+            $this->info('http://' . \Request::server('SERVER_NAME') . '/feed/' . $item->id . ' : ' . $item->shared_count);
         }
 	}
 
