@@ -196,11 +196,12 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 
-        'Image'           => 'Intervention\Image\Facades\Image',
+//        'Image'           => 'Intervention\Image\Facades\Image',
+        'Image'           =>  '\CatSearch\Facades\Image',
         'LocalizedCarbon' => 'Laravelrus\LocalizedCarbon\LocalizedCarbon',
         'DiffFormatter'   => 'Laravelrus\LocalizedCarbon\DiffFactoryFacade',
         'Repo'            => '\CatSearch\Facades\Repo',
-        'Social'            => '\CatSearch\Social\SocialFacade'
+        'SocialNetwork'   => '\CatSearch\Social\SocialFacade'
 
 	),
 

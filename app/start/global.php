@@ -86,9 +86,9 @@ require app_path().'/filters.php';
  */
 Photo::creating( function($photo) {
 
-    Image::make(sys_get_temp_dir() . DIRECTORY_SEPARATOR . $photo->path)->fit(540, 540)->save( public_path() . DIRECTORY_SEPARATOR . 'user/big_'.$photo->path );
-    Image::make(sys_get_temp_dir() . DIRECTORY_SEPARATOR . $photo->path)->fit(273, 273)->save( public_path() . DIRECTORY_SEPARATOR . 'user/medium_'.$photo->path );
-    Image::make(sys_get_temp_dir() . DIRECTORY_SEPARATOR . $photo->path)->fit(116, 75)->save( public_path() . DIRECTORY_SEPARATOR . 'user/small_'.$photo->path );
+    Image::build($photo->path, 'big');
+    Image::build($photo->path, 'medium');
+    Image::build($photo->path, 'small');
 
 });
 

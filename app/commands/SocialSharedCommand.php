@@ -40,7 +40,7 @@ class SocialSharedCommand extends Command {
         $items = Cat::all();
 
         foreach ($items as $item) {
-            $item->shared_count = Social::totalCount('http://' . \Request::server('SERVER_NAME') . '/feed/' . $item->id );
+            $item->shared_count = SocialNetwork::totalCount('http://' . \Request::server('SERVER_NAME') . '/feed/' . $item->id );
             $item->save();
             $this->info( Config::get('app.url') . '/feed/' . $item->id . ' : ' . $item->shared_count);
         }
