@@ -3,22 +3,25 @@ namespace CatSearch\Facades;
 
 use Intervention\Image\Facades\Image as BaseImage;
 
-
+/**
+ * Image class extension for custom needs
+ * Class Image
+ * @package CatSearch\Facades
+ */
 class Image extends BaseImage {
 
-//    public function __call($function, $args){
-//
-//        switch ($function){
-//            case 'temporary'
-//        }
-//
-//    }
-
+    /**
+     * Builds path to image of given format
+     * @param $filename
+     * @param null $format
+     * @param string $type
+     * @return string
+     */
     public static function path( $filename, $format = null, $type = 'public' ){
 
         $directory = \Config::get('image.directories.'. $type .'.path');
 
-        if (is_null($format) || $type == 'temporary') {
+        if (is_null($format)) {
             $prefix = '';
         } else {
             $prefix = \Config::get('image.formats.'. $format .'.prefix');
@@ -28,18 +31,31 @@ class Image extends BaseImage {
 
     }
 
+    /**
+     * Builds path to temporary image
+     * @param $filename
+     * @return string
+     */
     public static function temp( $filename ) {
 
         return self::path($filename, null, 'temporary');
 
     }
 
+    /**
+     * Saves image with given format
+     * @param $filename
+     * @param $format
+     * @return mixed
+     */
     public static function build ( $filename, $format ) {
 
         $image = Image::make(self::temp($filename));
 
         $width = \Config::get('image.formats.'. $format .'.width');
         $height = \Config::get('image.formats.'. $format .'.height');
+
+        $image->fit($width, $height);
 
         $additionalMethods = \Config::get('image.formats.'. $format .'.methods');
 

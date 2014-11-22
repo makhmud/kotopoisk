@@ -38,7 +38,7 @@ class ImageFormatTest extends TestCase {
 
     public function testImageExtension() {
 
-        $this->assertEquals( '/tmp/1.png', Image::path( '1.png', 'big', 'temporary') );
+        $this->assertEquals( '/tmp/blured-1.png', Image::path( '1.png', 'blured', 'temporary') );
         $this->assertEquals( '/tmp/1.png', Image::temp( '1.png') );
         $this->assertEquals( '/home/geronimo/Work/kotopoisk/kotopoisk/public/user/blured-1.png', Image::path( '1.png', 'blured') );
         $this->assertEquals( '/home/geronimo/Work/kotopoisk/kotopoisk/public/user/1.png', Image::path( '1.png') );
