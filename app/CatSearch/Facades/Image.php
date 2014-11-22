@@ -10,6 +10,10 @@ use Intervention\Image\Facades\Image as BaseImage;
  */
 class Image extends BaseImage {
 
+    public static function config( $key ) {
+        return \Config::get('image.' . $key);
+    }
+
     /**
      * Builds path to image of given format
      * @param $filename
@@ -19,12 +23,12 @@ class Image extends BaseImage {
      */
     public static function path( $filename, $format = null, $type = 'public' ){
 
-        $directory = \Config::get('image.directories.'. $type .'.path');
+        $directory = self::config('directories.'. $type .'.path');
 
         if (is_null($format)) {
             $prefix = '';
         } else {
-            $prefix = \Config::get('image.formats.'. $format .'.prefix');
+            $prefix = self::config('formats.'. $format .'.prefix');
         }
 
         return $directory . $prefix . $filename;
@@ -42,6 +46,26 @@ class Image extends BaseImage {
 
     }
 
+    public static function format ( $filename, $format ) {
+
+        $image = Image::make(self::temp($filename));
+
+        $width = self::config('formats.'. $format .'.width');
+        $height = self::config('formats.'. $format .'.height');
+
+        $image->fit($width, $height);
+
+        $additionalMethods = self::config('formats.'. $format .'.methods');
+
+        if ( !is_null($additionalMethods) ){
+            foreach( $additionalMethods as $method ) {
+                $image = call_user_func_array( [$image, $method[0]], $method[1] );
+            }
+        }
+
+        return $image;
+    }
+
     /**
      * Saves image with given format
      * @param $filename
@@ -50,22 +74,7 @@ class Image extends BaseImage {
      */
     public static function build ( $filename, $format ) {
 
-        $image = Image::make(self::temp($filename));
-
-        $width = \Config::get('image.formats.'. $format .'.width');
-        $height = \Config::get('image.formats.'. $format .'.height');
-
-        $image->fit($width, $height);
-
-        $additionalMethods = \Config::get('image.formats.'. $format .'.methods');
-
-        if ( !is_null($additionalMethods) ){
-            foreach( $additionalMethods as $method ) {
-                $image = call_user_func_array( [$image, $method[0]], $method[1] );
-            }
-        }
-
-        return $image->save( self::path($filename, $format, 'public') );
+        return self::format( $filename, $format )->save( self::path($filename, $format, 'public') );
 
     }
 

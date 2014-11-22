@@ -2,6 +2,8 @@
 
 return array(
 
+    'default_name' => 'default.png',
+
     'directories' => [
         'public' => [
             'path'  => public_path() . DIRECTORY_SEPARATOR . 'user' . DIRECTORY_SEPARATOR,

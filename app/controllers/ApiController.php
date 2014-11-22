@@ -6,7 +6,7 @@ class ApiController extends BaseController {
         $request = new \Flow\Request();
 
         $filename = Input::get('flowTotalSize') . '-' . Input::get('flowFilename');
-        $tmpDir = sys_get_temp_dir() . DIRECTORY_SEPARATOR;
+        $tmpDir = Image::config('directories.temporary.path');
         $destination = $tmpDir . $filename;
         $config = new \Flow\Config(array(
             'tempDir' => sys_get_temp_dir()
@@ -28,7 +28,7 @@ class ApiController extends BaseController {
         if ($file->validateFile() && $file->save($destination)) {
 
             if (Input::has('isUserPic')) {
-                Image::make($destination)->fit(1366, 800)->blur(15)->brightness(-50)->save($tmpDir . 'blured-' . $filename);
+                Image::format( $filename, 'blured' )->save($tmpDir . 'blured-' . $filename);
             }
 
             $response = Response::make($destination, 200);
