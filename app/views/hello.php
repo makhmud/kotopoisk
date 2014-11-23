@@ -116,7 +116,7 @@ Minify::javascript([
     "/js/lib/angular-social/angular-social.src.js",
     "/js/lib/angular-touch/angular-touch.min.js",
     "/js/lib/matchmedia/matchMedia.js",
-    "/js/lib/matchmedia-ng/matchmedia-ng.js",
+    "/js/lib/matchmedia-ng/matchmedia-ng.js"
 ]);
 ?>
 

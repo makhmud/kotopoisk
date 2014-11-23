@@ -34,10 +34,9 @@
                 </div>
             </div>
             <time>{{data.currentCat.created_at}}</time>
-            <div class="body">
-                {{data.currentCat.content}}
+            <div class="body" ng-bind-html="data.currentCat.content | nl2br">
             </div>
-            <div class="contacts"><span class="tbold">Контакты:</span> {{data.currentCat.author.contacts.phone}}</div>
+            <div class="contacts"><span class="tbold">Контакты:</span> <span ng-bind-html="data.currentCat.contacts | nl2br"></span></div>
             <div class="social-icons" ng-social-buttons="{}" ng-if="currentCatLoaded"
                  data-url="$host + '/feed/' + data.currentCat.id"
                  data-title="'Котопоиск'"

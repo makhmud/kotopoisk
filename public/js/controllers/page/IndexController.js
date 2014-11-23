@@ -1,11 +1,5 @@
 app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route, $filter, social_auth) {
 
-    //$scope.settings.auth = social_auth;
-
-    //if ($scope.settings.auth) {
-    //    $location.path('/feed')
-    //}
-
     console.log('In Index Controller');
 
     $scope.page.isMain = true;

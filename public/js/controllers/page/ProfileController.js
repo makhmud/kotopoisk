@@ -83,7 +83,9 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter, m
             $scope.user.data,
             function(response){
                 if (!response.success) {
-                    $scope.notificate($filter('translate')('notification.register.already_exists'))
+                    $scope.notificate($filter('translate')('notification.profile.fail'))
+                } else {
+                    $scope.notificate($filter('translate')('notification.profile.success'))
                 }
             }
         );

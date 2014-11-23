@@ -22,6 +22,7 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
     $scope.newCat = new Cat({
         photos : [],
         comment : '',
+        contacts : '',
         address : '',
         position : {latitude:50,longitude: 35},
         auth_token : $cookies.auth_token
@@ -34,6 +35,7 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
         function (user) {
             if (user.success) {
                 $scope.user = user;
+                $scope.newCat.contacts = $scope.user.data.contacts.phone
             } else {
                 $scope.errors = user.errors;
             }
@@ -42,10 +44,6 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
 
     $scope.saveCat = function() {
         $scope.user.auth_token = $cookies.auth_token;
-        User.update(
-            {id:$cookies.auth_id},
-            $scope.user.data
-        );
         $scope.newCat.$save().then( function(response){
             if (response.success) {
                 $location.path(window.pages.feed.alias);

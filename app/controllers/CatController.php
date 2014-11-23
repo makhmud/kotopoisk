@@ -51,6 +51,7 @@ class CatController extends \BaseController {
 
             $cat->id_author = Auth::id();
             $cat->content = Input::get('comment');
+            $cat->contacts = Input::get('contacts');
             $cat->position = Input::get('position.latitude') . ',' . Input::get('position.longitude');
             $cat->save();
 

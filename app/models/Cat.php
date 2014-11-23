@@ -57,7 +57,16 @@ class Cat extends Eloquent {
      * @return string
      */
     public function getContentAttribute($value) {
-        return nl2br($value);
+        return e($value);
+    }
+
+    /**
+     * Changing output value
+     * @param $value
+     * @return string
+     */
+    public function getContactsAttribute($value) {
+        return e($value);
     }
 
 }
