@@ -54,7 +54,10 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
     }
 
     var applyPosition = function (coords) {
-        $scope.newCat.position = coords;
+        $scope.newCat.position = {
+            latitude:coords.latitude,
+            longitude:coords.longitude
+        };
         $scope.settings.map.positionMap.zoom = 15;
         $scope.settings.map.positionMap.center = coords;
     }
