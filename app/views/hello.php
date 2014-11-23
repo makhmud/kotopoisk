@@ -75,12 +75,14 @@
 
     <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
 
-    <script src="/js/lib/jquery/jquery.js"></script>
-    <script src="/js/lib/jquery.formstyler/jquery.formstyler.min.js"></script>
-    <?= Minify::javascriptDir('/js/lib/jquery.inputmask/dist/inputmask/') ?>
-<!--    <script src="/js/lib/jquery.inputmask/dist/inputmask/jquery.inputmask.js"></script>-->
-<!--    <script src="/js/lib/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js"></script>-->
-
+<?=
+Minify::javascript([
+    "/js/lib/jquery/jquery.js",
+    "/js/lib/jquery.formstyler/jquery.formstyler.min.js",
+    "/js/lib/jquery.inputmask/dist/inputmask/jquery.inputmask.js",
+    "/js/lib/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js",
+]);
+?>
     <!--Angular primary libs-->
 <?=
 Minify::javascript([
