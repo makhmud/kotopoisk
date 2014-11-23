@@ -278,7 +278,7 @@ main {
 	#add-more-photo {
 		height: 2.473em;
 		border: 2px solid #e1e1e1;
-		color: #c8c8c8;
+		color: #999;
 		background-color: #f6f6f6;
 		font-size: em(21px);
 		width: 100%;
@@ -292,7 +292,7 @@ main {
 		width: 100%;
 		background-color: #ffffff;
 		border: 2px solid #f6f6f6;
-		color: #c8c8c8;
+		color: #999;
 		font-size: em(21px);
 		font-weight: 400;
 		padding: em(10px);
@@ -324,7 +324,7 @@ main {
 	span {
 		height: em(43px);
 		float: left;
-		color: #d1d1d1;
+		color: #999;
 		line-height: em(43px);
 		font-size: 1.3em;
 	}
@@ -695,7 +695,12 @@ $list: adam john wynn mason kuroir;
       height: auto;
       width: auto;
     }
-
+    .progress{
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
     .progress-bar{
       background-image:linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
       background-color: #428bca;

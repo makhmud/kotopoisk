@@ -4,10 +4,10 @@
             <div id="photos" >
                 <ul class="photo-preview">
                     <li ng-repeat="file in $flow.files">
-                        <!--                    <div class="progress progress-striped" ng-class="{active: file.isUploading()}">-->
-                        <!--                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (file.progress() * 100) + '%'}" style="width: 100%;">-->
-                        <!--                        </div>-->
-                        <!--                    </div>-->
+                        <div class="progress progress-striped" ng-class="{active: file.isUploading()}">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (file.progress() * 100) + '%'}" style="width: 100%;">
+                            </div>
+                        </div>
                         <img flow-img="file"/>
                     </li>
                 </ul>
