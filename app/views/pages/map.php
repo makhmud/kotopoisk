@@ -6,8 +6,12 @@
                             icon="$host + '/images/map-marker.png'"
                             options="{
                                 labelContent:parseCatToMarker(cat),
-                                    labelAnchor: '-25 70'
+                                labelAnchor: '25 70'
                             }"
+                            events="{
+                                    mouseover : markerEvents.markerOver(cat.id),
+                                    mouseout : markerEvents.markerOut(cat.id)
+                                }"
                             click="showCat(cat.id)"
                             mouseover="markerClicked(1)">
             </ui-gmap-marker>

@@ -1,5 +1,5 @@
 log = require('util').log
-jasmineSettings = require "./GruntJasmineSettings"
+jasmineSettings = require './jasmine'
 _ = require 'lodash'
 
 module.exports = (grunt) ->
@@ -37,11 +37,9 @@ module.exports = (grunt) ->
       compile:
         files:
           "tmp/output_coffee.js": [
-            "src/coffee/extensions/string.coffee"
-            "src/coffee/extensions/lodash.coffee"
             "src/coffee/module.coffee"
             "src/coffee/providers/*.coffee"
-            "src/coffee/extensions/google.maps.coffee"
+            "src/coffee/extensions/*.coffee"
             "src/coffee/directives/api/utils/*.coffee"
             "src/coffee/directives/api/managers/*.coffee"
 
@@ -68,12 +66,12 @@ module.exports = (grunt) ->
           ]
 
         #specs
-          "tmp/string.js":"src/coffee/extensions/string.coffee"#to load as a vendor prior to specs to not have ns changes in two spots
           "tmp/spec/js/bootstrap.js": "spec/coffee/bootstrap.coffee"
           "tmp/spec/js/helpers/helpers.js": "spec/coffee/helpers/*.coffee"
           "tmp/spec/js/ng-gmap-module.spec.js": "spec/coffee/ng-gmap-module.spec.coffee"
           "tmp/spec/js/usage/usage.spec.js": "spec/coffee/usage/*.spec.coffee"
           "tmp/spec/js/directives/api/apis.spec.js": "spec/coffee/directives/api/*.spec.coffee"
+          "tmp/spec/js/providers/providers.spec.js": "spec/coffee/providers/*.spec.coffee"
           "tmp/spec/js/directives/api/models/child/children.spec.js": "spec/coffee/directives/api/models/child/*.spec.coffee"
           "tmp/spec/js/directives/api/models/parent/parents.spec.js": "spec/coffee/directives/api/models/parent/*.spec.coffee"
           "tmp/spec/js/directives/api/options/options.spec.js": "spec/coffee/directives/api/options/**/*.spec.coffee"
@@ -88,7 +86,6 @@ module.exports = (grunt) ->
         src: [
           "tmp/output_coffee.js"
           "tmp/wrapped_uuid.js"
-          "tmp/wrapped_bluebird.js"
           "tmp/wrapped_libs.js"
           "src/js/**/*.js" #this all will only work if the dependency orders do not matter
           "src/js/**/**/*.js"
@@ -105,6 +102,12 @@ module.exports = (grunt) ->
         files: [
           src: "tmp/output.js"
           dest: "dist/<%= pkg.name %>.js"
+        ]
+      # libraries that are not versioned well, not really on bower, not on a cdn yet
+      poorly_managed_dev__dep_bower_libs:
+        files: [
+          src: ["bower_components/bootstrap-without-jquery/bootstrap3/bootstrap-without-jquery.js"]
+          dest: "website_libs/dev_deps.js"
         ]
 
     uglify:
@@ -124,6 +127,16 @@ module.exports = (grunt) ->
 
     test: {}
     watch:
+      offline:
+        options:
+          livereload: true
+
+        files: [
+          "src/coffee/*.coffee", "src/coffee/**/*.coffee", "src/coffee/**/**/*.coffee",
+          "src/js/*.js", "src/js/**/*.js", "src/js/**/**/*.js", "spec/**/*.spec.coffee", "spec/coffee/helpers/**"#,
+          #"example/**"
+        ]
+        tasks: ['default-no-specs']
       all:
         options:
           livereload: true
@@ -186,8 +199,8 @@ module.exports = (grunt) ->
 
     subgrunt:
       bluebird:
-        projects:
-          'bower_components/bluebird': ["build","--features='core'"]
+        projects: {}
+#          'bower_components/bluebird': ["build","--features='core'"]
 
   options.jasmine.coverage = jasmineSettings.coverage if jasmineSettings.coverage
   return options

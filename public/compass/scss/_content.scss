@@ -1159,6 +1159,7 @@ $list: adam john wynn mason kuroir;
   .map-info{
     width: 390px;
     text-align: left;
+    padding-left: 60px;
 
     .image{
       width: 56px;
@@ -1207,10 +1208,13 @@ $list: adam john wynn mason kuroir;
       }
     }
 
-    &:hover{
+    position: relative;
+    &.hovered{
       .info{
         color: #333333;
       }
+
+      background: url(../images/favicon32.png) 9px center no-repeat;
     }
 
   }

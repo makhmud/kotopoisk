@@ -21,7 +21,7 @@ app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
     //
 
     $scope.parseCatToMarker = function(cat) {
-        return '<div class="map-info '+(($scope.settings.map.zoom<7)?'ng-hide':'')+'" > \
+        return '<div id="map-info-'+cat.id+'" class="map-info '+(($scope.settings.map.zoom<7)?'ng-hide':'')+'" > \
                 <div class="image"><img src="/user/small_'+cat.path+'" alt=""/></div> \
                 <div class="info"> \
                     <div class="name">'+cat.full_name+'</div> \
@@ -34,8 +34,6 @@ app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
             </div>';
     }
 
-    $scope.ser
-
     $scope.settings.map.MarkerOptions = function(cat) {
         return {
             labelContent:$scope.parseCatToMarker(cat),
@@ -46,7 +44,16 @@ app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
         }
     }
 
-    $scope.markerClicked = function(id) {
-        console.log(id);
+    $scope.markerEvents = {
+        markerOver : function(id) {
+            return function(obj, event, some) {
+                $('#map-info-'+id).addClass('hovered');
+            }
+        },
+        markerOut : function(id) {
+            return function(obj, event, some) {
+                $('#map-info-'+id).removeClass('hovered');
+            }
+        }
     }
 });
