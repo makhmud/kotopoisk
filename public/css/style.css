@@ -1647,22 +1647,12 @@ main h3 {
   background-position: -232px -58px;
 }
 
-/* line 846, ../compass/scss/_content.scss */
-.social-icon-1:hover {
-  background-position: 0 -59px;
-}
-
-/* line 849, ../compass/scss/_content.scss */
-.social-icon-5:hover {
-  background-position: -232px -59px;
-}
-
-/* line 853, ../compass/scss/_content.scss */
+/* line 847, ../compass/scss/_content.scss */
 #inner-popup {
   background-color: transparent;
 }
 
-/* line 856, ../compass/scss/_content.scss */
+/* line 850, ../compass/scss/_content.scss */
 #overlay, #inner-popup {
   position: absolute;
   width: 100%;
@@ -1673,7 +1663,7 @@ main h3 {
   top: 0;
   left: 0;
 }
-/* line 866, ../compass/scss/_content.scss */
+/* line 860, ../compass/scss/_content.scss */
 #overlay .close-overlay, #inner-popup .close-overlay {
   position: absolute;
   width: 100%;
@@ -1681,16 +1671,16 @@ main h3 {
   top: 0;
   left: 0;
 }
-/* line 874, ../compass/scss/_content.scss */
+/* line 868, ../compass/scss/_content.scss */
 #overlay .popup, #inner-popup .popup {
   margin: 80px auto;
   position: relative;
 }
-/* line 878, ../compass/scss/_content.scss */
+/* line 872, ../compass/scss/_content.scss */
 #overlay .popup .controls *, #inner-popup .popup .controls * {
   display: inline-block;
 }
-/* line 881, ../compass/scss/_content.scss */
+/* line 875, ../compass/scss/_content.scss */
 #overlay .popup .controls .prev, #overlay .popup .controls .next, #overlay .popup .controls .close, #inner-popup .popup .controls .prev, #inner-popup .popup .controls .next, #inner-popup .popup .controls .close {
   display: inline-block;
   position: absolute;
@@ -1701,19 +1691,19 @@ main h3 {
   line-height: 515px;
   text-align: center;
 }
-/* line 890, ../compass/scss/_content.scss */
+/* line 884, ../compass/scss/_content.scss */
 #overlay .popup .controls .prev span, #overlay .popup .controls .next span, #overlay .popup .controls .close span, #inner-popup .popup .controls .prev span, #inner-popup .popup .controls .next span, #inner-popup .popup .controls .close span {
   vertical-align: middle;
 }
-/* line 894, ../compass/scss/_content.scss */
+/* line 888, ../compass/scss/_content.scss */
 #overlay .popup .controls .prev, #inner-popup .popup .controls .prev {
   left: 0;
 }
-/* line 897, ../compass/scss/_content.scss */
+/* line 891, ../compass/scss/_content.scss */
 #overlay .popup .controls .next, #inner-popup .popup .controls .next {
   right: 0;
 }
-/* line 900, ../compass/scss/_content.scss */
+/* line 894, ../compass/scss/_content.scss */
 #overlay .popup .controls .close, #inner-popup .popup .controls .close {
   display: inline-block;
   top: -40px;
@@ -1722,26 +1712,26 @@ main h3 {
   line-height: 35px;
   right: 90px;
 }
-/* line 910, ../compass/scss/_content.scss */
+/* line 904, ../compass/scss/_content.scss */
 #overlay .popup .content, #inner-popup .popup .content {
   margin: auto;
   width: 540px;
   background-color: #ffffff;
   text-align: left;
 }
-/* line 917, ../compass/scss/_content.scss */
+/* line 911, ../compass/scss/_content.scss */
 #overlay .popup .content .text-panel, #inner-popup .popup .content .text-panel {
   padding: 12px;
 }
-/* line 919, ../compass/scss/_content.scss */
+/* line 913, ../compass/scss/_content.scss */
 #overlay .popup .content .text-panel *, #inner-popup .popup .content .text-panel * {
   margin-bottom: 6px;
 }
-/* line 921, ../compass/scss/_content.scss */
+/* line 915, ../compass/scss/_content.scss */
 #overlay .popup .content .text-panel *:last-child, #inner-popup .popup .content .text-panel *:last-child {
   margin-bottom: 0;
 }
-/* line 927, ../compass/scss/_content.scss */
+/* line 921, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel, #inner-popup .popup .content .image-panel {
   height: 300px;
   overflow: hidden;
@@ -1752,38 +1742,38 @@ main h3 {
   background-size: 100% auto;
   background-position: center center;
 }
-/* line 936, ../compass/scss/_content.scss */
+/* line 930, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel a, #inner-popup .popup .content .image-panel a {
   text-decoration: none;
   color: #ffffff;
 }
-/* line 940, ../compass/scss/_content.scss */
+/* line 934, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div, #inner-popup .popup .content .image-panel > div {
   position: absolute;
   line-height: 1;
 }
-/* line 943, ../compass/scss/_content.scss */
+/* line 937, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.likes span, #overlay .popup .content .image-panel > div.shared span, #inner-popup .popup .content .image-panel > div.likes span, #inner-popup .popup .content .image-panel > div.shared span {
   vertical-align: middle;
   margin: 0 2px;
   color: #ffffff;
   display: inline-block;
 }
-/* line 948, ../compass/scss/_content.scss */
+/* line 942, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.likes span.text, #overlay .popup .content .image-panel > div.shared span.text, #inner-popup .popup .content .image-panel > div.likes span.text, #inner-popup .popup .content .image-panel > div.shared span.text {
   margin-top: 3px;
 }
-/* line 953, ../compass/scss/_content.scss */
+/* line 947, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.likes, #inner-popup .popup .content .image-panel > div.likes {
   top: 15px;
   right: 15px;
 }
-/* line 958, ../compass/scss/_content.scss */
+/* line 952, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.shared, #inner-popup .popup .content .image-panel > div.shared {
   top: 15px;
   left: 15px;
 }
-/* line 963, ../compass/scss/_content.scss */
+/* line 957, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.line, #inner-popup .popup .content .image-panel > div.line {
   bottom: 0;
   height: 50px;
@@ -1791,43 +1781,43 @@ main h3 {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
 }
-/* line 969, ../compass/scss/_content.scss */
+/* line 963, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.line *, #inner-popup .popup .content .image-panel > div.line * {
   vertical-align: middle;
   margin: 0 6px;
 }
-/* line 973, ../compass/scss/_content.scss */
+/* line 967, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.line div, #inner-popup .popup .content .image-panel > div.line div {
   display: inline-block;
 }
-/* line 977, ../compass/scss/_content.scss */
+/* line 971, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.line .like, #inner-popup .popup .content .image-panel > div.line .like {
   float: right;
 }
-/* line 981, ../compass/scss/_content.scss */
+/* line 975, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel > div.line .map, #inner-popup .popup .content .image-panel > div.line .map {
   position: absolute;
   left: 0;
 }
-/* line 988, ../compass/scss/_content.scss */
+/* line 982, ../compass/scss/_content.scss */
 #overlay .popup .content .image-panel img, #inner-popup .popup .content .image-panel img {
   max-width: 540px;
   max-height: 300px;
   height: auto;
   width: auto;
 }
-/* line 996, ../compass/scss/_content.scss */
+/* line 990, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview, #inner-popup .popup .content .gallery-preview {
   overflow: hidden;
   width: 100%;
   position: relative;
 }
-/* line 1000, ../compass/scss/_content.scss */
+/* line 994, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview ul, #inner-popup .popup .content .gallery-preview ul {
   width: 20000em;
   transition: 80ms margin-left linear;
 }
-/* line 1003, ../compass/scss/_content.scss */
+/* line 997, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview ul li, #inner-popup .popup .content .gallery-preview ul li {
   text-align: center;
   display: inline-block;
@@ -1835,18 +1825,18 @@ main h3 {
   margin-right: 10px;
   opacity: .5;
 }
-/* line 1010, ../compass/scss/_content.scss */
+/* line 1004, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview ul li:hover, #inner-popup .popup .content .gallery-preview ul li:hover {
   opacity: 1;
 }
-/* line 1013, ../compass/scss/_content.scss */
+/* line 1007, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview ul li img, #inner-popup .popup .content .gallery-preview ul li img {
   max-width: 116px;
   max-height: 75px;
   width: auto;
   height: auto;
 }
-/* line 1022, ../compass/scss/_content.scss */
+/* line 1016, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview .preview-controls a, #inner-popup .popup .content .gallery-preview .preview-controls a {
   display: inline-block;
   width: 30px;
@@ -1855,42 +1845,42 @@ main h3 {
   top: 0;
   z-index: 100;
 }
-/* line 1030, ../compass/scss/_content.scss */
+/* line 1024, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview .preview-controls a:first-child, #inner-popup .popup .content .gallery-preview .preview-controls a:first-child {
   left: 0;
 }
-/* line 1033, ../compass/scss/_content.scss */
+/* line 1027, ../compass/scss/_content.scss */
 #overlay .popup .content .gallery-preview .preview-controls a:last-child, #inner-popup .popup .content .gallery-preview .preview-controls a:last-child {
   right: 0;
 }
-/* line 1038, ../compass/scss/_content.scss */
+/* line 1032, ../compass/scss/_content.scss */
 #overlay .popup .content time, #inner-popup .popup .content time {
   font-size: 15px;
   font-weight: bold;
 }
-/* line 1042, ../compass/scss/_content.scss */
+/* line 1036, ../compass/scss/_content.scss */
 #overlay .popup .content .body, #overlay .popup .content .contacts, #inner-popup .popup .content .body, #inner-popup .popup .content .contacts {
   font-size: 18px;
   line-height: 1.5;
 }
-/* line 1046, ../compass/scss/_content.scss */
+/* line 1040, ../compass/scss/_content.scss */
 #overlay .popup .content .social, #inner-popup .popup .content .social {
   text-align: center;
 }
-/* line 1050, ../compass/scss/_content.scss */
+/* line 1044, ../compass/scss/_content.scss */
 #overlay .popup#cat-item-popup, #inner-popup .popup#cat-item-popup {
   width: 720px;
 }
-/* line 1055, ../compass/scss/_content.scss */
+/* line 1049, ../compass/scss/_content.scss */
 #overlay .popup#change-password-popup, #inner-popup .popup#change-password-popup {
   padding-top: 40px;
   width: 634px;
 }
-/* line 1059, ../compass/scss/_content.scss */
+/* line 1053, ../compass/scss/_content.scss */
 #overlay .popup#change-password-popup .content, #inner-popup .popup#change-password-popup .content {
   padding: 45px 48px 0;
 }
-/* line 1063, ../compass/scss/_content.scss */
+/* line 1057, ../compass/scss/_content.scss */
 #overlay .popup#change-password-popup .controls .close, #inner-popup .popup#change-password-popup .controls .close {
   display: inline-block;
   right: 0;
@@ -1900,17 +1890,17 @@ main h3 {
   line-height: 35px;
 }
 
-/* line 1076, ../compass/scss/_content.scss */
+/* line 1070, ../compass/scss/_content.scss */
 .page--about main {
   text-align: left;
 }
-/* line 1078, ../compass/scss/_content.scss */
+/* line 1072, ../compass/scss/_content.scss */
 .page--about main h3, .page--about main .social-icons {
   text-align: center;
   display: block;
 }
 
-/* line 1084, ../compass/scss/_content.scss */
+/* line 1078, ../compass/scss/_content.scss */
 [class^="gallery-controls-"] {
   width: 17px;
   height: 28px;
@@ -1920,17 +1910,17 @@ main h3 {
   background-size: 34px 28px;
 }
 
-/* line 1092, ../compass/scss/_content.scss */
+/* line 1086, ../compass/scss/_content.scss */
 [class^="gallery-controls-"]:hover, *:hover > [class^="gallery-controls-"] {
   opacity: .5;
 }
 
-/* line 1095, ../compass/scss/_content.scss */
+/* line 1089, ../compass/scss/_content.scss */
 .gallery-controls-next {
   background-position: -17px 0;
 }
 
-/* line 1098, ../compass/scss/_content.scss */
+/* line 1092, ../compass/scss/_content.scss */
 .gallery-controls-close {
   width: 28px;
   height: 28px;
@@ -1940,7 +1930,7 @@ main h3 {
   display: none;
 }
 
-/* line 1107, ../compass/scss/_content.scss */
+/* line 1101, ../compass/scss/_content.scss */
 .main-switch {
   text-transform: uppercase;
   border-bottom: 2px solid #d5d5d5;
@@ -1948,7 +1938,7 @@ main h3 {
   margin: auto;
   margin-bottom: 10px;
 }
-/* line 1114, ../compass/scss/_content.scss */
+/* line 1108, ../compass/scss/_content.scss */
 .main-switch a {
   color: #d5d5d5;
   text-decoration: none;
@@ -1957,11 +1947,11 @@ main h3 {
   padding-bottom: 6px;
   width: 120px;
 }
-/* line 1122, ../compass/scss/_content.scss */
+/* line 1116, ../compass/scss/_content.scss */
 .main-switch a:last-child {
   margin-right: 0;
 }
-/* line 1126, ../compass/scss/_content.scss */
+/* line 1120, ../compass/scss/_content.scss */
 .main-switch a:after {
   content: '';
   display: inline-block;
@@ -1974,36 +1964,36 @@ main h3 {
   left: calc( 50% - 6px );
   border-radius: 5px;
 }
-/* line 1139, ../compass/scss/_content.scss */
+/* line 1133, ../compass/scss/_content.scss */
 .main-switch a.active {
   color: #f6c34f;
   border-bottom: 2px solid #f6c34f;
   margin-bottom: -2px;
 }
-/* line 1144, ../compass/scss/_content.scss */
+/* line 1138, ../compass/scss/_content.scss */
 .main-switch a.active:after {
   border-color: #f6c34f;
   background-color: #ffffff;
 }
 
-/* line 1152, ../compass/scss/_content.scss */
+/* line 1146, ../compass/scss/_content.scss */
 #map-wrap {
   position: relative;
 }
 
-/* line 1155, ../compass/scss/_content.scss */
+/* line 1149, ../compass/scss/_content.scss */
 #map {
   height: 1100px;
 }
 
-/* line 1159, ../compass/scss/_content.scss */
+/* line 1153, ../compass/scss/_content.scss */
 .map-info {
   width: 390px;
   text-align: left;
   padding-left: 60px;
   position: relative;
 }
-/* line 1164, ../compass/scss/_content.scss */
+/* line 1158, ../compass/scss/_content.scss */
 .map-info .image {
   width: 56px;
   height: 56px;
@@ -2013,12 +2003,12 @@ main h3 {
   margin-top: 10px;
   position: relative;
 }
-/* line 1173, ../compass/scss/_content.scss */
+/* line 1167, ../compass/scss/_content.scss */
 .map-info .image img {
   width: 56px;
   height: 56px;
 }
-/* line 1179, ../compass/scss/_content.scss */
+/* line 1173, ../compass/scss/_content.scss */
 .map-info .info {
   display: inline-block;
   padding: 10px 10px 10px 44px;
@@ -2029,37 +2019,37 @@ main h3 {
   box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
 }
-/* line 1190, ../compass/scss/_content.scss */
+/* line 1184, ../compass/scss/_content.scss */
 .map-info .info .name {
   height: 24px;
 }
-/* line 1194, ../compass/scss/_content.scss */
+/* line 1188, ../compass/scss/_content.scss */
 .map-info .info .line > * {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 1199, ../compass/scss/_content.scss */
+/* line 1193, ../compass/scss/_content.scss */
 .map-info .info time {
   margin-right: 10px;
 }
-/* line 1202, ../compass/scss/_content.scss */
+/* line 1196, ../compass/scss/_content.scss */
 .map-info .info .refresh {
   margin-right: 8px;
 }
-/* line 1206, ../compass/scss/_content.scss */
+/* line 1200, ../compass/scss/_content.scss */
 .map-info .info span {
   vertical-align: middle;
 }
-/* line 1212, ../compass/scss/_content.scss */
+/* line 1206, ../compass/scss/_content.scss */
 .map-info.hovered {
   background: url(../images/favicon32.png) 9px center no-repeat;
 }
-/* line 1213, ../compass/scss/_content.scss */
+/* line 1207, ../compass/scss/_content.scss */
 .map-info.hovered .info {
   color: #333333;
 }
 
-/* line 1222, ../compass/scss/_content.scss */
+/* line 1216, ../compass/scss/_content.scss */
 #short-cat-item-wrap {
   position: absolute;
   z-index: 100;
@@ -2068,7 +2058,7 @@ main h3 {
   display: none;
 }
 
-/* line 1229, ../compass/scss/_content.scss */
+/* line 1223, ../compass/scss/_content.scss */
 #short-cat-item {
   background-color: rgba(0, 0, 0, 0.7);
   width: 850px;
@@ -2079,55 +2069,55 @@ main h3 {
   font-size: 18px;
   line-height: 1.5;
 }
-/* line 1239, ../compass/scss/_content.scss */
+/* line 1233, ../compass/scss/_content.scss */
 #short-cat-item .name {
   color: #f6c34f;
   font-size: 30px;
 }
-/* line 1244, ../compass/scss/_content.scss */
+/* line 1238, ../compass/scss/_content.scss */
 #short-cat-item .image {
   position: relative;
   float: left;
   margin-right: 10px;
 }
-/* line 1248, ../compass/scss/_content.scss */
+/* line 1242, ../compass/scss/_content.scss */
 #short-cat-item .image .line {
   width: 100%;
   text-align: center;
   position: absolute;
   bottom: 0;
 }
-/* line 1253, ../compass/scss/_content.scss */
+/* line 1247, ../compass/scss/_content.scss */
 #short-cat-item .image .line > div {
   display: inline-block;
   margin: 0 10px;
 }
-/* line 1256, ../compass/scss/_content.scss */
+/* line 1250, ../compass/scss/_content.scss */
 #short-cat-item .image .line > div span {
   vertical-align: middle;
 }
-/* line 1262, ../compass/scss/_content.scss */
+/* line 1256, ../compass/scss/_content.scss */
 #short-cat-item .image img {
   width: 233px;
   height: 183px;
 }
 
-/* line 1269, ../compass/scss/_content.scss */
+/* line 1263, ../compass/scss/_content.scss */
 .page--map h1 {
   line-height: 1;
 }
 
-/* line 1273, ../compass/scss/_content.scss */
+/* line 1267, ../compass/scss/_content.scss */
 .angular-google-map-container {
   height: 660px;
 }
 
-/* line 1277, ../compass/scss/_content.scss */
+/* line 1271, ../compass/scss/_content.scss */
 form.invalid input {
   border-color: #ce3a3a !important;
 }
 
-/* line 1280, ../compass/scss/_content.scss */
+/* line 1274, ../compass/scss/_content.scss */
 .banner {
   display: none;
   position: fixed;
@@ -2135,7 +2125,7 @@ form.invalid input {
   text-align: center;
   z-index: 60;
 }
-/* line 1286, ../compass/scss/_content.scss */
+/* line 1280, ../compass/scss/_content.scss */
 .banner img {
   width: 100%;
   height: auto;
@@ -2830,6 +2820,11 @@ input[type=text]::-moz-placeholder {
   }
 
   /* line 259, ../compass/scss/respond/_small.scss */
+  #gallery li .line span.gallery-item-gray-3 {
+    margin-left: 1px;
+  }
+
+  /* line 263, ../compass/scss/respond/_small.scss */
   [class^="social-icon-"] {
     width: 45px;
     height: 45px;
@@ -2837,136 +2832,136 @@ input[type=text]::-moz-placeholder {
     background-size: 225px 90px;
   }
 
-  /* line 266, ../compass/scss/respond/_small.scss */
+  /* line 270, ../compass/scss/respond/_small.scss */
   .social-icon-1 {
     background-position: -0px 0;
   }
 
-  /* line 269, ../compass/scss/respond/_small.scss */
+  /* line 273, ../compass/scss/respond/_small.scss */
   .social-icon-1:hover {
     background-position: -0px -45px;
   }
 
-  /* line 266, ../compass/scss/respond/_small.scss */
+  /* line 270, ../compass/scss/respond/_small.scss */
   .social-icon-2 {
     background-position: -45px 0;
   }
 
-  /* line 269, ../compass/scss/respond/_small.scss */
+  /* line 273, ../compass/scss/respond/_small.scss */
   .social-icon-2:hover {
     background-position: -45px -45px;
   }
 
-  /* line 266, ../compass/scss/respond/_small.scss */
+  /* line 270, ../compass/scss/respond/_small.scss */
   .social-icon-3 {
     background-position: -90px 0;
   }
 
-  /* line 269, ../compass/scss/respond/_small.scss */
+  /* line 273, ../compass/scss/respond/_small.scss */
   .social-icon-3:hover {
     background-position: -90px -45px;
   }
 
-  /* line 266, ../compass/scss/respond/_small.scss */
+  /* line 270, ../compass/scss/respond/_small.scss */
   .social-icon-4 {
     background-position: -135px 0;
   }
 
-  /* line 269, ../compass/scss/respond/_small.scss */
+  /* line 273, ../compass/scss/respond/_small.scss */
   .social-icon-4:hover {
     background-position: -135px -45px;
   }
 
-  /* line 266, ../compass/scss/respond/_small.scss */
+  /* line 270, ../compass/scss/respond/_small.scss */
   .social-icon-5 {
     background-position: -180px 0;
   }
 
-  /* line 269, ../compass/scss/respond/_small.scss */
+  /* line 273, ../compass/scss/respond/_small.scss */
   .social-icon-5:hover {
     background-position: -180px -45px;
   }
 
-  /* line 274, ../compass/scss/respond/_small.scss */
+  /* line 278, ../compass/scss/respond/_small.scss */
   .side-menu + header a.menu-button {
     color: transparent;
     margin-left: -1.5em;
   }
 
-  /* line 279, ../compass/scss/respond/_small.scss */
+  /* line 283, ../compass/scss/respond/_small.scss */
   .side-menu.open ~ * {
     left: 283px;
   }
 
-  /* line 283, ../compass/scss/respond/_small.scss */
+  /* line 287, ../compass/scss/respond/_small.scss */
   .side-menu .element-container nav a:before {
     left: 22px;
     top: 19px;
   }
 
-  /* line 289, ../compass/scss/respond/_small.scss */
+  /* line 293, ../compass/scss/respond/_small.scss */
   #overlay .popup {
     padding-top: 40px;
   }
-  /* line 292, ../compass/scss/respond/_small.scss */
+  /* line 296, ../compass/scss/respond/_small.scss */
   #overlay .popup .content {
     width: 300px;
   }
-  /* line 294, ../compass/scss/respond/_small.scss */
+  /* line 298, ../compass/scss/respond/_small.scss */
   #overlay .popup .content .body, #overlay .popup .content .contacts {
     font-size: 9px;
   }
-  /* line 299, ../compass/scss/respond/_small.scss */
+  /* line 303, ../compass/scss/respond/_small.scss */
   #overlay .popup .content .image-panel > div.line {
     height: 30px;
     line-height: 30px;
   }
-  /* line 307, ../compass/scss/respond/_small.scss */
+  /* line 311, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls * {
     opacity: 1;
   }
-  /* line 310, ../compass/scss/respond/_small.scss */
+  /* line 314, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls *:hover {
     opacity: 1;
   }
-  /* line 313, ../compass/scss/respond/_small.scss */
+  /* line 317, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls .prev, #overlay .popup .controls .next, #overlay .popup .controls .close {
     top: 0;
     width: 35px;
     height: 35px;
     line-height: 35px;
   }
-  /* line 319, ../compass/scss/respond/_small.scss */
+  /* line 323, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls .prev {
     left: 0;
   }
-  /* line 322, ../compass/scss/respond/_small.scss */
+  /* line 326, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls .next {
     left: 35px;
   }
-  /* line 325, ../compass/scss/respond/_small.scss */
+  /* line 329, ../compass/scss/respond/_small.scss */
   #overlay .popup .controls .close {
     display: inline-block;
     right: 0;
   }
-  /* line 330, ../compass/scss/respond/_small.scss */
+  /* line 334, ../compass/scss/respond/_small.scss */
   #overlay .popup#cat-item-popup {
     width: 300px;
   }
-  /* line 332, ../compass/scss/respond/_small.scss */
+  /* line 336, ../compass/scss/respond/_small.scss */
   #overlay .popup#cat-item-popup .map .text {
     display: none;
   }
-  /* line 337, ../compass/scss/respond/_small.scss */
+  /* line 341, ../compass/scss/respond/_small.scss */
   #overlay .popup#change-password-popup {
     width: 278px;
   }
-  /* line 339, ../compass/scss/respond/_small.scss */
+  /* line 343, ../compass/scss/respond/_small.scss */
   #overlay .popup#change-password-popup .content {
     padding: 30px 13px 0;
   }
 
-  /* line 346, ../compass/scss/respond/_small.scss */
+  /* line 350, ../compass/scss/respond/_small.scss */
   [class^="gallery-controls-"] {
     width: 11px;
     height: 19px;
@@ -2974,12 +2969,12 @@ input[type=text]::-moz-placeholder {
     background-size: 22px 19px;
   }
 
-  /* line 352, ../compass/scss/respond/_small.scss */
+  /* line 356, ../compass/scss/respond/_small.scss */
   .gallery-controls-next {
     background-position: -11px 0;
   }
 
-  /* line 355, ../compass/scss/respond/_small.scss */
+  /* line 359, ../compass/scss/respond/_small.scss */
   .gallery-controls-close {
     width: 19px;
     height: 19px;
@@ -2988,17 +2983,17 @@ input[type=text]::-moz-placeholder {
     display: inline-block;
   }
 
-  /* line 363, ../compass/scss/respond/_small.scss */
+  /* line 367, ../compass/scss/respond/_small.scss */
   .main-switch {
     border-bottom-width: 1px;
     margin-bottom: 5px;
   }
-  /* line 367, ../compass/scss/respond/_small.scss */
+  /* line 371, ../compass/scss/respond/_small.scss */
   .main-switch a {
     margin-right: 6px;
     padding-bottom: 4px;
   }
-  /* line 371, ../compass/scss/respond/_small.scss */
+  /* line 375, ../compass/scss/respond/_small.scss */
   .main-switch a:after {
     width: 4px;
     height: 4px;
@@ -3009,108 +3004,108 @@ input[type=text]::-moz-placeholder {
     left: calc( 50% - 3px );
     border-radius: 3px;
   }
-  /* line 382, ../compass/scss/respond/_small.scss */
+  /* line 386, ../compass/scss/respond/_small.scss */
   .main-switch a.active {
     border-bottom-width: 1px;
     margin-bottom: -1px;
   }
 
-  /* line 389, ../compass/scss/respond/_small.scss */
+  /* line 393, ../compass/scss/respond/_small.scss */
   #short-cat-item {
     width: 320px;
     margin: 0;
     font-size: 9px;
   }
-  /* line 394, ../compass/scss/respond/_small.scss */
+  /* line 398, ../compass/scss/respond/_small.scss */
   #short-cat-item .name {
     font-size: 15px;
   }
-  /* line 399, ../compass/scss/respond/_small.scss */
+  /* line 403, ../compass/scss/respond/_small.scss */
   #short-cat-item .image img {
     width: 120px;
     height: 100px;
   }
 
-  /* line 406, ../compass/scss/respond/_small.scss */
+  /* line 410, ../compass/scss/respond/_small.scss */
   #map {
     height: 470px;
   }
 
-  /* line 410, ../compass/scss/respond/_small.scss */
+  /* line 414, ../compass/scss/respond/_small.scss */
   .map-info {
     width: 195px;
     text-align: left;
   }
-  /* line 414, ../compass/scss/respond/_small.scss */
+  /* line 418, ../compass/scss/respond/_small.scss */
   .map-info .image {
     width: 30px;
     height: 30px;
     border-radius: 16px;
     margin-top: 5px;
   }
-  /* line 420, ../compass/scss/respond/_small.scss */
+  /* line 424, ../compass/scss/respond/_small.scss */
   .map-info .image img {
     width: 30px;
     height: 30px;
   }
-  /* line 426, ../compass/scss/respond/_small.scss */
+  /* line 430, ../compass/scss/respond/_small.scss */
   .map-info .info {
     padding: 5px 5px 5px 20px;
     margin-left: -10px;
     font-size: 10px;
     line-height: 1.5;
   }
-  /* line 432, ../compass/scss/respond/_small.scss */
+  /* line 436, ../compass/scss/respond/_small.scss */
   .map-info .info .name {
     height: auto;
   }
-  /* line 436, ../compass/scss/respond/_small.scss */
+  /* line 440, ../compass/scss/respond/_small.scss */
   .map-info .info time {
     margin-right: 15px;
   }
-  /* line 439, ../compass/scss/respond/_small.scss */
+  /* line 443, ../compass/scss/respond/_small.scss */
   .map-info .info .refresh {
     margin-right: 7px;
   }
 
-  /* line 446, ../compass/scss/respond/_small.scss */
+  /* line 450, ../compass/scss/respond/_small.scss */
   .social-icons a {
     margin-left: 9px;
   }
 
-  /* line 450, ../compass/scss/respond/_small.scss */
+  /* line 454, ../compass/scss/respond/_small.scss */
   .popup .content time {
     font-size: 12px;
   }
 
-  /* line 454, ../compass/scss/respond/_small.scss */
+  /* line 458, ../compass/scss/respond/_small.scss */
   #profile-form input[type="submit"] {
     width: 310px;
   }
 
-  /* line 458, ../compass/scss/respond/_small.scss */
+  /* line 462, ../compass/scss/respond/_small.scss */
   .angular-google-map-container {
     height: 450px;
   }
 
-  /* line 462, ../compass/scss/respond/_small.scss */
+  /* line 466, ../compass/scss/respond/_small.scss */
   .wrapper-half {
     width: 50%;
   }
-  /* line 465, ../compass/scss/respond/_small.scss */
+  /* line 469, ../compass/scss/respond/_small.scss */
   .wrapper-half > div {
     width: 160px;
   }
-  /* line 469, ../compass/scss/respond/_small.scss */
+  /* line 473, ../compass/scss/respond/_small.scss */
   .wrapper-half.left {
     padding-right: 0;
   }
-  /* line 473, ../compass/scss/respond/_small.scss */
+  /* line 477, ../compass/scss/respond/_small.scss */
   .wrapper-half.right {
     padding-left: 0;
   }
 
-  /* line 478, ../compass/scss/respond/_small.scss */
+  /* line 482, ../compass/scss/respond/_small.scss */
   .banner {
     display: block;
   }
