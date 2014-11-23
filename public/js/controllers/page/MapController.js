@@ -27,7 +27,7 @@ app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
                     <div class="name">'+cat.full_name+'</div> \
                     <div class="line"> \
                         <time>'+cat.created_at+'</time> \
-                        <div class="refresh"><span class="gallery-item-gray-3"></span><span class="text">0</span></div> \
+                        <div class="refresh"><span class="gallery-item-gray-3"></span><span class="text">'+cat.shared_count+'</span></div> \
                         <div class="likes"><span class="gallery-item-gray-1"></span><span class="text">'+cat.count_likes+'</span></div> \
                     </div> \
                 </div> \
@@ -44,5 +44,9 @@ app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
                     console.log(123);
                 }
         }
+    }
+
+    $scope.markerClicked = function(id) {
+        console.log(id);
     }
 });

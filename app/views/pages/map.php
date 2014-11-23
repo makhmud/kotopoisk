@@ -8,7 +8,8 @@
                                 labelContent:parseCatToMarker(cat),
                                     labelAnchor: '-25 70'
                             }"
-                            click="showCat(cat.id)">
+                            click="showCat(cat.id)"
+                            mouseover="markerClicked(1)">
             </ui-gmap-marker>
         </div>
 

@@ -38,6 +38,7 @@ return array(
     'File' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Crypt' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'ClassPreloader' => array($vendorDir . '/classpreloader/classpreloader/src'),
+    'CeesVanEgmond\\Minify' => array($vendorDir . '/ceesvanegmond/minify/src'),
     'Carbon' => array($vendorDir . '/nesbot/carbon/src'),
     'Boris' => array($vendorDir . '/d11wtq/boris/lib'),
 );

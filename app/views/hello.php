@@ -77,43 +77,62 @@
 
     <script src="/js/lib/jquery/jquery.js"></script>
     <script src="/js/lib/jquery.formstyler/jquery.formstyler.min.js"></script>
-    <script src="/js/lib/jquery.inputmask/dist/inputmask/jquery.inputmask.js"></script>
-    <script src="/js/lib/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js"></script>
+    <?= Minify::javascriptDir('/js/lib/jquery.inputmask/dist/inputmask/') ?>
+<!--    <script src="/js/lib/jquery.inputmask/dist/inputmask/jquery.inputmask.js"></script>-->
+<!--    <script src="/js/lib/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js"></script>-->
 
     <!--Angular primary libs-->
-    <script src="/js/lib/angular/angular.min.js"></script>
-    <script src="/js/lib/angular-route/angular-route.min.js"></script>
-    <script src="/js/lib/angular-resource/angular-resource.min.js"></script>
-    <script src="/js/lib/angular-cookies/angular-cookies.min.js"></script>
+<?=
+Minify::javascript([
+    "/js/lib/angular/angular.min.js",
+    "/js/lib/angular-route/angular-route.min.js",
+    "/js/lib/angular-resource/angular-resource.min.js",
+    "/js/lib/angular-cookies/angular-cookies.min.js",
+]);
+?>
     <!--End Angular primary libs-->
 
     <!--Angular secondary libs-->
-    <script src="/js/lib/ng-infinite-scroller-origin/build/ng-infinite-scroll.min.js"></script>
-    <script src="/js/lib/flow.js/dist/flow.min.js"></script>
-    <script src="/js/lib/ng-flow/dist/ng-flow.min.js"></script>
-    <script src="/js/lib/angular-translate/angular-translate.min.js"></script>
-    <script src="/js/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
-    <script src="/js/lib/angular-social/angular-social.src.js"></script>
-    <script src="/js/lib/angular-touch/angular-touch.min.js"></script>
-    <script src="/js/lib/matchmedia/matchMedia.js"></script>
-    <script src="/js/lib/matchmedia-ng/matchmedia-ng.js"></script>
+<?=
+Minify::javascript([
+    "/js/lib/ng-infinite-scroller-origin/build/ng-infinite-scroll.min.js",
+    "/js/lib/flow.js/dist/flow.min.js",
+    "/js/lib/ng-flow/dist/ng-flow.min.js",
+    "/js/lib/angular-translate/angular-translate.min.js",
+    "/js/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js",
+    "/js/lib/angular-social/angular-social.src.js",
+    "/js/lib/angular-touch/angular-touch.min.js",
+    "/js/lib/matchmedia/matchMedia.js",
+    "/js/lib/matchmedia-ng/matchmedia-ng.js",
+]);
+?>
+
     <!--End Angular secondary libs-->
 
     <!--GMap Directive with dependencies-->
-    <script src="/js/lib/lodash/dist/lodash.min.js"></script>
-    <script src="/js/lib/bluebird/js/browser/bluebird.js"></script>
-    <script src="/js/lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+<?=
+    Minify::javascript([
+        '/js/lib/lodash/dist/lodash.min.js',
+        '/js/lib/bluebird/js/browser/bluebird.js',
+        '/js/lib/angular-google-maps/dist/angular-google-maps.min.js',
+    ]);
+?>
+<!--    <script src="/js/lib/lodash/dist/lodash.min.js"></script>-->
+<!--    <script src="/js/lib/bluebird/js/browser/bluebird.js"></script>-->
+<!--    <script src="/js/lib/angular-google-maps/dist/angular-google-maps.min.js"></script>-->
     <!--End GMap-->
 
     <script src="/js/start.js"></script>
 
     <!--Services-->
-    <script src="/js/services/AddressService.js"></script>
-    <script src="/js/services/AuthService.js"></script>
+<?= Minify::javascriptDir('/js/services/') ?>
+<!--    <script src="/js/services/AddressService.js"></script>-->
+<!--    <script src="/js/services/AuthService.js"></script>-->
     <!--End Services-->
 
     <!--Main Application-->
-    <script src="/js/app.js"></script>
+<?= Minify::javascript('/js/app.js') ?>
+<!--    <script src="/js/app.js"></script>-->
 
     <!--Models-->
     <script src="/js/models/Cat.js"></script>
@@ -121,19 +140,21 @@
     <!--End Models-->
 
     <!--Directives-->
-    <script src="/js/directives/feed_item.js"></script>
+    <?= Minify::javascriptDir('/js/directives/') ?>
+<!--    <script src="/js/directives/feed_item.js"></script>-->
     <!--End Directives-->
 
     <!--Controllers-->
-    <script src="/js/controllers/MainController.js"></script>
-    <script src="/js/controllers/page/IndexController.js"></script>
-    <script src="/js/controllers/page/FeedController.js"></script>
-    <script src="/js/controllers/page/SearchController.js"></script>
-    <script src="/js/controllers/page/MapController.js"></script>
-    <script src="/js/controllers/page/AboutController.js"></script>
-    <script src="/js/controllers/page/LoginController.js"></script>
-    <script src="/js/controllers/page/ProfileController.js"></script>
-    <script src="/js/controllers/page/AddCatController.js"></script>
+    <?= Minify::javascriptDir('/js/controllers/') ?>
+<!--    <script src="/js/controllers/MainController.js"></script>-->
+<!--    <script src="/js/controllers/page/IndexController.js"></script>-->
+<!--    <script src="/js/controllers/page/FeedController.js"></script>-->
+<!--    <script src="/js/controllers/page/SearchController.js"></script>-->
+<!--    <script src="/js/controllers/page/MapController.js"></script>-->
+<!--    <script src="/js/controllers/page/AboutController.js"></script>-->
+<!--    <script src="/js/controllers/page/LoginController.js"></script>-->
+<!--    <script src="/js/controllers/page/ProfileController.js"></script>-->
+<!--    <script src="/js/controllers/page/AddCatController.js"></script>-->
     <!--End Controllers-->
 
 </body>

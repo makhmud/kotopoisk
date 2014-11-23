@@ -125,6 +125,8 @@ return array(
         'Intervention\Image\ImageServiceProvider',
         'Laravelrus\LocalizedCarbon\LocalizedCarbonServiceProvider',
         'Vinelab\Http\HttpServiceProvider',
+        'CeesVanEgmond\Minify\MinifyServiceProvider',
+
         'CatSearch\ServiceProviders\RepositoryServiceProvider',
         'CatSearch\Social\SocialServiceProvider'
 

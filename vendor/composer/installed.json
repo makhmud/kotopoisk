@@ -1839,18 +1839,170 @@
         "homepage": "http://symfony.com"
     },
     {
+        "name": "natxet/CssMin",
+        "version": "3.0.2",
+        "version_normalized": "3.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/natxet/CssMin.git",
+            "reference": "afdcdbdb5fc332313f47a79ae60346df3e69a572"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/natxet/CssMin/zipball/afdcdbdb5fc332313f47a79ae60346df3e69a572",
+            "reference": "afdcdbdb5fc332313f47a79ae60346df3e69a572",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.0"
+        },
+        "time": "2013-07-02 20:53:35",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Joe Scylla",
+                "email": "joe.scylla@gmail.com",
+                "homepage": "https://profiles.google.com/joe.scylla"
+            }
+        ],
+        "description": "Minifying CSS",
+        "homepage": "http://code.google.com/p/cssmin/",
+        "keywords": [
+            "css",
+            "minify"
+        ]
+    },
+    {
+        "name": "linkorb/jsmin-php",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/linkorb/jsmin-php.git",
+            "reference": "be85d87fc9c27730e7e9ced742b13010dafc1026"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/linkorb/jsmin-php/zipball/be85d87fc9c27730e7e9ced742b13010dafc1026",
+            "reference": "be85d87fc9c27730e7e9ced742b13010dafc1026",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.0.0"
+        },
+        "time": "2013-03-15 13:16:35",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Joost Faassen",
+                "email": "j.faassen@linkorb.com",
+                "role": "Packaging for composer"
+            },
+            {
+                "name": "Ryan Grove",
+                "email": "ryan@wonko.com",
+                "role": "PHP port"
+            },
+            {
+                "name": "Adam Gofort",
+                "email": "aag@adamgoforth.com",
+                "role": "Updates to the PHP port"
+            },
+            {
+                "name": "Douglas Crockford",
+                "email": "douglas@crockford.com"
+            }
+        ],
+        "description": "Unofficial package of jsmin-php",
+        "homepage": "http://www.github.com/linkorb/jsmin-php",
+        "keywords": [
+            "javascript",
+            "jsmin",
+            "minify"
+        ]
+    },
+    {
+        "name": "ceesvanegmond/minify",
+        "version": "2.0.7",
+        "version_normalized": "2.0.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ceesvanegmond/minify.git",
+            "reference": "04aa585ec5681de9fe12c9dde624efd9ec9988f1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ceesvanegmond/minify/zipball/04aa585ec5681de9fe12c9dde624efd9ec9988f1",
+            "reference": "04aa585ec5681de9fe12c9dde624efd9ec9988f1",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~4.1",
+            "linkorb/jsmin-php": "1.*",
+            "natxet/cssmin": "3.*",
+            "php": ">=5.3.2"
+        },
+        "require-dev": {
+            "mikey179/vfsstream": "1.2.*",
+            "phpspec/phpspec": "2.0.0"
+        },
+        "time": "2014-06-03 07:11:52",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "CeesVanEgmond\\Minify": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Cees van Egmond",
+                "email": "cees@ceesvanegmond.com"
+            }
+        ],
+        "description": "A package for minifying styles and javascript ",
+        "keywords": [
+            "laravel",
+            "minify"
+        ]
+    },
+    {
         "name": "vinelab/http",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/Vinelab/http.git",
-            "reference": "0bc34a7e2964004743e2c412773a04d255f74e73"
+            "reference": "a2a135b4dd89f951b4c20d6f5cbd695a40ddfc91"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Vinelab/http/zipball/0bc34a7e2964004743e2c412773a04d255f74e73",
-            "reference": "0bc34a7e2964004743e2c412773a04d255f74e73",
+            "url": "https://api.github.com/repos/Vinelab/http/zipball/a2a135b4dd89f951b4c20d6f5cbd695a40ddfc91",
+            "reference": "a2a135b4dd89f951b4c20d6f5cbd695a40ddfc91",
             "shasum": ""
         },
         "require": {
@@ -1861,7 +2013,7 @@
             "mockery/mockery": "0.9.*",
             "phpunit/phpunit": "4.3.*"
         },
-        "time": "2014-10-27 19:21:56",
+        "time": "2014-11-22 12:29:36",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

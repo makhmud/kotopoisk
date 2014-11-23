@@ -8,7 +8,8 @@
         "flowjs/flow-php-server": "*",
 		"intervention/image": "~2.0",
         "laravelrus/localized-carbon": "1.*",
-        "vinelab/http": "dev-master"
+        "vinelab/http": "dev-master",
+        "ceesvanegmond/minify": "2.0.*"
 	},
 	"autoload": {
 		"classmap": [
