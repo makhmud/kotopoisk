@@ -1,4 +1,4 @@
-<main ng-if="!settings.showChooseMapPosition">
+<main ng-show="!settings.showChooseMapPosition">
     <form id="add-cat" name="AddCatForm" enctype='multipart/form-data'>
         <div flow-init="ngFlowParams" flow-files-submitted="$flow.upload()" flow-file-success="newCat.photos.push($message)">
             <div id="photos" >
