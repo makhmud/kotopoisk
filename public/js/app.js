@@ -18,25 +18,25 @@ app.config(['$locationProvider', '$routeProvider', '$httpProvider', '$translateP
             social_auth : ['Auth', function(Auth){ return Auth.checkSocial() || Auth.check() }]
         }
     });
-    $routeProvider.when('/feed/:id', {templateUrl: '/pages/feed', controller: 'FeedCtrl'});
-    $routeProvider.when('/feed', {templateUrl: '/pages/feed', controller: 'FeedCtrl'});
-    $routeProvider.when('/search/:find', {templateUrl: '/pages/feed', controller: 'SearchCtrl'});
-    $routeProvider.when('/map', {templateUrl: '/pages/map', controller: 'MapCtrl'});
-    $routeProvider.when('/add-cat', {
+    $routeProvider.when(window.pages.feed.alias + '/:id', {templateUrl: '/pages/feed', controller: 'FeedCtrl'});
+    $routeProvider.when(window.pages.feed.alias, {templateUrl: '/pages/feed', controller: 'FeedCtrl'});
+    $routeProvider.when(window.pages.search.alias + '/:find', {templateUrl: '/pages/feed', controller: 'SearchCtrl'});
+    $routeProvider.when(window.pages.map.alias, {templateUrl: '/pages/map', controller: 'MapCtrl'});
+    $routeProvider.when(window.pages.add_cat.alias, {
         templateUrl: '/pages/add-cat',
         controller: 'AddCatCtrl',
         resolve: {
             auth : ['Auth', function(Auth){ return Auth.check() }]
         }
     });
-    $routeProvider.when('/profile', {
+    $routeProvider.when(window.pages.profile.alias, {
         templateUrl: '/pages/profile',
         controller: 'ProfileCtrl',
         resolve: {
             auth : ['Auth', function(Auth){ return Auth.check() }]
         }
     });
-    $routeProvider.when('/about', {templateUrl: '/pages/about', controller: 'AboutCtrl'});
+    $routeProvider.when(window.pages.about.alias, {templateUrl: '/pages/about', controller: 'AboutCtrl'});
     $routeProvider.when('/login', {templateUrl: '/pages/login', controller: 'LoginCtrl'});
 
     $routeProvider.otherwise({redirectTo: '/'});

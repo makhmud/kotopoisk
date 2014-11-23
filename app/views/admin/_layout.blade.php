@@ -15,6 +15,7 @@
         <li><a href="/admin/user">Пользователи</a></li>
         <li><a href="/admin/cat">Объявления</a></li>
         <li><a href="/admin/general">Администрация</a></li>
+        <li><a href="/admin/pages">Страницы</a></li>
     </ul>
     
     {{ $content }}

@@ -13,7 +13,7 @@
 
 Route::any('/', function()
 {
-    $view = View::make('hello');
+    $view = View::make('hello')->with([ 'pages' => Page::all() ]);
 
     if (Input::has('token')) {
         $view->with(['social_token' => Input::get('token')]);
@@ -25,6 +25,7 @@ Route::any('/', function()
 Route::controller('/admin/user', 'AdminUserController');
 Route::controller('/admin/general', 'AdminGeneralController');
 Route::controller('/admin/cat', 'AdminCatsController');
+Route::controller('/admin/pages', 'AdminPagesController');
 Route::controller('/admin', 'AdminController');
 
 Route::group( array('prefix'=>'/pages/', 'before' => 'ajax'), function()
@@ -65,5 +66,5 @@ Route::group(array('prefix' => '/api/', 'before' => 'ajax' ), function() {
 
 App::missing(function($exception)
 {
-    return View::make('hello');
+    return View::make('hello')->with([ 'pages' => Page::all() ]);
 });

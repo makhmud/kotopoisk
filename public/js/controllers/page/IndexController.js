@@ -66,7 +66,7 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route,
                     $cookies.auth_token = response.auth_token;
                     $cookies.auth_id = response.auth_id;
                     $scope.settings.auth = true;
-                    $location.path('/feed');
+                    $location.path(window.pages.feed.alias);
                     $route.reload();
                 } else {
                     $scope.formStates.signinValid = false;

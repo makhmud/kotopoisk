@@ -48,7 +48,7 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
         );
         $scope.newCat.$save().then( function(response){
             if (response.success) {
-                $location.path('/feed');
+                $location.path(window.pages.feed.alias);
             }
         });
     }

@@ -25,7 +25,7 @@ app.factory('Auth', function($http, $q, $cookies, $location, $route) {
                 .success(function(data){
                     if (data.success) {
                         if ($location.path() == '/'){
-                            $location.path('/feed');
+                            $location.path(window.pages.feed.alias);
                         }
                         defer.resolve(true)
                     } else {
@@ -61,7 +61,7 @@ app.factory('Auth', function($http, $q, $cookies, $location, $route) {
                             $cookies.auth_token = data.auth_token;
                             $cookies.auth_id = data.auth_id;
                             if ($location.path() == '/'){
-                                $location.path('/feed');
+                                $location.path(window.pages.feed.alias);
                                 $route.reload();
                             }
                             defer.resolve(true);

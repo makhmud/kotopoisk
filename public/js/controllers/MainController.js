@@ -111,6 +111,8 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         isMain : false
     };
 
+    $scope.pages = window.pages;
+
     $scope.searchCount = 0;
 
     User.getAll({}, function(response){
@@ -347,7 +349,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         $scope.settings.map.center = position;
         $scope.settings.map.zoom = 10;
         $scope.methods.closePopup();
-        $location.path('/map');
+        $location.path(window.pages.map.alias);
     }
 
     $scope.like = function (idCat) {
@@ -383,7 +385,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
 
     $scope.find = function(find) {
         $scope.settings.lockDelayLoad = false;
-        $location.path('/search/' + find);
+        $location.path(window.pages.search.alias + '/' + find);
     }
 
     $scope.settings.galleryPreview = {position : 0};
@@ -404,7 +406,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
 
     $scope.addCatLink = function() {
         if ($scope.settings.auth) {
-            $location.path('/add-cat');
+            $location.path($scope.pages.add_cat.alias);
         } else {
             $scope.settings.isSideMenuOpened = false;
             $scope.notificate('Чтобы добавить котэ, пожалуйста, <a href="/">зарегистрируйтесь</a>.')
@@ -421,6 +423,13 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
     $scope.swipeRight = function(){
         if(matchmedia.isPhone()){
             $scope.settings.isSideMenuOpened = true;
+        }
+    }
+
+    $scope.activePage = window.pages.index;
+    for( var key in window.pages){
+        if ($location.path().startsWith( window.pages[key].alias) && key!='index') {
+            $scope.activePage = window.pages[key];
         }
     }
 

@@ -7,7 +7,10 @@
     <?php foreach( array(180, 120, 152, 144, 114, 60, 57, 80, 58, 40, 29, 76, 72, 50) as $size ) : ?>
         <link rel="apple-touch-icon" sizes="<?= $size ?>x<?= $size ?>" href="/images/apple-icons/touch-icon-<?= $size ?>.png">
     <?php endforeach; ?>
-	<title ng-bind="page.title | translate"></title>
+	<title ng-bind="activePage.title || (page.title | translate)"></title>
+    <meta name="title" content="{{activePage.title || (page.title | translate)}}">
+    <meta name="description" content="{{activePage.description}}">
+    <meta name="keywords" content="{{activePage.keywords}}">
     <link rel="stylesheet" href="/css/normalize.min.css"/>
     <link rel="stylesheet" href="/js/lib/jquery.formstyler/jquery.formstyler.css"/>
     <link rel="stylesheet" href="/css/style.css"/>
@@ -16,9 +19,17 @@
     <meta name="MobileOptimized" content="320">
     <meta name="HandheldFriendly" content="true">
     <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <script>
+        window.pages = {};
+        <?php if ( isset($pages) ): ?>
+            <?php foreach( $pages as $page ): ?>
+                window.pages['<?= $page->key ?>'] = <?= $page->toJson() ?>;
+            <?php endforeach ?>
+        <?php endif; ?>
+    </script>
 </head>
 <body class="{{page.bodyClasses}}" ng-swipe-right="swipeRight()" ng-swipe-left="swipeLeft()">
-
 <div class="main-container wrapper">
     <div class="side-menu {{ (settings.isSideMenuOpened) ? 'open' : '' }}" ng-if="!page.isMain">
         <div class="element-container">
@@ -29,10 +40,10 @@
             <a ng-click="addCatLink()" class="add-cat" ng-bind="'menu.add_cat' | translate "></a>
 
             <nav>
-                <a href="/feed" class="icon-feed" ng-bind="'page.feed.title' | translate "></a>
-                <a href="/map" class="icon-map" ng-bind="'page.map.title' | translate "></a>
-                <a href="/profile" class="icon-profile" ng-if="settings.auth" ng-bind="'page.profile.title' | translate "></a>
-                <a href="/about" class="icon-about" ng-bind="'page.about.title' | translate "></a>
+                <a href="{{pages.feed.alias}}" class="icon-feed" ng-bind="'page.feed.title' | translate "></a>
+                <a href="{{pages.map.alias}}" class="icon-map" ng-bind="'page.map.title' | translate "></a>
+                <a href="{{pages.profile.alias}}" class="icon-profile" ng-if="settings.auth" ng-bind="'page.profile.title' | translate "></a>
+                <a href="{{pages.about.alias}}" class="icon-about" ng-bind="'page.about.title' | translate "></a>
             </nav>
             <a href="/" class="signin" ng-if="!settings.auth" ng-bind="'menu.in' | translate"></a>
             <a ng-click="logout()" class="signin" ng-if="settings.auth" ng-bind="'menu.out' | translate"></a>
