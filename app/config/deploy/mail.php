@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-    array('address' => 'welcome@kotopoisk.com', 'name' => 'КотоПоиск'),
+    'from' => array('address' => 'welcome@kotopoisk.com', 'name' => 'КотоПоиск'),
 
 	/*
 	|--------------------------------------------------------------------------
