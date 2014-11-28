@@ -12,6 +12,7 @@ app.controller('FeedCtrl', function($scope, $filter, Cat, $routeParams) {
     $scope.page.search = false;
     $scope.notification = '';
     $scope.settings.isSideMenuOpened = false;
+    $scope.methods.closePopup();
 
     /**
      * Sets in true when end of all cats reached
