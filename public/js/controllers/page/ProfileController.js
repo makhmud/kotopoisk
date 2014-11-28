@@ -101,7 +101,7 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter, m
 
     var timeout;
     $scope.$watch('user', function(newValue, oldValue){
-        if (newValue.$resolved){
+        if (newValue.$resolved && oldValue.$resolved && !angular.equals(newValue.data, oldValue.data)){
             if (typeof(timeout) != 'undefined'){
                 clearTimeout(timeout);
             }
