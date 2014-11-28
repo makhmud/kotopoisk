@@ -97,7 +97,12 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter, m
                 }
             }
         );
-    }
+    };
+
+    var timeout;
+    $scope.$watch('user', function(newValue, oldValue){
+        console.log(newValue, oldValue);
+    })
 
     $scope.isFull = function() {
         if (typeof($scope.user.data) != 'undefined') {
