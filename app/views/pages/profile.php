@@ -19,7 +19,7 @@
         <div class="text" ng-bind="'page.profile.logout' | translate"></div>
     </a>
 </div>
-<main style="background-image: url(/api/getUserPic?destination={{user.data.image}});">
+<main style="background-image: url("/api/getUserPic?destination={{user.data.image}}");">
 
     <form id="profile-form" name="AddCatForm" enctype='multipart/form-data'>
         <div class="form-item" ng-class="{active: user.data.contacts.name.length>0}">
