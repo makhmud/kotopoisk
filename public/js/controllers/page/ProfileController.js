@@ -93,7 +93,7 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter, m
                 if (!response.success) {
                     $scope.notificate($filter('translate')('notification.profile.fail'))
                 } else {
-                    $scope.notificate($filter('translate')('notification.profile.success'))
+                    //$scope.notificate($filter('translate')('notification.profile.success'))
                 }
             }
         );
