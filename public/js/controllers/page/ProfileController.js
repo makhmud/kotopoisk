@@ -101,7 +101,14 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter, m
 
     var timeout;
     $scope.$watch('user', function(newValue, oldValue){
-        console.log(newValue, oldValue);
+        if (newValue.$resolved){
+            if (typeof(timeout) != 'undefined'){
+                clearTimeout(timeout);
+            }
+            timeout = setTimeout(function(){
+                console.log(newValue, oldValue);
+            }, 2000)
+        }
     }, true)
 
     $scope.isFull = function() {
