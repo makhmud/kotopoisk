@@ -106,7 +106,7 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter, m
                 clearTimeout(timeout);
             }
             timeout = setTimeout(function(){
-                console.log(newValue, oldValue);
+                $scope.saveUser();
             }, 2000)
         }
     }, true)
