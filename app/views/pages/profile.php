@@ -40,14 +40,7 @@
         <div class="form-item" ng-class="{active: user.data.contacts.web.length>0}">
             <input type="text" id="web" ng-model="user.data.contacts.web" placeholder="{{ 'placeholders.social_link' | translate }}"/>
         </div>
-        <div class="form-item" ng-class="{active: user.data.contacts.cats_amount>0}">
-            <select name="amount" id="amount" ng-model="user.data.contacts.cats_amount">
-                <option value="0" disabled selected >{{'placeholders.cats_amount' | translate}}</option>
-                <option value="1">0</option>
-                <option value="2">1</option>
-                <option value="3" ng-bind="'placeholders.more_than_2' | translate"></option>
-            </select>
-        </div>
+
         <div class="form-item submit" ng-class="{'active':isFull()}">
             <input type="submit" value="{{ 'page.profile.ready' | translate }}" ng-disabled="ProfileForm.$invalid" ng-click="saveUser()"/>
         </div>

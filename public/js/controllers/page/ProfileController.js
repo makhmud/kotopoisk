@@ -1,8 +1,8 @@
 app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter, matchmedia) {
 
-    $('select').styler({
-        selectSmartPositioning : false
-    });
+    //$('select').styler({
+    //    selectSmartPositioning : false
+    //});
 
     if (!matchmedia.isPhone()){
         $('#web').inputmask({
