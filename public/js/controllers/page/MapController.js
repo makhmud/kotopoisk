@@ -7,6 +7,7 @@ app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
     $scope.page.isMain = false;
     $scope.notification = '';
     $scope.settings.isSideMenuOpened = false;
+    $scope.methods.closePopup();
 
     $scope.settings.popupState.showControls = false;
 
