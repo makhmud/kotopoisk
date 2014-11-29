@@ -8,6 +8,7 @@ app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
     $scope.notification = '';
     $scope.settings.isSideMenuOpened = false;
     $scope.methods.closePopup();
+    $scope.settings.loginForms.active = 'signin';
 
     $scope.settings.popupState.showControls = false;
 

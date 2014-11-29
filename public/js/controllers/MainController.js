@@ -173,14 +173,19 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
      * Showing popup by given id
      * @param id
      */
-    $scope.showCat = function (id) {
-        var mainMargin = parseInt($('.main-container').css('margin-top'));
-        var top = $(window).scrollTop() - mainMargin;
-        top = top < 0 ? 0 : top;
-        if(mainMargin != 0) { top+=50; }
-        $('.popup').css(
-            {'margin-top':top + 'px'}
-        );
+    $scope.showCat = function (id, noScroll) {
+        if (typeof noScroll == 'undefined') noScroll = false;
+        var top = 0;
+        if (!noScroll) {
+            var mainMargin = parseInt($('.main-container').css('margin-top'));
+            top = $(window).scrollTop() - mainMargin;
+            console.log($(window).height() + top);
+            top = top < 0 ? 0 : top;
+            if(mainMargin != 0) { top+=50; }
+            $('.popup').css(
+                {'margin-top':top + 'px'}
+            );
+        }
 
         $timeout(function() {
             $scope.currentCatLoaded = false;
@@ -353,13 +358,19 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
     }
 
     $scope.like = function (idCat) {
-        $http.post('/api/like', {idCat : idCat, idUser : $cookies.auth_id, auth_token : $cookies.auth_token }).then( function (response) {
-            if (response.data.success) {
-                $scope.data.currentCat.likes.push(response.data.data);
-                $scope.data.currentCat.hasLike = true;
-                $filter('filter')($scope.data.cats,{id:$scope.data.currentCat.id}, true)[0].count_likes++;
-            }
-        })
+        if ($scope.settings.auth) {
+            $http.post('/api/like', {idCat : idCat, idUser : $cookies.auth_id, auth_token : $cookies.auth_token }).then( function (response) {
+                if (response.data.success) {
+                    $scope.data.currentCat.likes.push(response.data.data);
+                    $scope.data.currentCat.hasLike = true;
+                    $filter('filter')($scope.data.cats,{id:$scope.data.currentCat.id}, true)[0].count_likes++;
+                }
+            })
+        } else {
+            $scope.methods.closePopup();
+            $scope.methods.showPopup('login');
+        }
+
     }
 
     $scope.notification = '';
@@ -431,6 +442,86 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, U
         if ($location.path().startsWith( window.pages[key].alias) && key!='index') {
             $scope.activePage = window.pages[key];
         }
+    }
+
+    $scope.settings.loginForms = {
+        active:'signup',
+        signin : {
+            email : '',
+            password : ''
+        },
+        signup : {
+            email : ''
+        },
+        remind : {
+            email : ''
+        }
+    }
+
+    $scope.formStates = {
+        signinValid : true,
+        signupValid : true,
+        remindValid : true
+    }
+
+    /**
+     * Forms submit functions
+     * @type {{signin: Function}}
+     */
+    $scope.formSubmits = {
+
+        signin : function() {
+            $http.post('/api/auth/login', $scope.settings.loginForms.signin).success(function(response) {
+                if (response.success) {
+                    $cookies.auth_token = response.auth_token;
+                    $cookies.auth_id = response.auth_id;
+                    $scope.settings.auth = true;
+                    $location.path(window.pages.feed.alias);
+                    $route.reload();
+                } else {
+                    $scope.formStates.signinValid = false;
+                    $scope.notificate($filter('translate')('notification.register.wrong_credentials'));
+                }
+            });
+        },
+
+        signup : function() {
+            $http.post('/api/auth/register', $.extend({}, $scope.settings.loginForms.signup, {lng: $cookies.lng}) ).success(function(response) {
+                $scope.notificate($filter('translate')('notification.register'));
+                $scope.settings.loginForms.signup.email = '';
+            }).error(function(response) {
+                $scope.formStates.signupValid = false;
+                $scope.notificate($filter('translate')('notification.register.already_exists'));
+            });
+        },
+
+        remind : function() {
+            $http.post('/api/auth/remind', $.extend({}, $scope.settings.loginForms.remind, {lng: $cookies.lng})).success(function(response) {
+                $scope.notificate($filter('translate')('notification.remind'));
+                $scope.settings.loginForms.remind.email = '';
+            }).error(function(response) {
+                $scope.formStates.remindValid = false;
+                $scope.notificate($filter('translate')('notification.remind.success'));
+            });
+        }
+
+    }
+
+    /**
+     * Show form by name
+     * @param name
+     */
+    $scope.setActive = function( name ) {
+        $scope.settings.loginForms.active = name;
+    }
+
+    /**
+     * Checks is form with name active
+     * @param name
+     * @returns {boolean}
+     */
+    $scope.isActive = function( name ) {
+        return $scope.settings.loginForms.active == name;
     }
 
 });

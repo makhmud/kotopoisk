@@ -12,7 +12,7 @@
                                     mouseover : markerEvents.markerOver(cat.id),
                                     mouseout : markerEvents.markerOut(cat.id)
                                 }"
-                            click="showCat(cat.id)"
+                            click="showCat(cat.id, true)"
                             mouseover="markerClicked(1)">
             </ui-gmap-marker>
         </div>
@@ -20,4 +20,4 @@
     </ui-gmap-google-map>
 </div>
 
-<?php echo View::make('popup._popup')->with( array('popupIds'=> array('cat_item') ) ) ?>
+<?php echo View::make('popup._popup')->with( array('popupIds'=> array('cat_item', 'login') ) ) ?>

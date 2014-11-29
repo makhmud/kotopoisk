@@ -9,4 +9,4 @@
 </ul>
 
 
-    <?php echo View::make('popup._popup')->with( array('popupIds'=> array('cat_item') ) ) ?>
+    <?php echo View::make('popup._popup')->with( array('popupIds'=> array('cat_item', 'login') ) ) ?>

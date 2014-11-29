@@ -1262,6 +1262,8 @@ $list: adam john wynn mason kuroir;
 
   .page--map h1{
     line-height: 1;
+    margin-top: -70px;
+    padding-bottom: 10px;
   }
 
   .angular-google-map-container{
@@ -1282,3 +1284,17 @@ $list: adam john wynn mason kuroir;
       height: auto;
     }
   }
+#overlay {
+  #login-popup {
+    padding: 20px;
+    background-color: #ffffff;
+    width: 500px;
+
+    form {
+      margin: 0 40px;
+    }
+    .controls .close {
+      right: 0;
+    }
+  }
+}

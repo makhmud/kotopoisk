@@ -119,14 +119,13 @@ app.controller('ProfileCtrl', function($scope, User, $cookies, $http, $filter, m
             && $scope.user.data.email.length>0
             && $scope.user.data.contacts.phone.length>0
             && $scope.user.data.contacts.web.length>0
-            && $scope.user.data.contacts.cats_amount>0
         } else {
             return false;
         }
 
     }
 
-    $scope.$watch(function() {
-        $('select').trigger('refresh');
-    })
+    //$scope.$watch(function() {
+    //    $('select').trigger('refresh');
+    //})
 });

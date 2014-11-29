@@ -13,6 +13,7 @@ app.controller('FeedCtrl', function($scope, $filter, Cat, $routeParams) {
     $scope.notification = '';
     $scope.settings.isSideMenuOpened = false;
     $scope.methods.closePopup();
+    $scope.settings.loginForms.active = 'signin';
 
     /**
      * Sets in true when end of all cats reached
