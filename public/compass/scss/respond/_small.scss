@@ -484,9 +484,12 @@
     display: block;
   }
 
-  #login-popup{
+  #overlay #login-popup{
     width: 265px;
-
+    top: 50px;
+    .controls .close{
+      top: -40px;
+    }
     form{
       margin: 0 0;
     }

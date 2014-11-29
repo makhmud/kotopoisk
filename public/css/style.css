@@ -3122,15 +3122,20 @@ input[type=text]::-moz-placeholder {
   }
 
   /* line 487, ../compass/scss/respond/_small.scss */
-  #login-popup {
+  #overlay #login-popup {
     width: 265px;
+    top: 50px;
   }
   /* line 490, ../compass/scss/respond/_small.scss */
-  #login-popup form {
+  #overlay #login-popup .controls .close {
+    top: -40px;
+  }
+  /* line 493, ../compass/scss/respond/_small.scss */
+  #overlay #login-popup form {
     margin: 0 0;
   }
 
-  /* line 495, ../compass/scss/respond/_small.scss */
+  /* line 498, ../compass/scss/respond/_small.scss */
   .page--map h1 {
     margin-top: -48px;
   }
