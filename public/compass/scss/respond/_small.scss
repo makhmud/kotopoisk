@@ -240,19 +240,20 @@
   #gallery li:hover .info{
     display: block;
   }
-
-  [class^="gallery-item-"]{
-    width: 9px;
-    height: 9px;
-    -webkit-background-size: 27px 9px;
-    background-size: 27px 18px;
-  }
-  @for $i from 1 through 3{
-    .gallery-item-white-#{$i}{
-      background-position: -#{$i*9 - 9}px 0;
+  #gallery li {
+    [class^="gallery-item-"] {
+      width: 9px;
+      height: 9px;
+      -webkit-background-size: 27px 9px;
+      background-size: 27px 18px;
     }
-    .gallery-item-gray-#{$i}{
-      background-position: -#{$i*9 - 9}px -9px;
+    @for $i from 1 through 3 {
+      .gallery-item-white-#{$i} {
+        background-position: -#{$i*9 - 9}px 0;
+      }
+      .gallery-item-gray-#{$i} {
+        background-position: -#{$i*9 - 9}px -9px;
+      }
     }
   }
 
@@ -489,5 +490,9 @@
     form{
       margin: 0 0;
     }
+  }
+
+  .page--map h1{
+    margin-top: -48px;
   }
 }
