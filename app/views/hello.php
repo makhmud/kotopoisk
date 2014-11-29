@@ -29,9 +29,10 @@
         <?php endif; ?>
     </script>
 </head>
-<body class="{{page.bodyClasses}}" ng-swipe-right="swipeRight()" ng-swipe-left="swipeLeft()">
+<body class="{{page.bodyClasses}}" >
 <div class="main-container wrapper">
-    <div class="side-menu {{ (settings.isSideMenuOpened) ? 'open' : '' }}" ng-if="!page.isMain">
+    <div class="main-menu-tab"  ng-swipe-right="swipeRight()" ng-swipe-left="swipeLeft()"></div>
+    <div class="side-menu {{ (settings.isSideMenuOpened) ? 'open' : '' }}" ng-if="!page.isMain" ng-swipe-left="swipeLeft()" >
         <div class="element-container">
             <form>
                 <input type="search" class="search-icon" ng-model="searchText" placeholder="{{'search_placeholder' | translate}}"/>

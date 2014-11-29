@@ -2148,6 +2148,14 @@ form.invalid input {
   right: 0;
 }
 
+/* line 1303, ../compass/scss/_content.scss */
+.main-menu-tab {
+  position: fixed;
+  height: 100%;
+  width: 80px;
+  z-index: 1000;
+}
+
 /* line 3, ../compass/scss/_forms.scss */
 .page--home footer form input[type=text], .page--home footer form input[type=password], .page--home footer form input[type=submit] {
   height: 3.75em;
