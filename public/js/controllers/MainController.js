@@ -1,4 +1,4 @@
-app.controller('MainCtrl', function($scope, Cat, $filter, $location, $cookies, User, $translate, $http, Auth, $sce, $timeout, matchmedia) {
+app.controller('MainCtrl', function($scope, Cat, $filter, $route, $location, $cookies, User, $translate, $http, Auth, $sce, $timeout, matchmedia) {
 
     console.log('In Main Controller');
 
