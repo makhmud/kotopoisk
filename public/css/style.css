@@ -3139,4 +3139,9 @@ input[type=text]::-moz-placeholder {
   .page--map h1 {
     margin-top: -48px;
   }
+
+  /* line 502, ../compass/scss/respond/_small.scss */
+  .page--about main p {
+    padding: 0 12px;
+  }
 }
