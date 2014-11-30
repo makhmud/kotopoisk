@@ -448,6 +448,7 @@ a, a:visited {
   width: 8.4375em;
   top: 50%;
   margin-top: -1.125em;
+  z-index: 1200;
   font-weight: 400;
   color: #e2e2e2;
 }
@@ -463,11 +464,11 @@ a, a:visited {
   transform: rotate(180deg);
   filter: progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=0, M21=0, M22=-1, DX=0, DY=0, SizingMethod='auto expand');
 }
-/* line 112, ../compass/scss/_header.scss */
+/* line 113, ../compass/scss/_header.scss */
 .side-menu + header a:hover {
   color: #f6c34f;
 }
-/* line 120, ../compass/scss/_header.scss */
+/* line 121, ../compass/scss/_header.scss */
 .side-menu + header .member-counter {
   display: inline-block;
   position: absolute;
@@ -487,11 +488,11 @@ a, a:visited {
   margin-top: 0.1875em;
 }
 
-/* line 137, ../compass/scss/_header.scss */
+/* line 138, ../compass/scss/_header.scss */
 .side-menu.open + header a {
   margin-left: 1em;
 }
-/* line 139, ../compass/scss/_header.scss */
+/* line 140, ../compass/scss/_header.scss */
 .side-menu.open + header a:before {
   -webkit-transform: rotate(0);
   -moz-transform: rotate(0);

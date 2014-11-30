@@ -96,6 +96,7 @@
 		width: em(135px);
 		top: 50%;
 		margin-top: em(-18px);
+      z-index: 1200;
 		@extend %text-decoration-none;
 		font-weight: 400;
 		color: #e2e2e2;
