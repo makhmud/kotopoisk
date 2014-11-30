@@ -6,6 +6,15 @@ a[ng-click] {
   font-weight: bold;
 }
 
+.main.wrapper.popup-open{
+  min-height: 760px;
+}
+.page--feed, .page--search{
+  .main.wrapper.popup-open{
+    padding-bottom: 330px;
+  }
+}
+
 .page--home {
 	.logo-wrapper {
 		width: 100%;

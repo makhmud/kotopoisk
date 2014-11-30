@@ -70,7 +70,7 @@
         <span ng-bind-html="notification"></span>
     </div>
 
-    <div class="main wrapper clearfix"  ng-click="notificate('')">
+    <div class="main wrapper clearfix" ng-class="{'popup-open' : settings.popupId != null}"  ng-click="notificate('')">
         <h1 ng-bind="page.title | translate"  ng-if="!page.isMain"></h1>
 
             <div ng-view></div>
