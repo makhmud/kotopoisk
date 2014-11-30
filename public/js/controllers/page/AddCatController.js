@@ -52,7 +52,7 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
     }
 
     var applyPosition = function (coords) {
-        
+
         $scope.$apply(function () {
             $scope.newCat.position = coords;
         });

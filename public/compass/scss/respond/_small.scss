@@ -464,6 +464,16 @@
     height: 390px;
   }
 
+  .main.wrapper.popup-open{
+    min-height: 760px;
+  }
+
+  .page--feed, .page--search{
+    .main.wrapper.popup-open{
+      padding-bottom: 330px;
+    }
+  }
+
   .page--add-cat .angular-google-map-container{
     height: 270px;
   }

@@ -708,7 +708,7 @@ a[ng-click] {
 
 /* line 9, ../compass/scss/_content.scss */
 .main.wrapper.popup-open {
-  min-height: 760px;
+  min-height: 880px;
 }
 
 /* line 13, ../compass/scss/_content.scss */
@@ -717,7 +717,7 @@ a[ng-click] {
 }
 /* line 16, ../compass/scss/_content.scss */
 .page--feed .main.wrapper.popup-open, .page--search .main.wrapper.popup-open {
-  padding-bottom: 330px;
+  padding-bottom: 520px;
 }
 
 /* line 22, ../compass/scss/_content.scss */
@@ -3118,52 +3118,62 @@ input[type=text]::-moz-placeholder {
   }
 
   /* line 467, ../compass/scss/respond/_small.scss */
+  .main.wrapper.popup-open {
+    min-height: 760px;
+  }
+
+  /* line 472, ../compass/scss/respond/_small.scss */
+  .page--feed .main.wrapper.popup-open, .page--search .main.wrapper.popup-open {
+    padding-bottom: 330px;
+  }
+
+  /* line 477, ../compass/scss/respond/_small.scss */
   .page--add-cat .angular-google-map-container {
     height: 270px;
   }
 
-  /* line 471, ../compass/scss/respond/_small.scss */
+  /* line 481, ../compass/scss/respond/_small.scss */
   .wrapper-half {
     width: 50%;
   }
-  /* line 474, ../compass/scss/respond/_small.scss */
+  /* line 484, ../compass/scss/respond/_small.scss */
   .wrapper-half > div {
     width: 160px;
   }
-  /* line 478, ../compass/scss/respond/_small.scss */
+  /* line 488, ../compass/scss/respond/_small.scss */
   .wrapper-half.left {
     padding-right: 0;
   }
-  /* line 482, ../compass/scss/respond/_small.scss */
+  /* line 492, ../compass/scss/respond/_small.scss */
   .wrapper-half.right {
     padding-left: 0;
   }
 
-  /* line 487, ../compass/scss/respond/_small.scss */
+  /* line 497, ../compass/scss/respond/_small.scss */
   .banner {
     display: block;
   }
 
-  /* line 491, ../compass/scss/respond/_small.scss */
+  /* line 501, ../compass/scss/respond/_small.scss */
   #overlay #login-popup {
     width: 265px;
     top: 50px;
   }
-  /* line 494, ../compass/scss/respond/_small.scss */
+  /* line 504, ../compass/scss/respond/_small.scss */
   #overlay #login-popup .controls .close {
     top: -40px;
   }
-  /* line 497, ../compass/scss/respond/_small.scss */
+  /* line 507, ../compass/scss/respond/_small.scss */
   #overlay #login-popup form {
     margin: 0 0;
   }
 
-  /* line 502, ../compass/scss/respond/_small.scss */
+  /* line 512, ../compass/scss/respond/_small.scss */
   .page--map h1 {
     margin-top: -48px;
   }
 
-  /* line 506, ../compass/scss/respond/_small.scss */
+  /* line 516, ../compass/scss/respond/_small.scss */
   .page--about main p {
     padding: 0 12px;
   }
