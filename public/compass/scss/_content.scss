@@ -10,6 +10,9 @@ a[ng-click] {
   min-height: 760px;
 }
 .page--feed, .page--search{
+  .main{
+    min-height: 640px;
+  }
   .main.wrapper.popup-open{
     padding-bottom: 330px;
   }
