@@ -52,10 +52,11 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
     }
 
     var applyPosition = function (coords) {
-        $scope.newCat.position = {
-            latitude:coords.latitude,
-            longitude:coords.longitude
-        };
+        
+        $scope.$apply(function () {
+            $scope.newCat.position = coords;
+        });
+
         $scope.settings.map.positionMap.zoom = 15;
         $scope.settings.map.positionMap.center = coords;
     }
@@ -64,11 +65,12 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
         $scope.settings.showChooseMapPosition = true;
         navigator.geolocation.getCurrentPosition(
             function(pos) {
-                google.maps.event.trigger(map, 'resize');
                 applyPosition(pos.coords);
+                google.maps.event.trigger('resize');
             },
             function() {
-                google.maps.event.trigger(map, 'resize');
+                google.maps.event.trigger('resize');
+
             });
 
 

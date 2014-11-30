@@ -29,7 +29,10 @@
 </main>
 <div id="map-wrap" ng-if="settings.showChooseMapPosition">
     <button ng-click="settings.showChooseMapPosition = false" id="map-location-selector">Сохранить</button>
-    <ui-gmap-google-map id="map" center="settings.map.positionMap.center" zoom="settings.map.positionMap.zoom" options="settings.map.options">
+    <ui-gmap-google-map id="map"
+                        center="settings.map.positionMap.center"
+                        zoom="settings.map.positionMap.zoom"
+                        options="settings.map.options">
             <ui-gmap-marker idKey='choose-position'
                             options="{ draggable : true }"
                             coords='newCat.position'
