@@ -149,7 +149,9 @@ Minify::javascript([
 <!--    <script src="/js/app.js"></script>-->
 
     <!--Models-->
-<?= Minify::javascriptDir('/js/models/') ?>
+    <script src="/js/models/Cat.js"></script>
+    <script src="/js/models/User.js"></script>
+    <script src="/js/models/StaticPage.js"></script>
     <!--End Models-->
 
     <!--Directives-->
