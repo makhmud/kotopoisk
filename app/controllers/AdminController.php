@@ -4,8 +4,8 @@ class AdminController extends AdminBaseController {
 
     public function __construct()
     {
-        parent::__construct();
         $this->beforeFilter('auth.admin', ['except'=>['getLogin', 'postLogin'] ] );
+        $this->layout = 'admin._layout';
     }
 
     public function getIndex() {
