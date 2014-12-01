@@ -9,7 +9,8 @@
 		"intervention/image": "~2.0",
         "laravelrus/localized-carbon": "1.*",
         "vinelab/http": "dev-master",
-        "ceesvanegmond/minify": "2.0.*"
+        "ceesvanegmond/minify": "2.0.*",
+        "roumen/sitemap": "~2.4"
 	},
 	"autoload": {
 		"classmap": [

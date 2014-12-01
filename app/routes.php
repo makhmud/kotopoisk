@@ -67,6 +67,48 @@ Route::group(array('prefix' => '/api/', 'before' => 'ajax' ), function() {
 
 });
 
+Route::get('sitemap', function(){
+
+    // create new sitemap object
+    $sitemap = App::make("sitemap");
+
+    // set cache (key (string), duration in minutes (Carbon|Datetime|int), turn on/off (boolean))
+    // by default cache is disabled
+    $sitemap->setCache('laravel.sitemap', 3600);
+
+    // check if there is cached sitemap and build new only if is not
+    if (!$sitemap->isCached())
+    {
+        // add item to the sitemap (url, date, priority, freq)
+        $sitemap->add(URL::to('/'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+
+        // get all posts from db
+        $cats = Cat::orderBy('created_at', 'desc')->get();
+
+        // add every post to the sitemap
+        foreach ($cats as $cat)
+        {
+            $sitemap->add(URL::to('/feed/'.$cat->id), $cat->updated_at);
+        }
+
+        $pages = Page::all();
+
+        foreach ($pages as $page) {
+            $sitemap->add(URL::to($page->alias));
+        }
+
+        $pages = StaticPageModel::all();
+
+        foreach ($pages as $page) {
+            $sitemap->add(URL::to($page->alias));
+        }
+    }
+
+    // show your sitemap (options: 'xml' (default), 'html', 'txt', 'ror-rss', 'ror-rdf')
+    return $sitemap->render('xml');
+
+});
+
 App::missing(function($exception)
 {
     return View::make('hello')->with([ 'pages' => Page::all() ]);

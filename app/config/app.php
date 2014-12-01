@@ -126,6 +126,7 @@ return array(
         'Laravelrus\LocalizedCarbon\LocalizedCarbonServiceProvider',
         'Vinelab\Http\HttpServiceProvider',
         'CeesVanEgmond\Minify\MinifyServiceProvider',
+        'Roumen\Sitemap\SitemapServiceProvider',
 
         'CatSearch\ServiceProviders\RepositoryServiceProvider',
         'CatSearch\Social\SocialServiceProvider'
