@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="/images/favicon32.png">
     <link rel="stylesheet" href="/js/lib/bootstrap/dist/css/bootstrap.css"/>
+    <script src="/js/lib/ckeditor/ckeditor.js"></script>
     <title ng-bind="page.title"></title>
 </head>
 <body>
@@ -16,6 +17,7 @@
         <li><a href="/admin/cat">Объявления</a></li>
         <li><a href="/admin/general">Администрация</a></li>
         <li><a href="/admin/pages">Страницы</a></li>
+        <li><a href="/admin/static-pages">Статические страницы</a></li>
     </ul>
     
     {{ $content }}

@@ -26,6 +26,7 @@ Route::controller('/admin/user', 'AdminUserController');
 Route::controller('/admin/general', 'AdminGeneralController');
 Route::controller('/admin/cat', 'AdminCatsController');
 Route::controller('/admin/pages', 'AdminPagesController');
+Route::controller('/admin/static-pages', 'AdminStaticPagesController');
 Route::controller('/admin', 'AdminController');
 
 Route::group( array('prefix'=>'/pages/', 'before' => 'ajax'), function()
@@ -42,6 +43,8 @@ Route::group(array('prefix' => '/api/', 'before' => 'ajax' ), function() {
     Route::resource('cat', 'CatController');
 
     Route::resource('language', 'LanguageController');
+
+    Route::resource('static-page', 'StaticPageController');
 
     Route::controller('auth', 'AuthController');
 

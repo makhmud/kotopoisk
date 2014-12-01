@@ -1,12 +1,6 @@
 <?php
 
-class AdminCatsController extends \BaseController {
-
-    public function __construct()
-    {
-        $this->beforeFilter('auth.admin' );
-        $this->layout = 'admin._layout';
-    }
+class AdminCatsController extends AdminBaseController {
 
     public function getIndex() {
 

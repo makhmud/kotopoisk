@@ -37,7 +37,7 @@ app.config(['$locationProvider', '$routeProvider', '$httpProvider', '$translateP
         }
     });
     $routeProvider.when(window.pages.about.alias, {templateUrl: '/pages/about', controller: 'AboutCtrl'});
-    $routeProvider.when('/login', {templateUrl: '/pages/login', controller: 'LoginCtrl'});
+    $routeProvider.when('/:path', {templateUrl: '/pages/static', controller: 'StaticCtrl'});
 
     $routeProvider.otherwise({redirectTo: '/'});
 

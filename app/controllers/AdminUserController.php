@@ -1,12 +1,6 @@
 <?php
 
-class AdminUserController extends \BaseController {
-
-    public function __construct()
-    {
-        $this->beforeFilter('auth.admin' );
-        $this->layout = 'admin._layout';
-    }
+class AdminUserController extends AdminBaseController {
 
     public function getIndex() {
 

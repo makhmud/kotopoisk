@@ -1,2 +1,4 @@
 .idea/*
 public/.sass-cache/*
+public/user/*
+public/user/!*default.png
