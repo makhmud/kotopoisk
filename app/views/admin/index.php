@@ -33,7 +33,10 @@
                 <div class="col-md-6 form-group">
                     <div class="value">Language : <?= $value['lng'] ?></div>
                     <div class="value">Value :
-                        <textarea rows="5" name="item[<?= $key ?>][<?= $value['lng'] ?>][value]" type="text" class="form-control"><?= $value['value'] ?></textarea>
+                        <textarea rows="5" name="item[<?= $key ?>][<?= $value['lng'] ?>][value]" type="text"
+                                  class="form-control <?= ($key == 'page.about.content')?'ckeditor':'' ?>">
+                                  <?= $value['value'] ?>
+                        </textarea>
                     </div>
                 </div>
 

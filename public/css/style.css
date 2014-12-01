@@ -712,11 +712,11 @@ a[ng-click] {
 }
 
 /* line 13, ../compass/scss/_content.scss */
-.page--feed .main, .page--search .main {
+.page--feed .main, .page--search .main, .page-static .main {
   min-height: 640px;
 }
 /* line 16, ../compass/scss/_content.scss */
-.page--feed .main.wrapper.popup-open, .page--search .main.wrapper.popup-open {
+.page--feed .main.wrapper.popup-open, .page--search .main.wrapper.popup-open, .page-static .main.wrapper.popup-open {
   padding-bottom: 520px;
 }
 
