@@ -55,17 +55,17 @@ class CatsRepository {
             ->whereRaw('cats.content LIKE "%'.$search.'%"')
             ->get();
 
-        foreach ($results as $item) {
-            \App::setLocale($lng);
+        \App::setLocale($lng);
+        $results = array_map( function($item) {
             $item->created_at = \LocalizedCarbon::createFromTimeStamp(strtotime( $item->created_at ))->diffForHumans();
             $tempCoords = explode(',', $item->position);
             $item->position = array(
                 'latitude' => $tempCoords[0],
                 'longitude' => $tempCoords[1]
             );
-        }
 
-//        \Log::info('http://' . \Request::server('SERVER_NAME') . '/feed/' . \Request::server('SERVER_PORT'));
+            return $item;
+        }, $results );
 
         return new Collection($results);
     }

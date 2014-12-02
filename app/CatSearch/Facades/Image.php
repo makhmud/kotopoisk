@@ -46,6 +46,12 @@ class Image extends BaseImage {
 
     }
 
+    /**
+     * Applying given effects
+     * @param $filename
+     * @param $format
+     * @return mixed
+     */
     public static function format ( $filename, $format ) {
 
         $image = Image::make(self::temp($filename));

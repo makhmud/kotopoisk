@@ -24,7 +24,7 @@ abstract class AbstractAdapter {
      * @param array $config
      * @param Client $httpClient
      */
-    public function __construct($config = [], \Vinelab\Http\Client $httpClient) {
+    public function __construct($config = [], Client $httpClient) {
 
         $this->config = $config;
         $this->httpClient = $httpClient;

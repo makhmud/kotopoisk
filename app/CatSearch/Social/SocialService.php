@@ -25,6 +25,12 @@ class SocialService {
         }
     }
 
+    /**
+     * Total shared count
+     * @param $url
+     * @param array $only
+     * @return int
+     */
     public function totalCount($url, $only = ['vk', 'fb', 'twitter', 'gp', 'ok']) {
 
         $total = 0;

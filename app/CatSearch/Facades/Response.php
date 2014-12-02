@@ -4,7 +4,7 @@ namespace CatSearch\Facades;
 use Illuminate\Support\Facades\Response as BaseResponse;
 
 /**
- * Custon response class
+ * Custom response class
  * Class Response
  * @package CatSearch\Facades
  */
