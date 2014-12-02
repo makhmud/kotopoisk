@@ -7,8 +7,6 @@ use \Vinelab\Http\Client;
 
 class SocialService {
 
-    private $_adapter;
-
     /**
      * Return repository instance
      * @param $networkName

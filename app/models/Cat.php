@@ -69,4 +69,8 @@ class Cat extends Eloquent {
         return e($value);
     }
 
+    public function getLinkAttribute() {
+        return 'http://' . Request::server('SERVER_NAME') . '/feed/' . $this->id;
+    }
+
 }
