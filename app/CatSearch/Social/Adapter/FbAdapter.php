@@ -5,6 +5,9 @@ namespace CatSearch\Social\Adapter;
 
 class FbAdapter extends AbstractAdapter implements CountableInterface {
 
+    /**
+     * @inheritdoc
+     */
     public function buildSharedCountRequest($url)
     {
         return [
@@ -15,6 +18,9 @@ class FbAdapter extends AbstractAdapter implements CountableInterface {
         ];
     }
 
+    /**
+     * @inheritdoc
+     */
     public function proceedSharedCountResponse($response)
     {
         $response = $response->json();

@@ -5,6 +5,9 @@ namespace CatSearch\Social\Adapter;
 
 class OkAdapter extends AbstractAdapter implements CountableInterface {
 
+    /**
+     * @inheritdoc
+     */
     public function buildSharedCountRequest($url)
     {
         return [
@@ -16,6 +19,9 @@ class OkAdapter extends AbstractAdapter implements CountableInterface {
         ];
     }
 
+    /**
+     * @inheritdoc
+     */
     public function proceedSharedCountResponse($response)
     {
         $response = $response->content();

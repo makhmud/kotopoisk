@@ -5,6 +5,9 @@ namespace CatSearch\Social\Adapter;
 
 class GpAdapter extends AbstractAdapter implements CountableInterface {
 
+    /**
+     * @inheritdoc
+     */
     public function buildSharedCountRequest($url)
     {
 //        $request = [
@@ -16,6 +19,9 @@ class GpAdapter extends AbstractAdapter implements CountableInterface {
         return [];
     }
 
+    /**
+     * @inheritdoc
+     */
     public function proceedSharedCountResponse($response)
     {
 //        if ( isset($response->count) ){
