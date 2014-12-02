@@ -1,28 +1,28 @@
 <?php
+
 namespace CatSearch\Social\Adapter;
 
 
-class GpAdapter extends AbstractAdapter implements Countable {
+class GpAdapter extends AbstractAdapter implements CountableInterface {
 
-    public function getSharedCount($url) {
-
-        //:http://urls.api.twitter.com/1/urls/count.json?url=http%3A%2F%2Flocalhost%2Ffeed%2F181&callback=angular.callbacks._7
+    public function buildSharedCountRequest($url)
+    {
 //        $request = [
 //            'url' => 'http://urls.api.twitter.com/1/urls/count.json',
 //            'params' => [
 //                'url'    => $url
 //            ]
 //        ];
-//
-//        $response = \HttpClient::get($request)->json();
-//
+        return [];
+    }
+
+    public function proceedSharedCountResponse($response)
+    {
 //        if ( isset($response->count) ){
 //            return (int) $response->count;
 //        } else {
 //            return 0;
 //        }
-
         return 0;
     }
-
-} 
+}

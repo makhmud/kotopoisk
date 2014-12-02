@@ -1,4 +1,5 @@
 <?php
+
 namespace CatSearch\Social;
 
 use Illuminate\Support\ServiceProvider;

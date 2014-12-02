@@ -1,20 +1,23 @@
 <?php
+
 namespace CatSearch\Social\Adapter;
 
 
-class TwitterAdapter extends AbstractAdapter implements Countable {
+class TwitterAdapter extends AbstractAdapter implements CountableInterface {
 
-    public function getSharedCount($url) {
-
-        //:http://urls.api.twitter.com/1/urls/count.json?url=http%3A%2F%2Flocalhost%2Ffeed%2F181&callback=angular.callbacks._7
-        $request = [
-            'url' => 'http://urls.api.twitter.com/1/urls/count.json',
+    public function buildSharedCountRequest($url)
+    {
+        return [
+            'url' => $this->config['url'] . '1/urls/count.json',
             'params' => [
                 'url'    => $url
             ]
         ];
+    }
 
-        $response = \HttpClient::get($request)->json();
+    public function proceedSharedCountResponse($response)
+    {
+        $response = $response->json();
 
         if ( isset($response->count) ){
             return (int) $response->count;
@@ -22,5 +25,4 @@ class TwitterAdapter extends AbstractAdapter implements Countable {
             return 0;
         }
     }
-
-} 
+}

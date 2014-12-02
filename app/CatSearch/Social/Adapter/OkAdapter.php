@@ -1,23 +1,25 @@
 <?php
+
 namespace CatSearch\Social\Adapter;
 
 
-class OkAdapter extends AbstractAdapter implements Countable {
+class OkAdapter extends AbstractAdapter implements CountableInterface {
 
-    public function getSharedCount($url) {
-
-        //:http://www.odnoklassniki.ru/dk?st.cmd=shareData&ref=http%3A%2F%2Flocalhost%2Ffeed%2F181&cb=angular.callbacks._9
-        $request = [
-            'url' => 'http://www.odnoklassniki.ru/dk',
+    public function buildSharedCountRequest($url)
+    {
+        return [
+            'url' => $this->config['url'] . 'dk',
             'params' => [
                 'st.cmd'    => 'shareData',
                 'ref'       => $url,
             ]
         ];
+    }
 
-        $response = \HttpClient::get($request)->content();
+    public function proceedSharedCountResponse($response)
+    {
+        $response = $response->content();
 
         return 0;
     }
-
-} 
+}

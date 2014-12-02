@@ -1,12 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: geronimo
- * Date: 22.11.14
- * Time: 1:45
- */
 
 namespace CatSearch\Social;
+
+use \Vinelab\Http\Client;
 
 
 class SocialService {
@@ -23,7 +19,7 @@ class SocialService {
         $className = __NAMESPACE__ . '\\Adapter\\' . ucfirst($networkName) . 'Adapter';
 
         if ( class_exists($className) ) {
-            return new $className;
+            return new $className( \Config::get( 'social.' . $networkName ), new Client() );
         } else {
             return false;
         }
