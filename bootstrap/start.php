@@ -29,6 +29,7 @@ $env = $app->detectEnvironment(array(
 	'local' => array('geronimo-A55F-M3'),
 	'deploy' => array('srv109-h-st.jino.ru'),
 	'gilser' => array('Gilser'),
+	'home' => array('PC-FYB10'),
 
 ));
 
