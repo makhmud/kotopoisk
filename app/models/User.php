@@ -6,6 +6,8 @@ class User extends Eloquent implements UserInterface {
 
     //protected $fillable = ['image', 'email', 'password', 'is_admin', 'locked'];
     protected $guarded = [];
+
+    protected $hidden = ['password'];
     /**
      * Contacts model dependency
      * @return mixed
