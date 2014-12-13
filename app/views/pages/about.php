@@ -19,8 +19,10 @@
                 </div>
 
             <p><strong>{{'page.about.coop' | translate}}:</strong><br/>
-                kotopoisk@gmail.com<br/>
-                +380 98 307 55 15</p>
+                partners@kotopoisk.com
+                <br/>
+                +7 981 699 67 43
+            </p>
         </div>
     </div>
     <div class="wrapper-half right">
@@ -30,8 +32,9 @@
             </div>
 
             <p><strong>{{'page.about.adv' | translate}}:</strong><br/>
-                kotopoiskad@gmail.com<br/>
-                +380 98 779 84 18
+                advertising@kotopoisk.com
+                <br/>
+                +7 903 896 555 0
             </p>
         </div>
     </div>
