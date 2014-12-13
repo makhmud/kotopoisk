@@ -19,7 +19,7 @@
                 </div>
 
             <p><strong>{{'page.about.coop' | translate}}</strong><br/>
-                partners@kotopoisk.com
+                partnership@kotopoisk.com
                 <br/>
                 +7 981 699 67 43
             </p>
