@@ -420,7 +420,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $route, $location, $co
             $location.path($scope.pages.add_cat.alias);
         } else {
             $scope.settings.isSideMenuOpened = false;
-            $scope.notificate('Чтобы добавить котэ, пожалуйста, <a href="/">зарегистрируйтесь</a>.')
+            $scope.notificate('Чтобы получить возможность делать публикации, вам необходимо <a href="/">зарегистрироваться</a>')
         }
     }
 

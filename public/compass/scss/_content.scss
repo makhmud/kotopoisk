@@ -178,6 +178,10 @@ main {
 	width: 50%;
 	vertical-align: middle;
 
+  .img-wrap{
+    height: 80px;
+  }
+
 	& > div {
 		text-align: center;
 		width: 245px;
@@ -267,6 +271,7 @@ main {
   line-height: em(47px, 20px);
   width: em(260px, 20px);
   color: #ffffff;
+  margin-bottom: 15px;
   text-align: center;
   background-color: #f3c04d;
   &:hover{
@@ -340,7 +345,7 @@ main {
 	#location-selector {
 		border: 0;
 		font-size: 1.3em;
-		line-height: em(47px, 20px);
+		line-height: 2.5em;
 		width: em(260px, 20px);
 		float: right;
 		color: #ffffff;
@@ -672,6 +677,7 @@ $list: adam john wynn mason kuroir;
       width: 290px;
       &[type="submit"]{
         width: 350px;
+        cursor: default;
       }
     }
     input:disabled{
@@ -1317,4 +1323,12 @@ $list: adam john wynn mason kuroir;
 
 .page--static main{
   text-align: left;
+}
+
+.notification a{
+  color: #222222;
+
+  &:hover{
+    text-decoration: none;
+  }
 }

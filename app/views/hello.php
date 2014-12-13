@@ -43,8 +43,8 @@
             <nav>
                 <a href="{{pages.feed.alias}}" class="icon-feed" ng-bind="'page.feed.title' | translate "></a>
                 <a href="{{pages.map.alias}}" class="icon-map" ng-bind="'page.map.title' | translate "></a>
-                <a href="{{pages.profile.alias}}" class="icon-profile" ng-if="settings.auth" ng-bind="'page.profile.title' | translate "></a>
                 <a href="{{pages.about.alias}}" class="icon-about" ng-bind="'page.about.title' | translate "></a>
+                <a href="{{pages.profile.alias}}" class="icon-profile" ng-if="settings.auth" ng-bind="'page.profile.title' | translate "></a>
             </nav>
             <a href="/" class="signin" ng-if="!settings.auth" ng-bind="'menu.in' | translate"></a>
             <a ng-click="logout()" class="signin" ng-if="settings.auth" ng-bind="'menu.out' | translate"></a>

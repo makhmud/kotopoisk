@@ -35,7 +35,10 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
         function (user) {
             if (user.success) {
                 $scope.user = user;
-                $scope.newCat.contacts = $scope.user.data.contacts.phone
+                $scope.newCat.contacts = $scope.user.data.contacts.phone + '\n'
+                                        + $scope.user.data.contacts.city + '\n'
+                                        + $scope.user.data.contacts.web + '\n'
+                                        + $scope.user.data.contacts.name + ' ' + $scope.user.data.contacts.surname + '\n';
             } else {
                 $scope.errors = user.errors;
             }
