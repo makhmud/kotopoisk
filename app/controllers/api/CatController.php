@@ -49,7 +49,7 @@ class CatController extends \BaseController {
         DB::transaction(function() {
             $cat = new Cat();
 
-            $cat->id_author = Auth::id();
+            $cat->id_author = User::where('auth_token', Input::get('auth_token'))->first()->id;
             $cat->content = Input::get('comment');
             $cat->contacts = Input::get('contacts');
             $cat->position = Input::get('position.latitude') . ',' . Input::get('position.longitude');
