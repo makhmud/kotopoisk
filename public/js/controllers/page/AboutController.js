@@ -8,12 +8,5 @@ app.controller('AboutCtrl', function($scope, $filter, $sce, $translate) {
     $scope.notification = '';
     $scope.settings.isSideMenuOpened = false;
 
-    $scope.content = '';
-
-    $translate('page.about.content')
-        .then(function (translatedValue) {
-            $scope.content = $sce.trustAsHtml(translatedValue);
-        });
-
-
+    $scope.content = $sce.trustAsHtml($filter('translate')('page.about.content'));
 });

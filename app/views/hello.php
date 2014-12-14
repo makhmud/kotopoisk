@@ -112,7 +112,7 @@ Minify::javascript([
     "/js/lib/ng-infinite-scroller-origin/build/ng-infinite-scroll.min.js",
     "/js/lib/flow.js/dist/flow.min.js",
     "/js/lib/ng-flow/dist/ng-flow.min.js",
-    "/js/lib/angular-translate/angular-translate.min.js",
+    "/js/lib/angular-translate/angular-translate.js",
     "/js/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js",
     "/js/lib/angular-social/angular-social.src.js",
     "/js/lib/angular-touch/angular-touch.min.js",
