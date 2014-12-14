@@ -22,6 +22,8 @@ Route::any('/', function()
 	return $view;
 });
 
+Route::get('/feed/{id}', 'SeoController@feed');
+
 Route::controller('/admin/user', 'AdminUserController');
 Route::controller('/admin/general', 'AdminGeneralController');
 Route::controller('/admin/cat', 'AdminCatsController');
