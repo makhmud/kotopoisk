@@ -3,9 +3,9 @@
 
     <h3>{{'page.about.social' | translate}}</h3>
     <div class="social-icons">
-        <a href="#" class="vk"></a>
-        <a href="#" class="fb"></a>
-        <a href="#" class="ig"></a>
+        <a href="http://vk.com/kotopoisk_com" target="_blank" class="vk"></a>
+        <a href="http://facebook.com/kotopoisk" target="_blank" class="fb"></a>
+        <a href="http://instagram.com/kotopoisk" target="_blank" class="ig"></a>
     </div>
 </main>
 
