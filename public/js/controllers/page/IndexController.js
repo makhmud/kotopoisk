@@ -28,7 +28,7 @@ app.controller('IndexCtrl', function($scope, $http, $cookies, $location, $route,
      */
     $scope.ids = {first:null, last:null};
 
-    $scope.page.title = 'Another title';
+    $scope.page.title = 'page.index.title';
     $scope.page.bodyClasses = 'page--home';
     //
     //var User = $resource('/api/user', {});
