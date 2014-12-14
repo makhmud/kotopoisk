@@ -909,7 +909,7 @@ angular.module('pascalprecht.translate').directive('translate', [
                 };
               }
             }();
-          var unbind = $rootScope.$on('$translateChangeEnd', updateTranslationFn);
+          var unbind = $rootScope.$on('$translateChangeSuccess', updateTranslationFn);
           updateTranslationFn();
           scope.$on('$destroy', unbind);
         };
