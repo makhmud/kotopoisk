@@ -35,10 +35,19 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
         function (user) {
             if (user.success) {
                 $scope.user = user;
-                $scope.newCat.contacts = $scope.user.data.contacts.phone + '\n'
-                                        + $scope.user.data.contacts.city + '\n'
-                                        + $scope.user.data.contacts.web + '\n'
-                                        + $scope.user.data.contacts.name + ' ' + $scope.user.data.contacts.surname + '\n';
+                if ($scope.user.data.contacts.phone.length == 0
+                    && $scope.user.data.contacts.city.length == 0
+                    && $scope.user.data.contacts.web.length == 0
+                    && $scope.user.data.contacts.surname.length == 0
+                    && $scope.user.data.contacts.name.length == 0) {
+                    $scope.newCat.contacts = '';
+                } else {
+                    $scope.newCat.contacts = $scope.user.data.contacts.phone + '\n'
+                    + $scope.user.data.contacts.city + '\n'
+                    + $scope.user.data.contacts.web + '\n'
+                    + $scope.user.data.contacts.name + ' ' + $scope.user.data.contacts.surname + '\n';
+                }
+
             } else {
                 $scope.errors = user.errors;
             }
