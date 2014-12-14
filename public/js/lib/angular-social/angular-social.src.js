@@ -131,7 +131,7 @@ app.directive('ngSocialFacebook', function() {
             }
         },
         popup: {
-            url: 'http://www.facebook.com/sharer/sharer.php?u={url}',
+            url: 'http://www.facebook.com/sharer/sharer.php?s=100&p[url]={url}&p[title]={title}&p[image]={image}',
             width: 600,
             height: 500
         },
