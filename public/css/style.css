@@ -2177,7 +2177,7 @@ form.invalid input {
 .main-menu-tab {
   position: fixed;
   height: 100%;
-  width: 30px;
+  width: 10px;
   z-index: 1000;
 }
 
@@ -3143,7 +3143,7 @@ input[type=text]::-moz-placeholder {
 
   /* line 463, ../compass/scss/respond/_small.scss */
   .angular-google-map-container {
-    height: 390px;
+    height: 331px;
   }
 
   /* line 467, ../compass/scss/respond/_small.scss */

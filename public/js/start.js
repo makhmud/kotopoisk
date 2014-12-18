@@ -17,6 +17,24 @@ $(document).on('blur', 'form input', function() {
     temp_placeholder = '';
 });
 
+var adaptMapHeight = function( isMapPage ) {
+    if (typeof isMapPage == 'undefined') { isMapPage == false };
+
+    var fixture = isMapPage ? 93 : 0
+
+    setTimeout(function() {
+        console.log($('.main > h1'));
+        $('.angular-google-map-container').height(
+            $(document).height()
+            - $('header').height()
+            - 56 - 20
+            - $('#map-location-selector').height() - 15
+            - $('.banner').height()
+            + fixture
+        );
+    }, 100);
+}
+
 var app = angular.module('app',
     [
         'ngRoute',

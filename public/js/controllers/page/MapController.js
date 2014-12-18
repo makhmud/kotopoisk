@@ -1,4 +1,4 @@
-app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
+app.controller('MapCtrl', function($scope, $resource, Cat, $filter, matchmedia) {
 
     console.log('In Map Controller');
 
@@ -57,5 +57,9 @@ app.controller('MapCtrl', function($scope, $resource, Cat, $filter) {
                 $('#map-info-'+id).removeClass('hovered');
             }
         }
+    }
+
+    if(matchmedia.isPhone()){
+        adaptMapHeight(true);
     }
 });

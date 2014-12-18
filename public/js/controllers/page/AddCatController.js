@@ -1,4 +1,4 @@
-app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeout, $cookies, $location, $filter) {
+app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeout, $cookies, $location, $filter, matchmedia) {
 
     console.log('In AddCat Controller');
 
@@ -75,6 +75,10 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
 
     $scope.showCurrentMap = function() {
         $scope.settings.showChooseMapPosition = true;
+        if(matchmedia.isPhone()){
+            adaptMapHeight();
+        }
+
         navigator.geolocation.getCurrentPosition(
             function(pos) {
                 applyPosition(pos.coords);
