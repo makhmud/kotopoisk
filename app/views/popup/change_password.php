@@ -8,10 +8,10 @@
         </span>
     <div class="content">
         <form name="changePassword">
-            <input type="password" required="required" ng-model="changePassForm.data.oldPass" placeholder="Старый пароль"/>
-            <input type="password" required="required" ng-model="changePassForm.data.newPass" placeholder="Новый пароль"/>
-            <input type="password" required="required" ng-model="changePassForm.data.newPassRepeat" placeholder="Повторите пароль"/>
-            <input type="submit" ng-click="changePassForm.submit()" ng-disabled="changePassword.$invalid && (changePassForm.data.newPass != changePassForm.data.newPassRepeat)" value="Сменить пароль"/>
+            <input type="password" required="required" ng-model="changePassForm.data.oldPass" placeholder="{{'placeholders.old_password' | translate}}"/>
+            <input type="password" required="required" ng-model="changePassForm.data.newPass" placeholder="{{'placeholders.new_password' | translate}}"/>
+            <input type="password" required="required" ng-model="changePassForm.data.newPassRepeat" placeholder="{{'placeholders.new_password_repeat' | translate}}"/>
+            <input type="submit" ng-click="changePassForm.submit()" ng-disabled="changePassword.$invalid && (changePassForm.data.newPass != changePassForm.data.newPassRepeat)" value="{{'placeholders.change_password_button' | translate}}"/>
         </form>
     </div>
 </div>
