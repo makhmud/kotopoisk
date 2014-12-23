@@ -20,7 +20,7 @@
         </div>
         <textarea placeholder="{{'page.add.comment' | translate}}" ng-model="newCat.comment" required="required"></textarea>
         <textarea placeholder="{{'page.add.contacts' | translate}}" ng-model="newCat.contacts" required="required"></textarea>
-        <a id="location-selector" ng-click="showCurrentMap()" ng-bind="'page.add.show_on_map' | translate"></a>
+        <a id="location-selector" ng-click="showCurrentMap()" ng-bind="page.mapButtonText | translate"></a>
         <input type="hidden" ng-model="newCat.position" />
         <input type="submit" value="Добавить" ng-disabled="AddCatForm.$invalid" ng-click="saveCat()"/>
     </form>

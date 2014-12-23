@@ -8,6 +8,8 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
     $scope.notification = '';
     $scope.settings.isSideMenuOpened = false;
 
+    $scope.page.mapButtonText = 'page.add.show_on_map';
+
     $scope.ngFlowParams = {
         target: '/api/upload?auth_token=' + $cookies.auth_token ,
         testChunks:false
@@ -77,6 +79,7 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
 
     $scope.showCurrentMap = function() {
         $scope.settings.showChooseMapPosition = true;
+        $scope.page.mapButtonText = 'page.add.show_on_map_chosen';
         if(matchmedia.isPhone()){
             adaptMapHeight();
         }
@@ -93,6 +96,10 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
 
 
     }
+
+    //$scope.$watch('newCat', function(newVal, oldVal){
+    //    console.log(newVal, oldVal);
+    //})
 
     var searchTimeout;
     $scope.doSearch = function() {
