@@ -690,7 +690,7 @@ $list: adam john wynn mason kuroir;
     input:disabled{
       opacity: 1;
     }
-    .form-item:nth-child(2n){
+    .form-item:nth-of-type(2n){
       text-align: left;
     }
   }

@@ -1416,7 +1416,7 @@ main h3 {
   opacity: 1;
 }
 /* line 693, ../compass/scss/_content.scss */
-#profile-form .form-item:nth-child(2n) {
+#profile-form .form-item:nth-of-type(2n) {
   text-align: left;
 }
 
