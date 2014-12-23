@@ -84,6 +84,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $route, $location, $co
          * Toggles side menu state
          */
         toggleSideMenu : function () {
+            $scope.notificate('');
             $scope.settings.isSideMenuOpened = !$scope.settings.isSideMenuOpened;
         }
     }
@@ -420,7 +421,7 @@ app.controller('MainCtrl', function($scope, Cat, $filter, $route, $location, $co
             $location.path($scope.pages.add_cat.alias);
         } else {
             $scope.settings.isSideMenuOpened = false;
-            $scope.notificate('Чтобы получить возможность делать публикации, вам необходимо <a href="/">зарегистрироваться</a>')
+            $scope.notificate($filter('translate')('notification.need_reg.text') + ' <a href="/">'+ $filter('translate')('notification.need_reg.link_text') +'</a>');
         }
     }
 
