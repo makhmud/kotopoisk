@@ -699,6 +699,10 @@ $list: adam john wynn mason kuroir;
     width: 100%;
     padding-top: 130px;
     margin-top: -130px;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top center;
   }
 
   .file-button-container-big, .file-button-container-big input[type=file] {
