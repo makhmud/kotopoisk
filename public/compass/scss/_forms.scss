@@ -15,6 +15,7 @@ $placeholder-color: #e0e0e0;
 
 		input[type=text], input[type=password]{
 			@extend %form-ui-element;
+          box-shadow: none;
 			border: 1px solid #cdcdcd;
 			padding: 0 em(30px,23px);
 			font-size: em(23px);

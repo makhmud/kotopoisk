@@ -17,7 +17,6 @@
             <form ng-if="isActive('signup')" name="register" ng-class="{ invalid : !formStates.signupValid }">
                 <input type="text" placeholder="{{ 'placeholders.main.email' | translate }}" required="required" ng-model="settings.loginForms.signup.email"/>
                 <input type="submit" value="{{ 'page.main.buttons.access' | translate }}"  ng-click="formSubmits.signup()" ng-disabled="register.$invalid" />
-                <script src="//ulogin.ru/js/ulogin.js"></script>
                 <div class="info-links">
                     <a href="#"  ng-bind="'page.main.policy' | translate"></a>
                 </div>

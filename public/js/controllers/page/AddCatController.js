@@ -37,12 +37,14 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
                 $scope.user = user;
                 if ($scope.user.data.contacts.phone.length == 0
                     && $scope.user.data.contacts.city.length == 0
+                    && $scope.user.data.email == 0
                     && $scope.user.data.contacts.web.length == 0
                     && $scope.user.data.contacts.surname.length == 0
                     && $scope.user.data.contacts.name.length == 0) {
                     $scope.newCat.contacts = '';
                 } else {
-                    $scope.newCat.contacts = $scope.user.data.contacts.phone + '\n'
+                    $scope.newCat.contacts = $scope.user.data.email + '\n'
+                    + $scope.user.data.contacts.phone + '\n'
                     + $scope.user.data.contacts.city + '\n'
                     + $scope.user.data.contacts.web + '\n'
                     + $scope.user.data.contacts.name + ' ' + $scope.user.data.contacts.surname + '\n';
