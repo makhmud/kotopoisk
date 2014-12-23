@@ -6,4 +6,8 @@ class Translation extends Eloquent {
 
     public $fillable = ['key', 'lng', 'value'];
 
+    public function getValueAttribute($value) {
+        return trim($value);
+    }
+
 }

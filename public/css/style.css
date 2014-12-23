@@ -2177,7 +2177,7 @@ form.invalid input {
 .main-menu-tab {
   position: fixed;
   height: 100%;
-  width: 10px;
+  width: 15px;
   z-index: 1000;
 }
 

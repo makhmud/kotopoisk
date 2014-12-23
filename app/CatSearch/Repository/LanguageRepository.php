@@ -33,7 +33,7 @@ class LanguageRepository {
         $formatted = [];
 
         foreach($translations as $item) {
-            $formatted[$item->key][] = ['lng' => $item->lng, 'value' => $item->value];
+            $formatted[$item->key][] = ['lng' => $item->lng, 'value' => trim($item->value)];
             if (!is_null($search)) {
                 $other = \Translation::orderBy('key', 'asc')
                     ->where('key', '=', $item->key)
