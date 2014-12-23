@@ -14,10 +14,10 @@
                     <span class="text">{{data.currentCat.likes.length}}</span></a></div>
             <div class="line">
                 <div class="map">
-                    <a href="#" ng-click="mapView(data.currentCat.position)"><span class="gallery-item-white-2"></span><span class="text" >Посмотреть на карте</span></a>
+                    <a href="#" ng-click="mapView(data.currentCat.position)"><span class="gallery-item-white-2"></span><span class="text" ng-bind="'page.feed.show_on_map' | translate"></span></a>
                 </div>
                 <div class="like">
-                    <a ng-click="like(data.currentCat.id)"><span class="like-icon" ng-class="{active : data.currentCat.hasLike}"></span><span class="text">Мне нравится</span></a>
+                    <a ng-click="like(data.currentCat.id)"><span class="like-icon" ng-class="{active : data.currentCat.hasLike}"></span><span class="text" ng-bind="'page.feed.like' | translate"></span></a>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
             <time>{{data.currentCat.created_at}}</time>
             <div class="body" ng-bind-html="data.currentCat.content | nl2br">
             </div>
-            <div class="contacts"><span class="tbold">Контакты:</span> <span ng-bind-html="data.currentCat.contacts | nl2br"></span></div>
+            <div class="contacts"><span class="tbold" ng-bind="'page.feed.contacts' | translate"></span> <span ng-bind-html="data.currentCat.contacts | nl2br"></span></div>
             <div class="social-icons" ng-social-buttons="{}" ng-if="currentCatLoaded"
                  data-url="$host + '/feed/' + data.currentCat.id"
                  data-title="'Котопоиск'"

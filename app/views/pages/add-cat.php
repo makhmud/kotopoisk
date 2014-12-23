@@ -16,17 +16,17 @@
                     <img src="/images/add-photo-button-icon.png" class="photo-file-preview" alt=""/>
                 </div>
             </div>
-            <button type="button" class="text-center" id="add-more-photo" flow-btn ng-show="newCat.photos.length > 0">+ добавить еще фото</button>
+            <button type="button" class="text-center" id="add-more-photo" flow-btn ng-show="newCat.photos.length > 0" ng-bind="'page.add.more_photo' | translate"></button>
         </div>
-        <textarea placeholder="Комментарий" ng-model="newCat.comment" required="required"></textarea>
-        <textarea placeholder="Контакты" ng-model="newCat.contacts" required="required"></textarea>
-        <a id="location-selector" ng-click="showCurrentMap()">Указать место на карте</a>
+        <textarea placeholder="{{'page.add.comment' | translate}}" ng-model="newCat.comment" required="required"></textarea>
+        <textarea placeholder="{{'page.add.contacts' | translate}}" ng-model="newCat.contacts" required="required"></textarea>
+        <a id="location-selector" ng-click="showCurrentMap()" ng-bind="'page.add.show_on_map' | translate"></a>
         <input type="hidden" ng-model="newCat.position" />
         <input type="submit" value="Добавить" ng-disabled="AddCatForm.$invalid" ng-click="saveCat()"/>
     </form>
 </main>
 <div id="map-wrap" ng-if="settings.showChooseMapPosition">
-    <button ng-click="settings.showChooseMapPosition = false" id="map-location-selector">Сохранить</button>
+    <button ng-click="settings.showChooseMapPosition = false" id="map-location-selector" ng-bind="'page.add.map_save' | translate"></button>
     <ui-gmap-google-map id="map"
                         center="settings.map.positionMap.center"
                         zoom="settings.map.positionMap.zoom"
