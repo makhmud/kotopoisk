@@ -56,6 +56,21 @@ class Image extends BaseImage {
 
         $image = Image::make(self::temp($filename));
 
+        $exif = $image->exif();
+        if(!empty($exif['Orientation'])){
+            switch($exif['Orientation']){
+                case 8:
+                    $image->rotate(90);
+                    break;
+                case 3:
+                    $image->rotate(180);
+                    break;
+                case 6:
+                    $image->rotate(-90);
+                    break;
+            }
+        }
+
         $width = self::config('formats.'. $format .'.width');
         $height = self::config('formats.'. $format .'.height');
 
