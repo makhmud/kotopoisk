@@ -16,7 +16,7 @@
                     <img src="/images/add-photo-button-icon.png" class="photo-file-preview" alt=""/>
                 </div>
             </div>
-            <button type="button" class="text-center" id="add-more-photo" flow-btn ng-show="newCat.photos.length > 0" ng-bind="'page.add.more_photo' | translate"></button>
+            <button type="button" class="text-center" id="add-more-photo" flow-btn flow-attrs="{accept:'image/*'}" ng-show="newCat.photos.length > 0" ng-bind="'page.add.more_photo' | translate"></button>
         </div>
         <textarea placeholder="{{'page.add.comment' | translate}}" ng-model="newCat.comment" required="required"></textarea>
         <textarea placeholder="{{'page.add.contacts' | translate}}" ng-model="newCat.contacts" required="required"></textarea>
