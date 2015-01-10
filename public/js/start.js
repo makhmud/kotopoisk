@@ -50,6 +50,8 @@ var app = angular.module('app',
     ]
 );
 
+app.constant('defaultMapCenter', {latitude: 55.753930000000004,longitude:37.620795});
+
 app.filter('nl2br', function($sce){
     return function(msg,is_xhtml) {
         var is_xhtml = is_xhtml || true;

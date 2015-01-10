@@ -1,4 +1,4 @@
-app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeout, $cookies, $location, $filter, matchmedia) {
+app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeout, $cookies, $location, $filter, matchmedia, defaultMapCenter) {
 
     console.log('In AddCat Controller');
 
@@ -17,8 +17,8 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
 
     $scope.settings.showChooseMapPosition = false;
     $scope.settings.map.positionMap = {
-        zoom : 7,
-        center : {latitude:50,longitude: 35}
+        zoom : 10,
+        center : defaultMapCenter
     }
 
     $scope.newCat = new Cat({
@@ -26,7 +26,7 @@ app.controller('AddCatCtrl', function($scope, Cat, User, AddressService, $timeou
         comment : '',
         contacts : '',
         address : '',
-        position : {latitude:50,longitude: 35},
+        position : defaultMapCenter,
         auth_token : $cookies.auth_token
     });
 
